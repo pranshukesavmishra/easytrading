@@ -54,13 +54,18 @@ Local server: `cd /home/user/easytrading && python3 -m http.server 8080 &`. Per-
 - Home rebuilt (hero stage, bento services, marquee, big-number principles, glowing process band). Inner pages restyled by parallel agents (see git log).
 - QA helper `scripts/shoot.cjs` now scrolls with behavior:"instant" (html has smooth scroll, which made lazy `.reveal` checks give false alarms).
 
+- v3.1 (10 Nov): all pages restyled (home by lead; services, performance+markets, about+tools+contact+legal+404 by parallel agents). Added scroll-progress bar, button shine, footer watermark, page fade-in (main.css/main.js), home sparkline bento tiles, "Market pulse" (3 TradingView mini charts) and "Who we work with" sections.
+- Final QA (all green): 11 pages x 390/768/1440 = 0 errors, 0 overflow, 0 hidden reveals; calculators 9/9; `showPerformance=false` hides all return figures, Rs 50 Cr and 98% (left visible: "100+ clients", "15+ yrs team experience", generic word "CAGR"); TradingView embeds mount on home, markets (desktop+mobile).
+- Wording softened (step 4 of the old list): about-page "Maximum loss known before entry"/"Hedged or defined-risk..." now "Risk limits considered before entry"/"Derivative positions built around risk controls"; services "How it works" copy uses can/typically/aims to; no "team that picks up the phone" claim remains.
+- Known leftovers: `.note--warn` default is a champagne tint (overridden per page); legal TOC has no active-section highlight; markets gold/silver panel has spare space on desktop; contact map iframe is blank in the sandbox only; hero gradient accent words are fine but check contrast of azure text on tinted backgrounds with a tool; services.orig.html/gen.mjs used by the services agent live only in the scratchpad (not in the repo).
+
 ## What is left to do (in order)
-1. **Verify the last uncommitted change** (may or may not have been applied): `assets/js/main.js` TradingView defaults should be
+1. (DONE in session 3) **Verify the last uncommitted change** (may or may not have been applied): `assets/js/main.js` TradingView defaults should be
    `colorTheme = "light"` and `isTransparent = false` (grep `colorTheme =`). Then run `node scripts/build.mjs`, run `shoot.cjs` on all 11 pages
    (expect 0 errors, 0 overflow at 390/768/1440), commit and push.
 2. **Final visual audit of v2**: look at every page (desktop + mobile). Known small items: `.page-hero` shows a faint grey wedge at the left on desktop;
    performance table header style; Performance and Market Desk mobile only partly eyeballed; no 768px screenshots taken for the v2 pages.
-3. **Get the owner's feedback** on the live preview and iterate. Ask for a reference site if they have one.
+3. **Get the owner's feedback** on the live v3.1 preview and iterate (owner asked for 'more upgradation everywhere' after v3; ask for a reference site). Ask for a reference site if they have one.
 4. **Content judgement calls still open** (see the last QA report): about-page claims "Maximum loss known before entry" / "Hedged or defined-risk derivative structures"
    and "a team that picks up the phone" are unverified operational promises: soften or remove (about.html ~line 175, index.html lead). Decide whether the "98% retention"
    and "100+ clients" figures should also hide under `showPerformance=false` (CHECKLIST groups them with performance claims). "Free consultation" was removed everywhere
