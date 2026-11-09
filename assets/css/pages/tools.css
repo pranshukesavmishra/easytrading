@@ -256,3 +256,5 @@
   .tabpanel:not([hidden]) { animation: none; }
   .howto li:hover, .q__opts label:hover span { transform: none; }
 }
+.note--warn { background: rgba(47,107,255,.07); border-color: rgba(47,107,255,.22); }
+.note--warn svg { color: var(--gold); }

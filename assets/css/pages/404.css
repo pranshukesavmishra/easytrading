@@ -1,32 +1,59 @@
-/* 404 page. Tokens only. */
-.nf { position: relative; padding: clamp(56px, 9vw, 120px) 0 clamp(40px, 6vw, 72px); overflow: hidden; }
+/* 404: giant gradient numerals, falling candle on a midnight chart. Tokens from main.css. */
+.nf { position: relative; isolation: isolate; padding: clamp(48px, 8vw, 110px) 0 clamp(48px, 7vw, 96px); overflow: hidden; }
+.nf::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: radial-gradient(60% 80% at 90% 0%, rgba(47,107,255,.2), transparent 62%), radial-gradient(45% 70% at 0% 100%, rgba(0,197,138,.14), transparent 60%), linear-gradient(180deg, #eef3ff, var(--ink-1));
+}
+.nf::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; opacity: .5; pointer-events: none;
+  background-image: linear-gradient(rgba(10,21,56,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(10,21,56,.06) 1px, transparent 1px);
+  background-size: 56px 56px; -webkit-mask-image: radial-gradient(70% 90% at 80% 10%, #000, transparent 75%); mask-image: radial-gradient(70% 90% at 80% 10%, #000, transparent 75%);
+}
 .nf__inner { display: grid; gap: 40px; align-items: center; }
 @media (min-width: 960px) { .nf__inner { grid-template-columns: 1.1fr 0.9fr; gap: 64px; } }
-.nf__title { font-size: var(--fs-2xl); max-width: 16ch; margin-bottom: 20px; }
-@media (min-width: 768px) { .nf__title { font-size: clamp(2.6rem, 1.6rem + 3vw, 4.25rem); } }
+.nf__big {
+  margin: 0 0 -0.12em; font-family: var(--font-display); font-weight: 700; letter-spacing: -0.07em; line-height: .8;
+  font-size: clamp(7rem, 3rem + 20vw, 17rem); padding-bottom: .08em;
+  background: var(--accent-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  animation: nf-rise 1.1s var(--ease) both;
+}
+@keyframes nf-rise { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+.nf__title { font-size: var(--fs-2xl); max-width: 14ch; margin-bottom: 20px; }
+@media (min-width: 768px) { .nf__title { font-size: clamp(2.4rem, 1.4rem + 3vw, 4rem); } }
 .nf .lead { margin-bottom: 32px; }
-.nf__chart { margin: 0; background: var(--ink-3); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-1); padding: 24px !important; max-width: 460px; width: 100%; justify-self: center; border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); padding: 16px 0; }
+.nf__chart {
+  margin: 0; width: 100%; max-width: 480px; justify-self: center; padding: 24px; border-radius: var(--radius-lg); position: relative; overflow: hidden;
+  background: radial-gradient(70% 90% at 100% 0%, rgba(47,107,255,.5), transparent 62%), linear-gradient(145deg, #060b1f, #11205a);
+  box-shadow: var(--shadow-2); transform: rotate(2deg);
+}
 .nf__chart svg { width: 100%; height: auto; overflow: visible; }
-.nf__grid line { stroke: var(--line); stroke-width: 1; }
-.nf__floor { stroke: var(--line-strong); stroke-width: 1; stroke-dasharray: 4 4; }
+.nf__grid line { stroke: rgba(255,255,255,.09); stroke-width: 1; }
+.nf__floor { stroke: rgba(255,255,255,.25); stroke-width: 1; stroke-dasharray: 4 4; }
 .nf__up line, .nf__down line, .nf__fall line { stroke-width: 2; }
-.nf__up line { stroke: var(--navy); } .nf__up rect { fill: var(--navy); }
-.nf__down line { stroke: var(--navy-2); } .nf__down rect { fill: var(--navy-2); }
-.nf__fall line { stroke: var(--gold-2); } .nf__fall rect { fill: var(--gold-2); }
-.nf__label { fill: var(--muted); font-family: var(--font-sans); font-size: 14px; }
+.nf__up line { stroke: #7aa2ff; } .nf__up rect { fill: #7aa2ff; }
+.nf__down line { stroke: #4a5fa8; } .nf__down rect { fill: #4a5fa8; }
+.nf__fall line { stroke: #ff7a6e; } .nf__fall rect { fill: #ff7a6e; }
+.nf__label { fill: #8fa2d6; font-family: var(--font-sans); font-size: 14px; }
 .nf__fall { transform-box: fill-box; transform-origin: 50% 0; animation: nf-drop 2.4s var(--ease) .4s both; }
 @keyframes nf-drop {
   0% { transform: translateY(-40px); opacity: 0; }
   60% { transform: translateY(6px); opacity: 1; }
   100% { transform: translateY(0) rotate(6deg); opacity: 1; }
 }
-.nf-links-wrap { border-top: 1px solid var(--line); }
-.nf-links__title { font-size: var(--fs-sm); color: var(--text-2); font-weight: 650; margin-bottom: 16px; }
-.nf-links { list-style: none; display: grid; counter-reset: nf; border-top: 1px solid var(--line-strong); }
-@media (min-width: 768px) { .nf-links { grid-auto-flow: column; grid-auto-columns: 1fr; } .nf-links li + li a { border-left: 1px solid var(--line); } }
-.nf-links a { display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 16px; border-bottom: 1px solid var(--line); font-weight: 600; color: var(--text); transition: color .2s, background .2s; }
+
+.nf-links-wrap { padding-bottom: clamp(56px, 8vw, 96px); }
+.nf-links__title { font-size: var(--fs-sm); color: var(--text-2); font-weight: 700; margin-bottom: 16px; font-family: var(--font-sans); letter-spacing: 0; }
+.nf-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; counter-reset: nf; }
+@media (min-width: 640px) { .nf-links { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .nf-links { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); grid-auto-flow: column; } }
 .nf-links li { counter-increment: nf; }
-.nf-links a::before { content: counter(nf, decimal-leading-zero); font-family: var(--font-display); color: var(--gold); font-size: var(--fs-sm); font-weight: 400; }
-.nf-links a svg { width: 16px; height: 16px; margin-left: auto; color: var(--muted); transition: transform .25s var(--ease), color .2s; }
-.nf-links a:hover { color: var(--gold); background: var(--gold-soft); }
+.nf-links a {
+  position: relative; display: flex; align-items: center; gap: 14px; min-height: 76px; padding: 18px 20px; font-weight: 650; color: var(--text);
+  background: var(--ink-3); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-1);
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .3s, color .2s;
+}
+.nf-links a::before { content: counter(nf, decimal-leading-zero); font-family: var(--font-display); color: var(--gold); font-size: var(--fs-sm); font-weight: 700; }
+.nf-links a svg { width: 18px; height: 18px; margin-left: auto; color: var(--muted); transition: transform .3s var(--ease), color .2s; }
+.nf-links a:hover { transform: translateY(-5px); box-shadow: var(--shadow-2); border-color: rgba(47,107,255,.35); color: var(--gold); }
 .nf-links a:hover svg { transform: translateX(4px); color: var(--gold); }
+@media (prefers-reduced-motion: reduce) { .nf__big { animation: none; } .nf__chart { transform: none; } .nf-links a:hover { transform: none; } }

@@ -137,8 +137,8 @@ html { scroll-padding-top: calc(var(--header-h) + 84px); }
 .bento--feature .bento__more { max-width: 46ch; }
 .bento--feature .bento__art { order: 5; width: 100%; height: clamp(90px, 14vw, 150px); margin: 4px 0 0; }
 .bento--feature .bento__foot { order: 6; }
-.bento__line { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.8s var(--ease) .3s; }
-.no-js .bento__line, .is-visible .bento__line { stroke-dashoffset: 0; }
+.bento__art--a { clip-path: inset(0 100% 0 0); transition: clip-path 1.8s var(--ease) .3s; }
+.no-js .bento__art--a, .is-visible .bento__art--a { clip-path: inset(0 0 0 0); }
 
 .bento--dark { background: radial-gradient(90% 80% at 100% 0%, rgba(47, 107, 255, 0.5), transparent 60%), radial-gradient(60% 60% at 0% 120%, rgba(25, 195, 214, 0.32), transparent 60%), linear-gradient(150deg, #070e2b, #101f58); border-color: rgba(255, 255, 255, 0.12); color: #fff; }
 .bento--dark::before { background: radial-gradient(360px circle at var(--mx) var(--my), rgba(143, 180, 255, 0.2), transparent 65%); }
@@ -323,9 +323,9 @@ table.compare { min-width: 680px; }
 /* ---------- Motion preferences ---------- */
 @media (prefers-reduced-motion: reduce) {
   .float-chip { animation: none; }
-  .risk-meter i, .steps li, .bento__line, .bento--risk .bento__art { transition: none !important; transition-delay: 0s !important; }
+  .risk-meter i, .steps li, .bento__art--a, .bento--risk .bento__art { transition: none !important; transition-delay: 0s !important; }
   .reveal:not(.is-visible) .steps li { opacity: 1; transform: none; }
-  .bento__line { stroke-dashoffset: 0; }
+  .bento__art--a { clip-path: none; }
   .bento:hover, .bento:focus-visible { transform: none; }
   .bento:hover .bento__go { transform: none; }
 }
@@ -335,3 +335,4 @@ table.compare { min-width: 680px; }
   content: ""; position: absolute; top: 0; left: 50%; width: min(100% - var(--gutter) * 2, var(--container)); height: 1px; transform: translateX(-50%);
   background: linear-gradient(90deg, transparent, var(--line-strong) 20%, rgba(47, 107, 255, 0.35) 50%, var(--line-strong) 80%, transparent);
 }
+.bento--dark .risk-meter[data-level="5"], .bento--dark .risk-meter[data-level="6"] { --c: #ff8f84; }
