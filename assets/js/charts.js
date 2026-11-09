@@ -7,7 +7,6 @@
   window.ET_DATA = {
     years: [2020, 2021, 2022, 2023, 2024],
     clientReturns: [50, 39, 35, 38, 41],          // % per year, client-reported, unaudited
-    nifty50Returns: [14.9, 24.1, 4.3, 20.0, 8.8], // % per year, Nifty 50 price index, calendar-year closes
     niftyCloses: { 2019: 12168.45, 2020: 13981.75, 2021: 17354.05, 2022: 18105.30, 2023: 21731.40, 2024: 23644.80 },
     growthOf: function (start, returns) {
       var v = start, out = [start];
@@ -19,6 +18,13 @@
       return (Math.pow(p, 1 / returns.length) - 1) * 100;
     }
   };
+
+  // % per year, Nifty 50 price index, derived (unrounded) from the calendar-year closes above.
+  // ≈ [14.9, 24.1, 4.3, 20.0, 8.8]; ₹1,00,000 → ≈ ₹1,94,312.
+  window.ET_DATA.nifty50Returns = window.ET_DATA.years.map(function (y) {
+    var c = window.ET_DATA.niftyCloses;
+    return (c[y] / c[y - 1] - 1) * 100;
+  });
 
   window.ET_CHART = {
     colors: {

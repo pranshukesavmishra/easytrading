@@ -14,7 +14,8 @@
 }
 
 /* ---------- Ticker ---------- */
-.tv--ticker { height: 46px; overflow: hidden; }
+.tv--ticker { height: 74px; overflow: hidden; }
+@media (min-width: 768px) { .tv--ticker { height: 46px; } }
 
 /* ---------- Terminal grid ---------- */
 .desk { background: var(--ink-0); }
@@ -59,11 +60,12 @@
 .tv--chart { height: 420px; }
 .tv--heatmap { height: 460px; }
 .tv--mini { height: 200px; }
-.tv--gauge { height: 420px; }
+.tv--gauge { height: 380px; }
 .tv--calendar { height: 520px; }
 @media (min-width: 768px) {
   .tv--chart { height: 560px; }
   .tv--heatmap { height: 560px; }
+  .tv--gauge { height: 420px; }
 }
 @media (min-width: 1100px) {
   .tv--calendar { height: 100%; min-height: 560px; flex: 1; }
@@ -102,4 +104,4 @@
 .desk-note { margin-top: 16px; }
 .desk-note a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 /* Transparent TradingView iframes render an opaque dark canvas under color-scheme: dark; match the iframe document instead. */
-.tv-embed { color-scheme: normal; }
+

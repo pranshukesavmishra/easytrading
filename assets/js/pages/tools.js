@@ -260,7 +260,7 @@ if (typeof document !== "undefined") (function () {
 
   /* ---------------- Charts ---------------- */
   var chartsReady = !!(window.Chart && window.ET_CHART && window.ET_CHART.init());
-  var COL = (window.ET_CHART && window.ET_CHART.colors) || { slate: "#7C8AA5", gold: "#F5B800", grid: "rgba(255,255,255,0.06)" };
+  var COL = (window.ET_CHART && window.ET_CHART.colors) || { slate: "#7C8AA5", gold: "#E8B33A", grid: "rgba(255,255,255,0.06)" };
   var tipINR = { callbacks: { label: function (c) { return " " + c.dataset.label + ": " + rupee(c.parsed.y != null ? c.parsed.y : c.parsed); } } };
   var axisINR = { ticks: { callback: function (v) { return ET.formatINRShort(v); }, maxTicksLimit: 6 }, grid: { color: COL.grid }, border: { display: false } };
 
@@ -294,7 +294,7 @@ if (typeof document !== "undefined") (function () {
     return new Chart(canvas, {
       type: "line",
       data: { labels: [], datasets: [{ label: "Value", data: [], borderColor: COL.gold, borderWidth: 2, pointRadius: 0, pointHoverRadius: 4, tension: 0.25, fill: true,
-        backgroundColor: function (ctx) { return window.ET_CHART.gradient(ctx.chart.ctx, ctx.chart.chartArea, COL.goldFill || "rgba(245,184,0,0.18)"); } }] },
+        backgroundColor: function (ctx) { return window.ET_CHART.gradient(ctx.chart.ctx, ctx.chart.chartArea, COL.goldFill || "rgba(232,179,58,0.18)"); } }] },
       options: { interaction: { mode: "index", intersect: false }, plugins: { legend: { display: false }, tooltip: tipINR },
         scales: { x: { grid: { display: false }, ticks: { maxRotation: 0, autoSkipPadding: 8 } }, y: axisINR } }
     });

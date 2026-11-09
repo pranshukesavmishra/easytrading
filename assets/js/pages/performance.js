@@ -128,7 +128,7 @@
   function initCharts() {
     if (!window.ET_CHART || !window.ET_CHART.init()) return;
     var C = window.ET_CHART.colors, Chart = window.Chart;
-    var mono = { family: "'JetBrains Mono', monospace", size: 11 };
+    var mono = { family: "'IBM Plex Mono', monospace", size: 11 };
     var labels = ["Start"].concat(D.years.map(function (y) { return "End " + y; }));
 
     var gEl = $("#growth-chart");
@@ -142,7 +142,7 @@
               label: "Easy Trading (client-reported)", data: D.growthOf(amount, D.clientReturns),
               borderColor: C.gold, borderWidth: 2.5, tension: 0.3, pointRadius: 3, pointHoverRadius: 6,
               pointBackgroundColor: C.gold, fill: true,
-              backgroundColor: function (c) { return window.ET_CHART.gradient(c.chart.ctx, c.chart.chartArea, "rgba(245,184,0,0.26)", "rgba(245,184,0,0)"); }
+              backgroundColor: function (c) { return window.ET_CHART.gradient(c.chart.ctx, c.chart.chartArea, "rgba(232,179,58,0.26)", "rgba(232,179,58,0)"); }
             },
             {
               label: "Nifty 50", data: D.growthOf(amount, D.nifty50Returns),
