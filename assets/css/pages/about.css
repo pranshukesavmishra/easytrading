@@ -59,14 +59,14 @@
   display: flex; flex-direction: column; justify-content: space-between; gap: 28px; min-height: 220px; color: #fff; border-color: transparent;
   background:
     radial-gradient(70% 90% at 100% 0%, rgba(47,107,255,.55), transparent 62%),
-    radial-gradient(60% 70% at 0% 110%, rgba(25,195,214,.28), transparent 60%),
+    radial-gradient(60% 70% at 0% 110%, rgba(0,197,138,.28), transparent 60%),
     linear-gradient(145deg, #060b1f, #101d52);
 }
 .tile--numeral .tile__label, .tile--link .tile__label { color: #c9d5f5; font-weight: 600; font-size: var(--fs-base); }
 .tile--numeral .numeral, .tile--link .numeral {
-  background: linear-gradient(110deg, #7aa2ff 0%, #5fd8ee 100%); -webkit-background-clip: text; background-clip: text;
+  background: linear-gradient(110deg, #7aa2ff 0%, #5fe3b4 100%); -webkit-background-clip: text; background-clip: text;
 }
-.tile--link { text-decoration: none; background: radial-gradient(70% 90% at 100% 0%, rgba(25,195,214,.45), transparent 60%), linear-gradient(145deg, #1239a8, #1d55e6); }
+.tile--link { text-decoration: none; background: radial-gradient(70% 90% at 100% 0%, rgba(0,197,138,.45), transparent 60%), linear-gradient(145deg, #1239a8, #1d55e6); }
 .tile--link .tile__label { color: #fff; }
 .tile--link .numeral { background: none; -webkit-text-fill-color: #fff; color: #fff; }
 .tile--link .tile__arrow {
@@ -137,9 +137,9 @@
   background-size: 56px 56px; -webkit-mask-image: radial-gradient(70% 90% at 85% 0%, #000, transparent 75%); mask-image: radial-gradient(70% 90% at 85% 0%, #000, transparent 75%);
 }
 .vision .eyebrow { color: #8fb4ff; background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.16); }
-.vision .eyebrow::before { background: var(--aqua); box-shadow: 0 0 0 4px rgba(25,195,214,.25); }
+.vision .eyebrow::before { background: var(--aqua); box-shadow: 0 0 0 4px rgba(0,197,138,.25); }
 .vision__title { color: #fff; font-size: clamp(2.4rem, 1.2rem + 5vw, 5.6rem); line-height: .98; letter-spacing: -0.05em; margin: 0 0 clamp(28px, 4vw, 48px); max-width: 14ch; }
-.vision__title .serif-i { background-image: linear-gradient(110deg, #7aa2ff, #4fe0ee); }
+.vision__title .serif-i { background-image: linear-gradient(110deg, #7aa2ff, #5fe3b4); }
 .vision__quote { margin: 0; padding-top: clamp(24px, 3vw, 36px); border-top: 1px solid transparent; border-image: linear-gradient(90deg, rgba(122,162,255,.7), rgba(79,224,238,.25), transparent) 1; }
 .vision__quote blockquote { margin: 0; }
 .vision__quote p {
@@ -157,7 +157,7 @@
 }
 .value:hover { transform: translateY(-5px); background: rgba(255,255,255,.09); border-color: rgba(122,162,255,.55); }
 .value dt { font-family: var(--font-display); font-size: var(--fs-xl); font-weight: 600; letter-spacing: -0.03em; color: #fff; display: flex; flex-direction: column; gap: 14px; }
-.value__n { font-size: var(--fs-sm); font-weight: 650; letter-spacing: .04em; color: #7fe4f0; font-family: var(--font-sans); }
+.value__n { font-size: var(--fs-sm); font-weight: 650; letter-spacing: .04em; color: #6fe8bd; font-family: var(--font-sans); }
 .value dd { margin: 10px 0 0; color: #b9c6e6; }
 
 /* ---------- Who we serve ---------- */
@@ -185,7 +185,7 @@
 .tile--edge { display: flex; flex-direction: column; }
 .edge__icon {
   width: 56px; height: 56px; border-radius: 18px; display: grid; place-items: center; margin-bottom: 24px;
-  background: linear-gradient(145deg, rgba(47,107,255,.14), rgba(25,195,214,.16)); color: var(--gold);
+  background: linear-gradient(145deg, rgba(47,107,255,.14), rgba(0,197,138,.16)); color: var(--gold);
 }
 .edge__icon svg { width: 26px; height: 26px; stroke-width: 1.7; }
 .tile--edge h3 { font-size: var(--fs-lg); letter-spacing: -0.025em; margin-bottom: 8px; max-width: 24ch; }
@@ -203,7 +203,7 @@
 .timeline { list-style: none; margin: 0; padding: 0; position: relative; }
 .timeline::before {
   content: ""; position: absolute; left: 8px; top: 12px; bottom: 12px; width: 2px; border-radius: 2px;
-  background: linear-gradient(180deg, #2f6bff 0%, #19c3d6 70%, rgba(25,195,214,.05) 100%);
+  background: linear-gradient(180deg, #2f6bff 0%, var(--aqua) 70%, rgba(0,197,138,.05) 100%);
 }
 .tl { position: relative; padding: 0 0 22px 44px; }
 .tl:last-child { padding-bottom: 0; }

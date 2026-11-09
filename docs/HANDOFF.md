@@ -48,7 +48,11 @@ Local server: `cd /home/user/easytrading && python3 -m http.server 8080 &`. Per-
   (they only look blank in full-page screenshots because they load lazily; test by scrolling, not by fullPage).
 - Fixed: performance table first-column border glitch; contact email wrapping mid-word.
 - With `showPerformance=false` every return figure, Rs 50 Cr and 98% hide. Left visible on purpose (verified facts, not returns): "100+ clients", "15+ yrs team experience".
-- Owner feedback on v2 (10 Nov): "still doesn't look premium and good, too old-looking and boring". Redesign iteration in progress; see below.
+- Owner feedback on v2 (10 Nov): "still doesn't look premium and good, too old-looking and boring". Owner chose **modern fintech + luxury**, wants fonts, colours, layout and motion all changed, then asked for **modern fintech colours and trading-graph themes**.
+- v3 design system (assets/css/main.css): ice-white `--ink-1 #f4f7fd`, midnight `--navy #0a1538`, accent gradient blue `#2f6bff` -> emerald `#00c58a` (`--accent-grad`). LEGACY NAMES `--gold*`, `.btn--gold`, `.gold`, `.serif-i` now mean the blue accent. Fonts: Bricolage Grotesque (display), Figtree (body), IBM Plex Mono (numbers). Easy Trading chart series = emerald (`ET_CHART.colors.gold`), Nifty = slate.
+- Trading-graph theme: home hero = animated 2D candlestick canvas (home.js; three.js terrain removed), inner `.page-hero` carries a candlestick + trend-line SVG motif (main.css end), grid chart-paper backgrounds, floating glass cards.
+- Home rebuilt (hero stage, bento services, marquee, big-number principles, glowing process band). Inner pages restyled by parallel agents (see git log).
+- QA helper `scripts/shoot.cjs` now scrolls with behavior:"instant" (html has smooth scroll, which made lazy `.reveal` checks give false alarms).
 
 ## What is left to do (in order)
 1. **Verify the last uncommitted change** (may or may not have been applied): `assets/js/main.js` TradingView defaults should be

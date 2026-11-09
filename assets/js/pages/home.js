@@ -29,7 +29,7 @@
       W = r.width; H = r.height;
       canvas.width = W * dpr; canvas.height = H * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      step = W < 640 ? 14 : 18;
+      step = W < 640 ? 16 : 24;
       var need = Math.ceil(W / step) + 4;
       if (!candles.length) candles.push(nextCandle(100));
       while (candles.length < need) candles.push(nextCandle(candles[candles.length - 1].c));
@@ -41,22 +41,24 @@
       candles.forEach(function (k) { lo = Math.min(lo, k.l); hi = Math.max(hi, k.h); });
       var pad = H * 0.18, span = (hi - lo) || 1;
       var y = function (v) { return H - pad - ((v - lo) / span) * (H - pad * 2); };
-      var bw = Math.max(3, step * 0.5);
+      var bw = Math.max(4, step * 0.55);
+      ctx.globalAlpha = 1; ctx.strokeStyle = "rgba(10,21,56,0.06)"; ctx.lineWidth = 1;
+      for (var g = 1; g < 6; g++) { var gy = Math.round(H * g / 6) + .5; ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(W, gy); ctx.stroke(); }
       // trend line
       ctx.beginPath();
       candles.forEach(function (k, i) {
         var x = i * step - offset;
         if (i === 0) ctx.moveTo(x, y(k.c)); else ctx.lineTo(x, y(k.c));
       });
-      ctx.strokeStyle = "rgba(47,107,255,0.22)";
+      ctx.strokeStyle = "rgba(0,197,138,0.22)";
       ctx.lineWidth = 1.5;
       ctx.stroke();
       candles.forEach(function (k, i) {
         var x = i * step - offset;
         var up = k.c >= k.o;
-        var fade = Math.min(1, Math.max(0.15, x / W + 0.2));
-        ctx.globalAlpha = 0.55 * fade;
-        ctx.strokeStyle = ctx.fillStyle = up ? "#3ddc97" : "#ff5c5c";
+        var fade = Math.min(1, Math.max(0.2, x / W));
+        ctx.globalAlpha = 0.85 * fade;
+        ctx.strokeStyle = ctx.fillStyle = up ? "#00b37a" : "#f0506e";
         ctx.beginPath(); ctx.moveTo(x, y(k.h)); ctx.lineTo(x, y(k.l)); ctx.lineWidth = 1; ctx.stroke();
         var top = y(Math.max(k.o, k.c)), bot = y(Math.min(k.o, k.c));
         ctx.fillRect(x - bw / 2, top, bw, Math.max(1.5, bot - top));
@@ -109,7 +111,7 @@
               label: "Easy Trading", data: D.growthOf(100000, D.clientReturns),
               borderColor: C.gold, borderWidth: 2.5, tension: 0.35, pointRadius: 0, pointHoverRadius: 5, pointBackgroundColor: C.gold,
               fill: true,
-              backgroundColor: function (c) { return window.ET_CHART.gradient(c.chart.ctx, c.chart.chartArea, "rgba(47,107,255,0.35)", "rgba(47,107,255,0)"); }
+              backgroundColor: function (c) { return window.ET_CHART.gradient(c.chart.ctx, c.chart.chartArea, "rgba(0,197,138,0.35)", "rgba(0,197,138,0)"); }
             },
             {
               label: "Nifty 50", data: D.growthOf(100000, D.nifty50Returns),

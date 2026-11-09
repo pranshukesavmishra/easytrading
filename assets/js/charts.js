@@ -28,7 +28,7 @@
 
   window.ET_CHART = {
     colors: {
-      gold: "#2F6BFF", gold2: "#19C3D6", goldFill: "rgba(47,107,255,0.2)",
+      gold: "#00A870", gold2: "#00C58A", goldFill: "rgba(0,197,138,0.22)",
       slate: "#8B98AB", slateFill: "rgba(139,152,171,0.18)",
       gain: "#0B7A4B", loss: "#B42318", grid: "rgba(11,27,51,0.08)", text: "#5B6A7D"
     },

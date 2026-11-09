@@ -36,3 +36,17 @@
     if (sec) io.observe(sec);
   });
 })();
+
+/* Bento cards: soft spotlight that follows the pointer (fine pointers, motion allowed). */
+(function () {
+  "use strict";
+  if (window.ET && ET.reduceMotion) return;
+  if (!window.matchMedia || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+  document.querySelectorAll(".bento").forEach(function (card) {
+    card.addEventListener("pointermove", function (e) {
+      var r = card.getBoundingClientRect();
+      card.style.setProperty("--mx", (e.clientX - r.left) + "px");
+      card.style.setProperty("--my", (e.clientY - r.top) + "px");
+    });
+  });
+})();
