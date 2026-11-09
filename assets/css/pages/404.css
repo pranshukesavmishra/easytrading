@@ -1,0 +1,31 @@
+/* 404 page. Tokens only. */
+.nf { position: relative; padding: clamp(56px, 9vw, 120px) 0 clamp(40px, 6vw, 72px); overflow: hidden; }
+.nf__inner { display: grid; gap: 40px; align-items: center; }
+@media (min-width: 960px) { .nf__inner { grid-template-columns: 1.1fr 0.9fr; gap: 64px; } }
+.nf__title { font-size: var(--fs-2xl); max-width: 16ch; margin-bottom: 20px; }
+@media (min-width: 768px) { .nf__title { font-size: clamp(2.6rem, 1.6rem + 3vw, 4.25rem); } }
+.nf .lead { margin-bottom: 32px; }
+.nf__chart { margin: 0; max-width: 460px; width: 100%; justify-self: center; border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); padding: 16px 0; }
+.nf__chart svg { width: 100%; height: auto; overflow: visible; }
+.nf__grid line { stroke: var(--line); stroke-width: 1; }
+.nf__floor { stroke: var(--line-strong); stroke-width: 1; stroke-dasharray: 4 4; }
+.nf__up line, .nf__down line, .nf__fall line { stroke-width: 2; }
+.nf__up line { stroke: var(--gain); } .nf__up rect { fill: var(--gain); }
+.nf__down line { stroke: var(--loss); } .nf__down rect { fill: var(--loss); }
+.nf__fall line { stroke: var(--gold); } .nf__fall rect { fill: var(--gold); }
+.nf__label { fill: var(--muted); font-family: var(--font-mono); font-size: 14px; letter-spacing: .1em; }
+.nf__fall { transform-box: fill-box; transform-origin: 50% 0; animation: nf-drop 2.4s var(--ease) .4s both; }
+@keyframes nf-drop {
+  0% { transform: translateY(-40px); opacity: 0; }
+  60% { transform: translateY(6px); opacity: 1; }
+  100% { transform: translateY(0) rotate(6deg); opacity: 1; }
+}
+.nf-links-wrap { border-top: 1px solid var(--line); }
+.nf-links__title { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 16px; }
+.nf-links { list-style: none; display: grid; border-top: 1px solid var(--line-strong); }
+@media (min-width: 768px) { .nf-links { grid-auto-flow: column; grid-auto-columns: 1fr; } .nf-links li + li a { border-left: 1px solid var(--line); } }
+.nf-links a { display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 16px; border-bottom: 1px solid var(--line); font-weight: 600; color: var(--text); transition: color .2s, background .2s; }
+.nf-links a .mono { color: var(--gold); font-size: var(--fs-xs); font-weight: 400; }
+.nf-links a svg { width: 16px; height: 16px; margin-left: auto; color: var(--muted); transition: transform .25s var(--ease), color .2s; }
+.nf-links a:hover { color: var(--gold); background: var(--gold-soft); }
+.nf-links a:hover svg { transform: translateX(4px); color: var(--gold); }

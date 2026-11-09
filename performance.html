@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en-IN" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Performance: Year-wise Returns vs Nifty 50 | Easy Trading</title>
+  <meta name="description" content="Easy Trading's client-reported, unaudited year-wise returns from 2020 to 2024 next to the Nifty 50 index, with an interactive growth chart, return composition and full methodology.">
+  <link rel="canonical" href="https://easytrading.co.in/performance.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Easy Trading">
+  <meta property="og:title" content="Easy Trading performance: five years next to the Nifty 50">
+  <meta property="og:description" content="Client-reported, unaudited yearly returns 2020 to 2024, compared with the Nifty 50 price index. Interactive growth chart and methodology.">
+  <meta property="og:url" content="https://easytrading.co.in/performance.html">
+  <meta property="og:image" content="https://easytrading.co.in/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://easytrading.co.in/assets/img/og-image.png">
+  <!-- @head -->
+  <meta name="theme-color" content="#07080a">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icon-32.png">
+  <link rel="apple-touch-icon" href="/assets/img/icon-180.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/assets/js/config.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
+  <!-- /@head -->
+  <link rel="stylesheet" href="/assets/css/pages/performance.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+  <script src="/assets/js/charts.js" defer></script>
+  <script src="/assets/js/pages/performance.js" defer></script>
+</head>
+<body class="page-performance">
+  <!-- @header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/" aria-label="Easy Trading home">
+        <img src="/assets/img/logo-256.webp" alt="" width="40" height="40">
+        <span>Easy <b>Trading</b></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/performance.html" aria-current="page">Performance</a></li>
+          <li><a href="/markets.html">Market Desk</a></li>
+          <li><a href="/tools.html">Tools</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--gold btn--sm header-cta" href="/contact.html#consult">Book a consultation</a>
+      <button class="menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu"><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobile-nav" inert>
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/performance.html" aria-current="page">Performance</a></li>
+        <li><a href="/markets.html">Market Desk</a></li>
+        <li><a href="/tools.html">Tools</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--gold" href="/contact.html#consult">Book a consultation</a>
+    <p class="mobile-contact">Call or WhatsApp <a href="tel:+919891722514">+91 98917 22514</a></p>
+  </div>
+  <!-- /@header -->
+
+  <main id="main">
+    <!-- Shown only when SITE.showPerformance is false (performance.js unhides it) -->
+    <section class="page-hero perf-fallback" data-perf-fallback hidden>
+      <div class="container">
+        <ol class="breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Performance</li></ol>
+        <p class="eyebrow">Performance</p>
+        <h1>Performance details <em class="serif-i">on request.</em></h1>
+        <p class="lead">Historical performance information is shared in a one-to-one conversation, together with the risks involved. Speak to us to understand how our approach works.</p>
+        <div class="btn-row">
+          <a class="btn btn--gold" href="/contact.html#consult">Book a consultation <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a>
+          <a class="btn btn--ghost" href="/services.html">Explore strategies</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="page-hero perf-hero" data-performance aria-labelledby="perf-h1">
+      <div class="container">
+        <ol class="breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Performance</li></ol>
+        <p class="eyebrow">Track record · 2020 to 2024</p>
+        <h1 id="perf-h1">Our <em class="serif-i">Performance</em></h1>
+        <p class="lead">Five calendar years of client-reported returns, set against the Nifty 50 index through a pandemic crash, a global rate-hike cycle and record highs. Every number on this page can be traced to the method below.</p>
+        <div class="perf-flag" role="note">
+          <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-alert"/></svg>
+          <p><strong>Client-reported, unaudited.</strong> Easy Trading figures are reported by the firm and have not been independently audited. Past performance is not indicative of future returns. <a href="#methodology">Read the methodology</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== KPI STRIP ===================== -->
+    <section class="kpi-strip" data-performance aria-label="Key figures">
+      <div class="container">
+        <dl class="kpis">
+          <div class="kpi kpi--lead">
+            <dt>5-yr CAGR <sup>*</sup></dt>
+            <dd class="mono gold" data-cagr-client>≈ <span>…</span></dd>
+            <p>Compounded from the five yearly figures</p>
+          </div>
+          <div class="kpi">
+            <dt>Active clients</dt>
+            <dd class="mono"><span data-count="100" data-suffix="+">100+</span></dd>
+          </div>
+          <div class="kpi">
+            <dt>Under advisory</dt>
+            <dd class="mono"><span data-count="50" data-prefix="₹" data-suffix=" Cr">₹50 Cr</span></dd>
+          </div>
+          <div class="kpi">
+            <dt>Client retention</dt>
+            <dd class="mono"><span data-count="98" data-suffix="%">98%</span></dd>
+          </div>
+          <div class="kpi">
+            <dt>Best · 2020</dt>
+            <dd class="mono gain">+50%</dd>
+          </div>
+          <div class="kpi">
+            <dt>Lowest · 2022</dt>
+            <dd class="mono gain">+35%</dd>
+          </div>
+        </dl>
+        <p class="fine muted"><sup>*</sup>All Easy Trading figures are client-reported and unaudited.</p>
+      </div>
+    </section>
+
+    <!-- ===================== GROWTH SIMULATOR ===================== -->
+    <section class="section" id="growth" data-performance aria-labelledby="growth-title">
+      <div class="container">
+        <div class="section-head split-head">
+          <div>
+            <p class="eyebrow">Interactive · illustrative</p>
+            <h2 id="growth-title" class="h2">Growth of your investment.</h2>
+          </div>
+          <p class="lead">Enter or slide a starting amount. The chart compounds it through each year's client-reported return and, alongside, through the Nifty 50 index. Illustrative only.</p>
+        </div>
+
+        <div class="sim card">
+          <div class="sim__controls">
+            <div class="field">
+              <label for="sim-amount">Starting amount (₹)</label>
+              <input class="input mono" id="sim-amount" type="text" inputmode="numeric" autocomplete="off" value="1,00,000" aria-describedby="sim-hint">
+              <span class="field-hint muted" id="sim-hint">Between ₹10,000 and ₹1,00,00,000</span>
+            </div>
+            <div class="field">
+              <label for="sim-range">Adjust amount</label>
+              <input id="sim-range" type="range" min="0" max="1000" step="1" value="500" aria-valuetext="₹1,00,000">
+              <div class="sim__scale mono" aria-hidden="true"><span>₹10K</span><span>₹1L</span><span>₹10L</span><span>₹1Cr</span></div>
+            </div>
+            <div class="sim__presets" role="group" aria-label="Quick amounts">
+              <button type="button" class="chip" data-amount="50000">₹50K</button>
+              <button type="button" class="chip is-active" data-amount="100000">₹1L</button>
+              <button type="button" class="chip" data-amount="1000000">₹10L</button>
+              <button type="button" class="chip" data-amount="5000000">₹50L</button>
+              <button type="button" class="chip" data-amount="10000000">₹1Cr</button>
+            </div>
+
+            <dl class="sim__out" aria-live="polite">
+              <div class="sim__row sim__row--client">
+                <dt><i class="sw sw--gold" aria-hidden="true"></i>Easy Trading <small>client-reported</small></dt>
+                <dd><strong class="mono" data-out="client-end">₹5,47,694</strong><span class="mono gold" data-out="client-mult">5.48×</span></dd>
+              </div>
+              <div class="sim__row">
+                <dt><i class="sw sw--slate" aria-hidden="true"></i>Nifty 50 <small>price index</small></dt>
+                <dd><strong class="mono" data-out="nifty-end">₹1,94,312</strong><span class="mono muted" data-out="nifty-mult">1.94×</span></dd>
+              </div>
+              <div class="sim__row sim__row--diff">
+                <dt>Difference at end of 2024</dt>
+                <dd><strong class="mono gain" data-out="diff">₹3,53,382</strong></dd>
+              </div>
+            </dl>
+          </div>
+          <div class="sim__chart">
+            <div class="sim__chart-head mono">
+              <span>VALUE · ₹</span><span>Dec 2019 → Dec 2024</span>
+            </div>
+            <div class="chart-box chart-box--growth">
+              <canvas id="growth-chart" role="img" aria-label="Line chart: a starting amount compounded through Easy Trading's client-reported yearly returns versus the Nifty 50 index from the start of 2020 to the end of 2024. With ₹1,00,000 the Easy Trading line ends near ₹5.48 lakh and the Nifty 50 line near ₹1.94 lakh."></canvas>
+            </div>
+          </div>
+        </div>
+        <p class="fine muted">Illustrative calculation using reported calendar-year returns. Ignores taxes, costs, fees and the timing of cash flows. Not a forecast or a promise of future returns.</p>
+      </div>
+    </section>
+
+    <!-- ===================== YEAR TABLE ===================== -->
+    <section class="section section--alt" id="yearly" data-performance aria-labelledby="table-title">
+      <div class="container">
+        <div class="section-head split-head">
+          <div>
+            <p class="eyebrow">The record</p>
+            <h2 id="table-title" class="h2">Year by year.</h2>
+          </div>
+          <p class="lead">Easy Trading's reported annual return next to the Nifty 50's calendar-year price return and its closing level.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="data perf-table">
+            <caption class="sr-only">Easy Trading yearly returns (client-reported, unaudited) compared with the Nifty 50 price index, 2020 to 2024</caption>
+            <thead>
+              <tr>
+                <th scope="col">Year</th>
+                <th scope="col" class="num">Easy Trading</th>
+                <th scope="col" class="num">Nifty 50</th>
+                <th scope="col" class="num">Difference</th>
+                <th scope="col" class="num">Nifty close</th>
+              </tr>
+            </thead>
+            <tbody data-perf-rows></tbody>
+            <tfoot data-perf-foot></tfoot>
+          </table>
+        </div>
+        <p class="fine muted">Difference is in percentage points (pp). Nifty close is the last trading day's closing level of the calendar year.</p>
+      </div>
+    </section>
+
+    <!-- ===================== YEARLY BARS + CONTEXT ===================== -->
+    <section class="section" id="context" data-performance aria-labelledby="context-title">
+      <div class="container">
+        <div class="section-head split-head">
+          <div>
+            <p class="eyebrow">Market context</p>
+            <h2 id="context-title" class="h2">Five different markets.</h2>
+          </div>
+          <p class="lead">Returns only mean something next to the conditions that produced them. Hover a year to highlight it on the chart.</p>
+        </div>
+        <div class="ctx">
+          <div class="ctx__chart card">
+            <div class="sim__chart-head mono"><span>ANNUAL RETURN · %</span><span class="ctx__legend"><i class="sw sw--gold" aria-hidden="true"></i>Easy Trading <i class="sw sw--slate" aria-hidden="true"></i>Nifty 50</span></div>
+            <div class="chart-box chart-box--bars">
+              <canvas id="bars-chart" role="img" aria-label="Bar chart of yearly returns. Easy Trading (client-reported): 2020 50%, 2021 39%, 2022 35%, 2023 38%, 2024 41%. Nifty 50: 2020 14.9%, 2021 24.1%, 2022 4.3%, 2023 20.0%, 2024 8.8%."></canvas>
+            </div>
+          </div>
+          <ol class="ctx__list">
+            <li tabindex="0" data-idx="0">
+              <span class="ctx__year mono">2020</span>
+              <div><h3>Pandemic crash and recovery</h3><p>Markets fell sharply in March as COVID-19 lockdowns began, then recovered on liquidity support to end the year at new highs.</p></div>
+              <span class="ctx__nums mono"><b class="gold" data-ctx-client></b><b data-ctx-nifty></b></span>
+            </li>
+            <li tabindex="0" data-idx="1">
+              <span class="ctx__year mono">2021</span>
+              <div><h3>Post-pandemic rally</h3><p>Reopening, a strong earnings rebound and heavy retail participation carried Indian equities steadily higher.</p></div>
+              <span class="ctx__nums mono"><b class="gold" data-ctx-client></b><b data-ctx-nifty></b></span>
+            </li>
+            <li tabindex="0" data-idx="2">
+              <span class="ctx__year mono">2022</span>
+              <div><h3>Rate hikes and war</h3><p>Central banks raised rates aggressively to fight inflation and the Russia–Ukraine war shook commodity markets. Indian indices ended only modestly higher.</p></div>
+              <span class="ctx__nums mono"><b class="gold" data-ctx-client></b><b data-ctx-nifty></b></span>
+            </li>
+            <li tabindex="0" data-idx="3">
+              <span class="ctx__year mono">2023</span>
+              <div><h3>Broad-based rally</h3><p>Gains spread across large, mid and small caps as inflation eased and earnings held up.</p></div>
+              <span class="ctx__nums mono"><b class="gold" data-ctx-client></b><b data-ctx-nifty></b></span>
+            </li>
+            <li tabindex="0" data-idx="4">
+              <span class="ctx__year mono">2024</span>
+              <div><h3>Record highs, then a correction</h3><p>Indices reached record highs in September before an autumn correction as foreign investors sold.</p></div>
+              <span class="ctx__nums mono"><b class="gold" data-ctx-client></b><b data-ctx-nifty></b></span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RETURN COMPOSITION ===================== -->
+    <section class="section section--alt" id="composition" data-performance aria-labelledby="comp-title">
+      <div class="container split split--wide-left comp">
+        <div>
+          <div class="section-head section-head--flush">
+            <p class="eyebrow">Return composition</p>
+            <h2 id="comp-title" class="h2">Two return engines.</h2>
+          </div>
+          <p class="lead">Our clients benefit from both equity compounding and weekly/monthly F&amp;O income. Long-term equity holdings grow capital over years; index options selling on collateral margins adds a cash-flow layer on top.</p>
+          <p class="muted">The bars show the reported yearly range of each engine. The combined bar stacks the midpoints of the two ranges, with the whisker spanning the sum of their lows and highs.</p>
+        </div>
+        <figure class="ranges card" aria-labelledby="ranges-cap">
+          <div class="ranges__axis mono" aria-hidden="true"><span style="--x:0">0%</span><span style="--x:20">10%</span><span style="--x:40">20%</span><span style="--x:60">30%</span><span style="--x:80">40%</span><span style="--x:100">50%</span></div>
+          <div class="range">
+            <div class="range__label"><span>Long-term equity</span><span class="mono gold">15–20% avg / yr</span></div>
+            <div class="range__track"><span class="range__bar range__bar--eq" style="--from:30;--to:40"></span></div>
+          </div>
+          <div class="range">
+            <div class="range__label"><span>Options selling</span><span class="mono gold">20–25% / yr</span></div>
+            <div class="range__track"><span class="range__bar range__bar--opt" style="--from:40;--to:50"></span></div>
+          </div>
+          <div class="range range--total">
+            <div class="range__label"><span>Combined</span><span class="mono gold">often exceeding 40%</span></div>
+            <div class="range__track">
+              <span class="range__seg range__seg--eq" style="--from:0;--to:35" title="Equity midpoint 17.5%"></span>
+              <span class="range__seg range__seg--opt" style="--from:35;--to:80" title="Options midpoint 22.5%"></span>
+              <span class="range__whisker" style="--from:70;--to:90"></span>
+              <span class="range__mark" style="--at:80"><span class="mono">40%</span></span>
+            </div>
+            <div class="range__keys mono"><span><i class="sw sw--gold" aria-hidden="true"></i>Equity mid 17.5%</span><span><i class="sw sw--gold2" aria-hidden="true"></i>Options mid 22.5%</span><span>Range 35–45%</span></div>
+          </div>
+          <figcaption id="ranges-cap" class="fine muted">Client-reported historical ranges, not a forecast. Ranges overlap year to year, and a single year can fall outside them. F&amp;O involves substantial risk.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== INDEX COMPARISON ===================== -->
+    <section class="section" id="compare" data-performance aria-labelledby="compare-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Against the index</p>
+          <h2 id="compare-title" class="h2">More than 2× the index CAGR.</h2>
+          <p class="lead">From 2020 to 2024, equity compounding plus F&amp;O income produced a reported CAGR more than twice that of a passive Nifty 50 holding. The computed numbers, side by side:</p>
+        </div>
+        <div class="vs">
+          <div class="vs__col vs__col--client">
+            <p class="vs__label mono">Easy Trading · client-reported</p>
+            <p class="vs__big mono gold" data-cagr-client>≈ <span>…</span></p>
+            <p class="vs__sub">5-yr CAGR · ₹1,00,000 → <span class="mono" data-end-client>…</span></p>
+            <div class="vs__bar"><span data-bar-client></span></div>
+          </div>
+          <div class="vs__mid mono" aria-hidden="true"><span data-cagr-ratio>…</span><small>the CAGR</small></div>
+          <div class="vs__col">
+            <p class="vs__label mono">Nifty 50 · price index</p>
+            <p class="vs__big mono" data-cagr-nifty>≈ <span>…</span></p>
+            <p class="vs__sub">5-yr CAGR · ₹1,00,000 → <span class="mono" data-end-nifty>…</span></p>
+            <div class="vs__bar vs__bar--slate"><span data-bar-nifty></span></div>
+          </div>
+        </div>
+        <p class="fine muted">CAGRs are computed on this page from the yearly figures in the table above. The Nifty 50 comparison excludes dividends, which would add to the index return. The comparison is against the index only.</p>
+      </div>
+    </section>
+
+    <!-- ===================== METHODOLOGY ===================== -->
+    <section class="section section--alt" id="methodology" data-performance aria-labelledby="method-title">
+      <div class="container split split--wide-left method">
+        <div>
+          <div class="section-head section-head--flush">
+            <p class="eyebrow">How the figures are computed</p>
+            <h2 id="method-title" class="h2">Methodology.</h2>
+          </div>
+          <ol class="method__list">
+            <li><span class="mono gold">01</span><div><h3>Yearly returns are client-reported</h3><p>The 2020 to 2024 annual figures (50%, 39%, 35%, 38% and 41%) are reported by Easy Trading. They have not been audited by an independent third party.</p></div></li>
+            <li><span class="mono gold">02</span><div><h3>CAGR is compounded, not averaged</h3><p>Each year's return is applied to the previous year's ending value. CAGR is the constant annual rate that turns the starting value into the final value over five years: (product of (1 + r))<sup>1/5</sup> − 1.</p></div></li>
+            <li><span class="mono gold">03</span><div><h3>Nifty 50 is the price index</h3><p>Benchmark returns use published calendar-year closing levels of the Nifty 50 price index, from 12,168.45 at the end of 2019 to 23,644.80 at the end of 2024. Dividends are excluded.</p></div></li>
+            <li><span class="mono gold">04</span><div><h3>Fees and taxes</h3><p>Whether the reported figures are gross or net of fees and charges is not specified. Taxes, brokerage and the timing of individual deposits and withdrawals are not reflected.</p></div></li>
+            <li><span class="mono gold">05</span><div><h3>Individual results differ</h3><p>Each client's return depends on when they started, the strategies used, position sizing and capital added or withdrawn. Your result may be higher or lower.</p></div></li>
+          </ol>
+        </div>
+        <aside class="method__side">
+          <div class="note note--warn">
+            <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-alert"/></svg>
+            <div>
+              <p><strong>Important disclaimer.</strong> Investments in the securities market are subject to market risks. Please read all related documents carefully before investing. Past performance may not guarantee future results.</p>
+              <p>The returns on this page are client-reported and unaudited, and are shown for information only. They are not an offer, a recommendation, or a promise or guarantee of any future return. Derivatives (F&amp;O) trading involves substantial risk of loss and may not be suitable for every investor. Returns can be lower or negative in any year.</p>
+            </div>
+          </div>
+          <a class="link-arrow" href="/legal/disclaimer.html">Read the full disclaimer <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="section section--tight" data-performance>
+      <div class="container">
+        <div class="cta-band">
+          <p class="eyebrow">Talk it through</p>
+          <h2>Ask how these numbers were made.</h2>
+          <p class="lead">A free, no-obligation conversation with a NISM-certified professional about your goals, your risk appetite and the strategies that fit.</p>
+          <div class="btn-row">
+            <a class="btn btn--gold" href="/contact.html#consult">Book a consultation <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a>
+            <a class="btn btn--ghost" href="/tools.html">Try the calculators</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- @footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Easy Trading home">
+            <img src="/assets/img/logo-256.webp" alt="" width="40" height="40" loading="lazy">
+            <span>Easy <b>Trading</b></span>
+          </a>
+          <p>Your trusted partner in wealth management and portfolio services. Capital protection, disciplined execution, long-term compounding.</p>
+          <div class="socials">
+            <a href="https://www.facebook.com/easytradinglive" target="_blank" rel="noopener" aria-label="Easy Trading on Facebook"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-facebook"/></svg></a>
+            <a href="https://youtube.com/@easytradinglive" target="_blank" rel="noopener" aria-label="Easy Trading on YouTube"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-youtube"/></svg></a>
+            <a href="https://wa.me/919891722514" target="_blank" rel="noopener" aria-label="Chat with Easy Trading on WhatsApp"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-whatsapp"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="/about.html">About us</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/performance.html">Performance</a></li>
+            <li><a href="/markets.html">Market Desk</a></li>
+            <li><a href="/tools.html">Investor tools</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Strategies</h3>
+          <ul>
+            <li><a href="/services.html#equity-portfolio">Equity portfolios</a></li>
+            <li><a href="/services.html#options-selling">Index options selling</a></li>
+            <li><a href="/services.html#ipo">IPO research</a></li>
+            <li><a href="/services.html#gold-silver">Gold &amp; silver ETFs</a></li>
+            <li><a href="/services.html#mtf">MTF optimisation</a></li>
+            <li><a href="/services.html#risk-management">Risk management</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Reach us</h3>
+          <ul class="footer-contact">
+            <li><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-phone"/></svg><a href="tel:+919891722514">+91 98917 22514</a></li>
+            <li><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-mail"/></svg><a href="mailto:contact@easytrading.co.in">contact@easytrading.co.in</a></li>
+            <li><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-pin"/></svg><span>Tower 5, UGF–A, Sahana Apartment, Chhatarpur, New Delhi – 110074</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p class="risk-disclaimer"><strong>Risk disclosure:</strong> Investments in the securities market are subject to market risks. Please read all related documents carefully before investing. Past performance may not guarantee future results. Derivatives (F&amp;O) trading involves substantial risk and may not be suitable for every investor. Returns shown on this website are client-reported and are not a promise or guarantee of future returns.</p>
+        <p data-registrations hidden></p>
+        <div class="row">
+          <span>© <span data-year>2026</span> Easy Trading. All rights reserved.</span>
+          <nav aria-label="Legal">
+            <a href="/legal/disclaimer.html">Disclaimer</a>
+            <a href="/legal/privacy.html">Privacy</a>
+            <a href="/legal/terms.html">Terms</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a class="fab-whatsapp" href="https://wa.me/919891722514?text=Hi%20Easy%20Trading%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-whatsapp"/></svg></a>
+  <!-- /@footer -->
+</body>
+</html>

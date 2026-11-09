@@ -1,0 +1,14 @@
+{
+  "name": "Easy Trading",
+  "short_name": "Easy Trading",
+  "description": "NISM-certified investment management firm in New Delhi, since 2020.",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    { "src": "/assets/img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ],
+  "theme_color": "#070b14",
+  "background_color": "#070b14",
+  "display": "standalone"
+}

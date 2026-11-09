@@ -22,26 +22,27 @@
 
   window.ET_CHART = {
     colors: {
-      gold: "#F5B800", gold2: "#FFD369", goldFill: "rgba(245,184,0,0.18)",
+      gold: "#E8B33A", gold2: "#F3D58A", goldFill: "rgba(232,179,58,0.18)",
       slate: "#7C8AA5", slateFill: "rgba(124,138,165,0.16)",
-      gain: "#2BD576", loss: "#FF5A76", grid: "rgba(255,255,255,0.06)", text: "#9AA6BD"
+      gain: "#3DDC97", loss: "#FF5C5C", grid: "rgba(255,255,255,0.06)", text: "#8E9196"
     },
     // Apply global defaults once Chart is present.
     init: function () {
       if (!window.Chart || this._done) return !!window.Chart;
       var C = window.Chart, c = this.colors;
       C.defaults.color = c.text;
-      C.defaults.font.family = "'Inter', system-ui, sans-serif";
+      C.defaults.font.family = "'Archivo', 'Helvetica Neue', Arial, sans-serif";
       C.defaults.font.size = 12;
       C.defaults.borderColor = c.grid;
       C.defaults.plugins.legend.labels.usePointStyle = true;
       C.defaults.plugins.legend.labels.boxWidth = 8;
-      C.defaults.plugins.tooltip.backgroundColor = "#0C1322";
+      C.defaults.plugins.tooltip.backgroundColor = "#0D0F12";
       C.defaults.plugins.tooltip.borderColor = "rgba(255,255,255,0.14)";
       C.defaults.plugins.tooltip.borderWidth = 1;
+      C.defaults.plugins.tooltip.cornerRadius = 2;
       C.defaults.plugins.tooltip.padding = 12;
-      C.defaults.plugins.tooltip.titleFont = { family: "'JetBrains Mono', monospace", weight: "600" };
-      C.defaults.plugins.tooltip.bodyFont = { family: "'JetBrains Mono', monospace" };
+      C.defaults.plugins.tooltip.titleFont = { family: "'IBM Plex Mono', monospace", weight: "600" };
+      C.defaults.plugins.tooltip.bodyFont = { family: "'IBM Plex Mono', monospace" };
       C.defaults.maintainAspectRatio = false;
       if (window.ET && window.ET.reduceMotion) C.defaults.animation = false;
       this._done = true;
@@ -51,7 +52,7 @@
     gradient: function (ctx, area, from, to) {
       if (!area) return from;
       var g = ctx.createLinearGradient(0, area.top, 0, area.bottom);
-      g.addColorStop(0, from); g.addColorStop(1, to || "rgba(245,184,0,0)");
+      g.addColorStop(0, from); g.addColorStop(1, to || "rgba(232,179,58,0)");
       return g;
     }
   };

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://easytrading.co.in/sitemap.xml

@@ -3,32 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Easy Trading — Portfolio Management &amp; Wealth Strategies | New Delhi</title>
+  <title>Easy Trading | Portfolio Management &amp; Wealth Strategies, New Delhi</title>
   <meta name="description" content="Easy Trading is a NISM-certified investment management firm in New Delhi, est. 2020. Equity portfolios, index options selling, IPO research, gold &amp; silver ETFs and disciplined risk management.">
   <link rel="canonical" href="https://easytrading.co.in/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Easy Trading">
-  <meta property="og:title" content="Easy Trading — Wealth, managed with discipline">
+  <meta property="og:title" content="Easy Trading | Wealth, managed with discipline">
   <meta property="og:description" content="NISM-certified investment management: equity compounding, risk-controlled F&amp;O strategies and capital protection. New Delhi, since 2020.">
   <meta property="og:url" content="https://easytrading.co.in/">
   <meta property="og:image" content="https://easytrading.co.in/assets/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://easytrading.co.in/assets/img/og-image.png">
   <!-- @head -->
-  <meta name="theme-color" content="#070b14">
+  <meta name="theme-color" content="#07080a">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icon-32.png">
   <link rel="apple-touch-icon" href="/assets/img/icon-180.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="/assets/css/main.css">
   <script src="/assets/js/config.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
   <!-- /@head -->
   <link rel="stylesheet" href="/assets/css/pages/home.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
   <script src="/assets/js/charts.js" defer></script>
+  <script src="/assets/js/hero3d.js" defer></script>
   <script src="/assets/js/pages/home.js" defer></script>
   <script type="application/ld+json">
   {
@@ -98,6 +100,7 @@
   <main id="main">
     <!-- ===================== HERO ===================== -->
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__webgl" aria-hidden="true"></div>
       <canvas class="hero__canvas" aria-hidden="true"></canvas>
       <div class="hero__glow" aria-hidden="true"></div>
       <div class="container hero__inner">
@@ -119,7 +122,7 @@
         <aside class="hero__panel glass" aria-label="Growth of ₹1 lakh, 2020 to 2024" data-performance>
           <div class="panel__head">
             <div>
-              <p class="panel__label">Growth of ₹1,00,000 · 2020–2024</p>
+              <p class="panel__label">Growth of ₹1,00,000 · 2020 to 2024</p>
               <p class="panel__value mono"><span data-count="547694" data-prefix="₹">₹5,47,694</span></p>
             </div>
             <span class="badge badge--gain">≈ 40.5% CAGR</span>
@@ -169,7 +172,7 @@
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Our philosophy</p>
-          <h2 id="philosophy-title" class="h2">Three principles. <em class="serif-i">No shortcuts.</em></h2>
+          <h2 id="philosophy-title" class="h2">Three principles behind <em class="serif-i">every position.</em></h2>
           <p class="lead">Since 2020 we have helped investors grow wealth through data-driven analysis, disciplined execution and low-risk strategies. Every position we take answers to the same three principles.</p>
         </div>
         <div class="pillars grid grid-3">

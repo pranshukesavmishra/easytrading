@@ -3,7 +3,8 @@
   "use strict";
 
   /* ---------- Candlestick backdrop ---------- */
-  var canvas = document.querySelector(".hero__canvas");
+  // The 2D candlestick backdrop is the fallback when the WebGL terrain (hero3d.js) is not running.
+  var canvas = document.querySelector(".hero:not(.has-webgl) .hero__canvas");
   if (canvas && canvas.getContext) {
     var ctx = canvas.getContext("2d");
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -47,7 +48,7 @@
         var x = i * step - offset;
         if (i === 0) ctx.moveTo(x, y(k.c)); else ctx.lineTo(x, y(k.c));
       });
-      ctx.strokeStyle = "rgba(245,184,0,0.22)";
+      ctx.strokeStyle = "rgba(232,179,58,0.22)";
       ctx.lineWidth = 1.5;
       ctx.stroke();
       candles.forEach(function (k, i) {
@@ -55,7 +56,7 @@
         var up = k.c >= k.o;
         var fade = Math.min(1, Math.max(0.15, x / W + 0.2));
         ctx.globalAlpha = 0.55 * fade;
-        ctx.strokeStyle = ctx.fillStyle = up ? "#2bd576" : "#ff5a76";
+        ctx.strokeStyle = ctx.fillStyle = up ? "#3ddc97" : "#ff5c5c";
         ctx.beginPath(); ctx.moveTo(x, y(k.h)); ctx.lineTo(x, y(k.l)); ctx.lineWidth = 1; ctx.stroke();
         var top = y(Math.max(k.o, k.c)), bot = y(Math.min(k.o, k.c));
         ctx.fillRect(x - bw / 2, top, bw, Math.max(1.5, bot - top));
@@ -108,7 +109,7 @@
               label: "Easy Trading", data: D.growthOf(100000, D.clientReturns),
               borderColor: C.gold, borderWidth: 2.5, tension: 0.35, pointRadius: 0, pointHoverRadius: 5, pointBackgroundColor: C.gold,
               fill: true,
-              backgroundColor: function (c) { return window.ET_CHART.gradient(c.chart.ctx, c.chart.chartArea, "rgba(245,184,0,0.28)", "rgba(245,184,0,0)"); }
+              backgroundColor: function (c) { return window.ET_CHART.gradient(c.chart.ctx, c.chart.chartArea, "rgba(232,179,58,0.3)", "rgba(232,179,58,0)"); }
             },
             {
               label: "Nifty 50", data: D.growthOf(100000, D.nifty50Returns),
@@ -123,9 +124,9 @@
             tooltip: { callbacks: { label: function (c) { return " " + c.dataset.label + ": " + window.ET.formatINR(c.parsed.y); } } }
           },
           scales: {
-            x: { grid: { display: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 } } },
+            x: { grid: { display: false }, ticks: { font: { family: "'IBM Plex Mono', monospace", size: 11 } } },
             y: { position: "right", grid: { color: C.grid }, border: { display: false },
-                 ticks: { maxTicksLimit: 5, font: { family: "'JetBrains Mono', monospace", size: 11 }, callback: function (v) { return window.ET.formatINRShort(v); } } }
+                 ticks: { maxTicksLimit: 5, font: { family: "'IBM Plex Mono', monospace", size: 11 }, callback: function (v) { return window.ET.formatINRShort(v); } } }
           }
         }
       });
@@ -138,8 +139,8 @@
         data: {
           labels: D.years.map(String),
           datasets: [
-            { label: "Easy Trading (client-reported)", data: D.clientReturns, backgroundColor: C.gold, borderRadius: 6, maxBarThickness: 44 },
-            { label: "Nifty 50", data: D.nifty50Returns, backgroundColor: "rgba(124,138,165,0.55)", borderRadius: 6, maxBarThickness: 44 }
+            { label: "Easy Trading (client-reported)", data: D.clientReturns, backgroundColor: C.gold, borderRadius: 1, maxBarThickness: 44 },
+            { label: "Nifty 50", data: D.nifty50Returns, backgroundColor: "rgba(124,138,165,0.55)", borderRadius: 1, maxBarThickness: 44 }
           ]
         },
         options: {
@@ -148,7 +149,7 @@
             tooltip: { callbacks: { label: function (c) { return " " + c.dataset.label + ": " + c.parsed.y.toFixed(1) + "%"; } } }
           },
           scales: {
-            x: { grid: { display: false }, ticks: { font: { family: "'JetBrains Mono', monospace" } } },
+            x: { grid: { display: false }, ticks: { font: { family: "'IBM Plex Mono', monospace" } } },
             y: { beginAtZero: true, grid: { color: C.grid }, border: { display: false }, ticks: { callback: function (v) { return v + "%"; } } }
           }
         }
