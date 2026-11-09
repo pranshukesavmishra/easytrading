@@ -15,13 +15,13 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://easytrading.co.in/assets/img/og-image.png">
   <!-- @head -->
-  <meta name="theme-color" content="#fbfaf6">
+  <meta name="theme-color" content="#f4f7fd">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icon-32.png">
   <link rel="apple-touch-icon" href="/assets/img/icon-180.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="/assets/css/main.css">
   <script src="/assets/js/config.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
@@ -102,6 +102,8 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__webgl" aria-hidden="true"></div>
       <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <span class="hero__orb hero__orb--a" aria-hidden="true"></span>
+      <span class="hero__orb hero__orb--b" aria-hidden="true"></span>
       <div class="container hero__inner">
         <div class="hero__copy">
           <p class="hero__kicker"><span class="dot" aria-hidden="true"></span> NISM-certified · New Delhi · Since 2020</p>
@@ -118,21 +120,32 @@
           </ul>
         </div>
 
-        <aside class="hero__panel glass" aria-label="Growth of ₹1 lakh, 2020 to 2024" data-performance>
-          <div class="panel__head">
-            <div>
-              <p class="panel__label">Growth of ₹1,00,000 · 2020 to 2024</p>
-              <p class="panel__value mono">₹5,47,694</p>
+        <div class="hero__stage">
+          <article class="float float--approach glass" aria-label="Our approach">
+            <p class="float__label">Our approach</p>
+            <ul class="approach">
+              <li><span class="approach__ic"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-shield"/></svg></span><span><strong>Capital protection</strong><small>Risk defined first</small></span></li>
+              <li><span class="approach__ic"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-target"/></svg></span><span><strong>Disciplined execution</strong><small>Rules over emotions</small></span></li>
+              <li><span class="approach__ic"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-trending"/></svg></span><span><strong>Long-term compounding</strong><small>Time does the heavy lifting</small></span></li>
+            </ul>
+          </article>
+          <aside class="float float--perf glass" aria-label="Growth of ₹1 lakh, 2020 to 2024" data-performance>
+            <div class="panel__head">
+              <div>
+                <p class="panel__label">Growth of ₹1,00,000 · 2020 to 2024</p>
+                <p class="panel__value mono">₹5,47,694</p>
+              </div>
+              <span class="badge badge--gain">≈ 40.5% CAGR</span>
             </div>
-            <span class="badge badge--gain">≈ 40.5% CAGR</span>
-          </div>
-          <div class="panel__chart"><canvas id="hero-chart" role="img" aria-label="Line chart: ₹1 lakh grows to about ₹5.48 lakh with Easy Trading's client-reported returns, versus about ₹1.94 lakh in the Nifty 50 index, from 2020 to 2024."></canvas></div>
-          <div class="panel__legend">
-            <span><i class="sw sw--gold"></i> Easy Trading <small>(client-reported)</small></span>
-            <span><i class="sw sw--slate"></i> Nifty 50 <small>≈ ₹1,94,312</small></span>
-          </div>
-          <p class="panel__fine">Client-reported and unaudited. Past performance is not indicative of future returns. <a href="/performance.html#methodology">Methodology</a></p>
-        </aside>
+            <div class="panel__chart"><canvas id="hero-chart" role="img" aria-label="Line chart: ₹1 lakh grows to about ₹5.48 lakh with Easy Trading's client-reported returns, versus about ₹1.94 lakh in the Nifty 50 index, from 2020 to 2024."></canvas></div>
+            <div class="panel__legend">
+              <span><i class="sw sw--gold"></i> Easy Trading <small>(client-reported)</small></span>
+              <span><i class="sw sw--slate"></i> Nifty 50 <small>≈ ₹1,94,312</small></span>
+            </div>
+            <p class="panel__fine">Client-reported and unaudited. Past performance is not indicative of future returns. <a href="/performance.html#methodology">Methodology</a></p>
+          </aside>
+          <div class="float float--chip glass"><span class="dot" aria-hidden="true"></span> Established 2020 · New Delhi</div>
+        </div>
       </div>
     </section>
 
@@ -142,9 +155,9 @@
     </div>
 
     <!-- ===================== AT A GLANCE ===================== -->
-    <section class="section--tight" aria-label="Easy Trading at a glance">
+    <section class="glance" aria-label="Easy Trading at a glance">
       <div class="container">
-        <div class="stats grid grid-4">
+        <div class="glance__band glass">
           <div class="stat reveal"><div class="stat__value">2020</div><div class="stat__label">Established in New Delhi</div></div>
           <div class="stat reveal reveal-delay-1"><div class="stat__value">NISM</div><div class="stat__label">Certified professionals</div></div>
           <div class="stat reveal reveal-delay-2"><div class="stat__value"><span data-count="100" data-suffix="+">100+</span></div><div class="stat__label">Active clients</div></div>
@@ -153,49 +166,109 @@
       </div>
     </section>
 
-    <!-- ===================== SERVICES ===================== -->
-    <section class="section section--alt" aria-labelledby="services-title">
-      <div class="container svc-layout">
-        <div class="svc-intro reveal">
-          <p class="eyebrow">What we do</p>
-          <h2 id="services-title" class="h2">Eight services, <em class="serif-i">built around you.</em></h2>
-          <p class="lead">Stable, cash-flow-oriented investment models backed by disciplined risk frameworks, combined to suit your goals and your appetite for risk.</p>
-          <a class="btn btn--navy" href="/services.html">See every service <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a>
+    <!-- ===================== SERVICES (BENTO) ===================== -->
+    <section class="section" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head split-head reveal">
+          <div>
+            <p class="eyebrow">What we do</p>
+            <h2 id="services-title" class="h2">Eight services, <em class="serif-i">built around you.</em></h2>
+          </div>
+          <div>
+            <p class="lead">Stable, cash-flow-oriented investment models backed by disciplined risk frameworks, combined to suit your goals and your appetite for risk.</p>
+            <a class="link-arrow" href="/services.html">See every service <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a>
+          </div>
         </div>
-        <ol class="svc-list">
-          <li class="reveal"><a href="/services.html#equity-portfolio"><span class="svc__n">01</span><span class="svc__t"><strong>Long-term equity portfolio management</strong><small>Research-led portfolios of quality businesses, held for compounding.</small></span><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a></li>
-          <li class="reveal"><a href="/services.html#options-selling"><span class="svc__n">02</span><span class="svc__t"><strong>Index options selling</strong><small>Nifty and Sensex option writing using collateral margins for regular cash flow.</small></span><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a></li>
-          <li class="reveal"><a href="/services.html#weekly-expiry"><span class="svc__n">03</span><span class="svc__t"><strong>Weekly expiry strategies</strong><small>Rule-based setups around weekly index expiries.</small></span><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a></li>
-          <li class="reveal"><a href="/services.html#ipo"><span class="svc__n">04</span><span class="svc__t"><strong>IPO research and listing strategies</strong><small>Issue-by-issue research and premium-listing strategies.</small></span><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a></li>
-          <li class="reveal"><a href="/services.html#intraday-swing"><span class="svc__n">05</span><span class="svc__t"><strong>Intraday and swing trading</strong><small>Short-horizon, technically driven trades with strict stop-losses.</small></span><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a></li>
-          <li class="reveal"><a href="/services.html#gold-silver"><span class="svc__n">06</span><span class="svc__t"><strong>Gold and silver ETFs</strong><small>Commodity allocation for diversification and as a hedge.</small></span><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a></li>
-          <li class="reveal"><a href="/services.html#mtf"><span class="svc__n">07</span><span class="svc__t"><strong>Margin trading facility optimisation</strong><small>Careful, cost-aware use of margin funding.</small></span><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a></li>
-          <li class="reveal"><a href="/services.html#risk-management"><span class="svc__n">08</span><span class="svc__t"><strong>Portfolio structuring and risk management</strong><small>Allocation, hedging and risk limits that tie everything together.</small></span><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a></li>
-        </ol>
+        <div class="bento">
+          <a class="bento__tile bento__tile--feature reveal" href="/services.html#equity-portfolio">
+            <span class="bento__n">01</span>
+            <span class="bento__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-trending"/></svg></span>
+            <strong>Long-term equity portfolio management</strong>
+            <small>Research-led portfolios of quality businesses, held for compounding. The core that every other strategy supports.</small>
+            <span class="bento__go" aria-hidden="true"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></span>
+          </a>
+          <a class="bento__tile  reveal" href="/services.html#options-selling">
+            <span class="bento__n">02</span>
+            <span class="bento__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-layers"/></svg></span>
+            <strong>Index options selling</strong>
+            <small>Nifty and Sensex option writing using collateral margins.</small>
+            <span class="bento__go" aria-hidden="true"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></span>
+          </a>
+          <a class="bento__tile  reveal" href="/services.html#weekly-expiry">
+            <span class="bento__n">03</span>
+            <span class="bento__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-calendar"/></svg></span>
+            <strong>Weekly expiry strategies</strong>
+            <small>Rule-based setups around weekly index expiries.</small>
+            <span class="bento__go" aria-hidden="true"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></span>
+          </a>
+          <a class="bento__tile  reveal" href="/services.html#ipo">
+            <span class="bento__n">04</span>
+            <span class="bento__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-rocket"/></svg></span>
+            <strong>IPO research and listing strategies</strong>
+            <small>Issue-by-issue research and premium-listing strategies.</small>
+            <span class="bento__go" aria-hidden="true"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></span>
+          </a>
+          <a class="bento__tile  reveal" href="/services.html#intraday-swing">
+            <span class="bento__n">05</span>
+            <span class="bento__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-candles"/></svg></span>
+            <strong>Intraday and swing trading</strong>
+            <small>Short-horizon, technically driven trades.</small>
+            <span class="bento__go" aria-hidden="true"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></span>
+          </a>
+          <a class="bento__tile  reveal" href="/services.html#gold-silver">
+            <span class="bento__n">06</span>
+            <span class="bento__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-coins"/></svg></span>
+            <strong>Gold and silver ETFs</strong>
+            <small>Commodity allocation for diversification.</small>
+            <span class="bento__go" aria-hidden="true"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></span>
+          </a>
+          <a class="bento__tile  reveal" href="/services.html#mtf">
+            <span class="bento__n">07</span>
+            <span class="bento__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-percent"/></svg></span>
+            <strong>Margin trading facility optimisation</strong>
+            <small>Careful, cost-aware use of margin funding.</small>
+            <span class="bento__go" aria-hidden="true"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></span>
+          </a>
+          <a class="bento__tile bento__tile--wide reveal" href="/services.html#risk-management">
+            <span class="bento__n">08</span>
+            <span class="bento__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-pie"/></svg></span>
+            <strong>Portfolio structuring and risk management</strong>
+            <small>Allocation, hedging and risk limits that tie everything together.</small>
+            <span class="bento__go" aria-hidden="true"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></span>
+          </a>
+        </div>
       </div>
     </section>
+
+    <!-- ===================== MARQUEE ===================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Equity portfolios</span><i></i><span>Index options</span><i></i><span>IPO research</span><i></i><span>Intraday &amp; swing</span><i></i><span>Gold &amp; silver ETFs</span><i></i><span>Margin trading</span><i></i><span>Risk management</span><i></i>
+        <span>Equity portfolios</span><i></i><span>Index options</span><i></i><span>IPO research</span><i></i><span>Intraday &amp; swing</span><i></i><span>Gold &amp; silver ETFs</span><i></i><span>Margin trading</span><i></i><span>Risk management</span><i></i>
+      </div>
+    </div>
 
     <!-- ===================== PHILOSOPHY ===================== -->
     <section class="section" aria-labelledby="philosophy-title">
       <div class="container">
-        <div class="section-head center reveal">
+        <div class="section-head reveal">
           <p class="eyebrow">Our philosophy</p>
           <h2 id="philosophy-title" class="h2">Three principles behind <em class="serif-i">every position.</em></h2>
           <p class="lead">Since 2020 we have helped investors grow their wealth through data-driven analysis, disciplined execution and low-risk strategies.</p>
         </div>
-        <div class="pillars grid grid-3">
-          <article class="pillar card reveal">
-            <div class="icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-shield"/></svg></div>
+        <div class="principles">
+          <article class="principle reveal">
+            <span class="principle__n" aria-hidden="true">01</span>
             <h3>Capital protection</h3>
-            <p>Risk is defined before return is chased. Position sizing, hedges and collateral-backed margins are part of every strategy from day one.</p>
+            <p>Risk is defined before return is chased. Position sizing, hedges and collateral-backed margins are part of the framework from day one.</p>
           </article>
-          <article class="pillar card reveal reveal-delay-1">
-            <div class="icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-target"/></svg></div>
+          <article class="principle reveal reveal-delay-1">
+            <span class="principle__n" aria-hidden="true">02</span>
             <h3>Disciplined execution</h3>
-            <p>Rules over emotions. Entries, exits and adjustments follow tested frameworks, so decisions stay consistent when markets are not.</p>
+            <p>Rules over emotions. Entries, exits and adjustments follow defined frameworks, so decisions stay consistent when markets are not.</p>
           </article>
-          <article class="pillar card reveal reveal-delay-2">
-            <div class="icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-trending"/></svg></div>
+          <article class="principle reveal reveal-delay-2">
+            <span class="principle__n" aria-hidden="true">03</span>
             <h3>Long-term compounding</h3>
             <p>Quality equity held with patience, topped up by cash flow from options income. Time in the market does the heavy lifting.</p>
           </article>
@@ -204,7 +277,7 @@
     </section>
 
     <!-- ===================== PROCESS ===================== -->
-    <section class="section section--navy" aria-labelledby="process-title">
+    <section class="section section--navy process-band" aria-labelledby="process-title">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">How we work</p>

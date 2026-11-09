@@ -24,7 +24,7 @@
   if (hero) hero.classList.add("has-webgl");
 
   var scene = new THREE.Scene();
-  scene.fog = new THREE.FogExp2(0xfbfaf6, 0.035);
+  scene.fog = new THREE.FogExp2(0xf4f7fd, 0.035);
   var camera = new THREE.PerspectiveCamera(48, 1, 0.1, 100);
   var camBase = new THREE.Vector3(0, 2.4, 8.6);
   camera.position.copy(camBase);
@@ -71,7 +71,7 @@
   var terrain = new THREE.Points(geo, mat);
   scene.add(terrain);
 
-  var gold = new THREE.Color(0xc99a2e), deep = new THREE.Color(0x4f6c9c), hot = new THREE.Color(0xa8741a);
+  var gold = new THREE.Color(0x2f6bff), deep = new THREE.Color(0x19c3d6), hot = new THREE.Color(0x1d55e6);
   var tmp = new THREE.Color();
 
   function heightAt(x, z, t) {
@@ -91,12 +91,12 @@
   var tracePos = new Float32Array(TRACE_N * 3);
   var traceGeo = new THREE.BufferGeometry();
   traceGeo.setAttribute("position", new THREE.BufferAttribute(tracePos, 3));
-  var trace = new THREE.Line(traceGeo, new THREE.LineBasicMaterial({ color: 0x0b2447, transparent: true, opacity: 0.9 }));
+  var trace = new THREE.Line(traceGeo, new THREE.LineBasicMaterial({ color: 0x0a1538, transparent: true, opacity: 0.9 }));
   scene.add(trace);
-  var head = new THREE.Sprite(new THREE.SpriteMaterial({ map: sprite, color: 0x0b2447, transparent: true, depthWrite: false }));
+  var head = new THREE.Sprite(new THREE.SpriteMaterial({ map: sprite, color: 0x0a1538, transparent: true, depthWrite: false }));
   head.scale.set(0.55, 0.55, 1);
   scene.add(head);
-  var halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: sprite, color: 0xe2b13c, transparent: true, opacity: 0.45, depthWrite: false }));
+  var halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: sprite, color: 0x19c3d6, transparent: true, opacity: 0.45, depthWrite: false }));
   halo.scale.set(1.8, 1.8, 1);
   scene.add(halo);
 

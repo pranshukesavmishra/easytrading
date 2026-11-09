@@ -27,8 +27,31 @@
   /* ---------- Computed CAGR figures ---------- */
   var cagrC = D.cagr(D.clientReturns), cagrN = D.cagr(D.nifty50Returns);
   var endC = D.growthOf(100000, D.clientReturns).pop(), endN = D.growthOf(100000, D.nifty50Returns).pop();
-  $$("[data-cagr-client] span").forEach(function (el) { el.textContent = pct1(cagrC) + "%"; });
-  $$("[data-cagr-nifty] span").forEach(function (el) { el.textContent = pct1(cagrN) + "%"; });
+  var reduce = (ET.reduceMotion !== undefined ? ET.reduceMotion : (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches));
+  // Count-up for the big CAGR numerals (final value is written straight away when motion is reduced or unsupported).
+  var cio = (!reduce && "IntersectionObserver" in window) ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      cio.unobserve(en.target);
+      var el = en.target, to = +el.getAttribute("data-to"), t0 = null;
+      requestAnimationFrame(function step(ts) {
+        if (!t0) t0 = ts;
+        var p = Math.min((ts - t0) / 1500, 1);
+        el.textContent = pct1(to * (1 - Math.pow(1 - p, 4))) + "%";
+        if (p < 1) requestAnimationFrame(step); else el.textContent = pct1(to) + "%";
+      });
+    });
+  }, { threshold: 0.4 }) : null;
+  var setCagr = function (sel, val) {
+    $$(sel + " span").forEach(function (el) {
+      el.textContent = pct1(val) + "%";
+      if (cio && /(^|\s)(hero-card__big|vs__big)(\s|$)/.test(el.parentNode.className)) {
+        el.setAttribute("data-to", val); el.textContent = pct1(0) + "%"; cio.observe(el);
+      }
+    });
+  };
+  setCagr("[data-cagr-client]", cagrC);
+  setCagr("[data-cagr-nifty]", cagrN);
   $$("[data-end-client]").forEach(function (el) { el.textContent = ET.formatINR(endC); });
   $$("[data-end-nifty]").forEach(function (el) { el.textContent = ET.formatINR(endN); });
   $$("[data-cagr-ratio]").forEach(function (el) { el.textContent = (cagrC / cagrN).toFixed(1) + "×"; });
@@ -45,17 +68,18 @@
     var html = "";
     D.years.forEach(function (y, i) {
       var c = D.clientReturns[i], n = D.nifty50Returns[i], d = c - n;
-      html += "<tr><th scope=\"row\" class=\"mono\">" + y + "</th>" +
-        "<td class=\"num " + cls(c) + "\">" + signed(c, 1) + "%</td>" +
-        "<td class=\"num " + cls(n) + "\">" + signed(n, 1) + "%</td>" +
-        "<td class=\"num " + cls(d) + "\">" + signed(d, 1) + " pp</td>" +
+      var bar = function (v, k) { return "<span class=\"cellbar" + k + "\" aria-hidden=\"true\"><i style=\"--w:" + Math.max(2, Math.min(100, Math.abs(v) / 55 * 100)).toFixed(1) + "%\"></i></span>"; };
+      html += "<tr><th scope=\"row\">" + y + "</th>" +
+        "<td class=\"num " + cls(c) + "\"><span class=\"cell\">" + bar(c, "") + "<span>" + signed(c, 1) + "%</span></span></td>" +
+        "<td class=\"num " + cls(n) + "\"><span class=\"cell\">" + bar(n, " cellbar--slate") + "<span>" + signed(n, 1) + "%</span></span></td>" +
+        "<td class=\"num\"><span class=\"pp\">" + signed(d, 1) + " pp</span></td>" +
         "<td class=\"num\">" + fmtClose(closes[y]) + "</td></tr>";
     });
     tbody.innerHTML = html;
     var base = D.years[0] - 1;
     if (tfoot) {
       tfoot.innerHTML =
-        "<tr class=\"perf-table__base\"><th scope=\"row\" class=\"mono\">" + base + " close</th><td class=\"num muted\" colspan=\"3\">Starting level for 2020</td><td class=\"num\">" +
+        "<tr class=\"perf-table__base\"><th scope=\"row\">" + base + " close</th><td class=\"num muted\" colspan=\"3\">Starting level for 2020</td><td class=\"num\">" +
         fmtClose(closes[base]) + "</td></tr>" +
         "<tr class=\"perf-table__total\"><th scope=\"row\">5-yr CAGR</th><td class=\"num gold\">≈ " + pct1(cagrC) + "%</td><td class=\"num\">≈ " + pct1(cagrN) +
         "%</td><td class=\"num gain\">" + signed(cagrC - cagrN, 1) + " pp</td><td class=\"num muted\">" +
@@ -140,9 +164,9 @@
           datasets: [
             {
               label: "Easy Trading (client-reported)", data: D.growthOf(amount, D.clientReturns),
-              borderColor: C.gold, borderWidth: 2.5, tension: 0.3, pointRadius: 3, pointHoverRadius: 6,
+              borderColor: C.gold, borderWidth: 2.5, tension: 0.3, pointRadius: 4, pointHoverRadius: 7, pointBorderColor: "#fff", pointBorderWidth: 2,
               pointBackgroundColor: C.gold, fill: true,
-              backgroundColor: function (c) { return window.ET_CHART.gradient(c.chart.ctx, c.chart.chartArea, "rgba(226,177,60,0.22)", "rgba(226,177,60,0)"); }
+              backgroundColor: function (c) { return window.ET_CHART.gradient(c.chart.ctx, c.chart.chartArea, "rgba(47,107,255,0.30)", "rgba(25,195,214,0)"); }
             },
             {
               label: "Nifty 50", data: D.growthOf(amount, D.nifty50Returns),
@@ -155,7 +179,7 @@
           interaction: { mode: "index", intersect: false },
           plugins: {
             legend: { display: false },
-            tooltip: { callbacks: { label: function (c) { return " " + c.dataset.label + ": " + ET.formatINR(c.parsed.y); } } }
+            tooltip: { cornerRadius: 12, callbacks: { label: function (c) { return " " + c.dataset.label + ": " + ET.formatINR(c.parsed.y); } } }
           },
           scales: {
             x: { grid: { display: false }, ticks: { font: mono, maxRotation: 0, autoSkip: true,
@@ -174,15 +198,15 @@
         data: {
           labels: D.years.map(String),
           datasets: [
-            { label: "Easy Trading (client-reported)", data: D.clientReturns, backgroundColor: C.gold, hoverBackgroundColor: C.gold2, borderRadius: 4, maxBarThickness: 40 },
-            { label: "Nifty 50", data: D.nifty50Returns, backgroundColor: C.slate, hoverBackgroundColor: C.slate, borderRadius: 4, maxBarThickness: 40 }
+            { label: "Easy Trading (client-reported)", data: D.clientReturns, backgroundColor: C.gold, hoverBackgroundColor: C.gold2, borderRadius: 8, maxBarThickness: 36 },
+            { label: "Nifty 50", data: D.nifty50Returns, backgroundColor: C.slate, hoverBackgroundColor: C.slate, borderRadius: 8, maxBarThickness: 36 }
           ]
         },
         options: {
           interaction: { mode: "index", intersect: false },
           plugins: {
             legend: { display: false },
-            tooltip: { callbacks: { label: function (c) { return " " + c.dataset.label + ": " + c.parsed.y.toFixed(1) + "%"; } } }
+            tooltip: { cornerRadius: 12, callbacks: { label: function (c) { return " " + c.dataset.label + ": " + c.parsed.y.toFixed(1) + "%"; } } }
           },
           onHover: function (e, els) { highlight(els.length ? els[0].index : -1, false); },
           scales: {

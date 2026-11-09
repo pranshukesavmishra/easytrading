@@ -16,7 +16,7 @@ const out = process.argv[3] || ".";
     page.on("response", (r) => { if (r.url().includes("localhost") && r.status() >= 400) errors.push(r.status() + " " + r.url()); });
     await page.goto("http://localhost:8080" + path, { waitUntil: "load", timeout: 60000 });
     // scroll through to trigger reveals / lazy embeds
-    await page.evaluate(async () => { for (let y = 0; y < document.documentElement.scrollHeight; y += 400) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 160)); } window.scrollTo(0, 0); });
+    await page.evaluate(async () => { for (let y = 0; y < document.documentElement.scrollHeight; y += 400) { window.scrollTo({ top: y, behavior: "instant" }); await new Promise(r => setTimeout(r, 160)); } window.scrollTo({ top: 0, behavior: "instant" }); });
     await page.waitForTimeout(2500);
     const hiddenReveals = await page.evaluate(() => document.querySelectorAll(".reveal:not(.is-visible)").length);
     if (hiddenReveals) errors.push("reveal elements still hidden: " + hiddenReveals);

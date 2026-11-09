@@ -28,7 +28,7 @@
 
   window.ET_CHART = {
     colors: {
-      gold: "#C99A2E", gold2: "#E2B13C", goldFill: "rgba(226,177,60,0.2)",
+      gold: "#2F6BFF", gold2: "#19C3D6", goldFill: "rgba(47,107,255,0.2)",
       slate: "#8B98AB", slateFill: "rgba(139,152,171,0.18)",
       gain: "#0B7A4B", loss: "#B42318", grid: "rgba(11,27,51,0.08)", text: "#5B6A7D"
     },
@@ -37,7 +37,7 @@
       if (!window.Chart || this._done) return !!window.Chart;
       var C = window.Chart, c = this.colors;
       C.defaults.color = c.text;
-      C.defaults.font.family = "'Plus Jakarta Sans', system-ui, sans-serif";
+      C.defaults.font.family = "'Figtree', system-ui, sans-serif";
       C.defaults.font.size = 12;
       C.defaults.borderColor = c.grid;
       C.defaults.plugins.legend.labels.usePointStyle = true;
@@ -59,7 +59,7 @@
     gradient: function (ctx, area, from, to) {
       if (!area) return from;
       var g = ctx.createLinearGradient(0, area.top, 0, area.bottom);
-      g.addColorStop(0, from); g.addColorStop(1, to || "rgba(226,177,60,0)");
+      g.addColorStop(0, from); g.addColorStop(1, to || "rgba(47,107,255,0)");
       return g;
     }
   };

@@ -48,7 +48,7 @@
         var x = i * step - offset;
         if (i === 0) ctx.moveTo(x, y(k.c)); else ctx.lineTo(x, y(k.c));
       });
-      ctx.strokeStyle = "rgba(232,179,58,0.22)";
+      ctx.strokeStyle = "rgba(47,107,255,0.22)";
       ctx.lineWidth = 1.5;
       ctx.stroke();
       candles.forEach(function (k, i) {
@@ -109,7 +109,7 @@
               label: "Easy Trading", data: D.growthOf(100000, D.clientReturns),
               borderColor: C.gold, borderWidth: 2.5, tension: 0.35, pointRadius: 0, pointHoverRadius: 5, pointBackgroundColor: C.gold,
               fill: true,
-              backgroundColor: function (c) { return window.ET_CHART.gradient(c.chart.ctx, c.chart.chartArea, "rgba(226,177,60,0.35)", "rgba(226,177,60,0)"); }
+              backgroundColor: function (c) { return window.ET_CHART.gradient(c.chart.ctx, c.chart.chartArea, "rgba(47,107,255,0.35)", "rgba(47,107,255,0)"); }
             },
             {
               label: "Nifty 50", data: D.growthOf(100000, D.nifty50Returns),
