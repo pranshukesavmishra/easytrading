@@ -15,13 +15,13 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://easytrading.co.in/assets/img/og-image.png">
   <!-- @head -->
-  <meta name="theme-color" content="#fbfaf6">
+  <meta name="theme-color" content="#f4f7fd">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icon-32.png">
   <link rel="apple-touch-icon" href="/assets/img/icon-180.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="/assets/css/main.css">
   <script src="/assets/js/config.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
@@ -122,32 +122,45 @@
         <h1 id="page-title">Wealth management built on <em class="serif-i">discipline.</em></h1>
         <p class="lead">Easy Trading is a NISM-certified investment management firm, established in 2020 in New Delhi. We build stable, cash-flow-oriented investment models backed by disciplined risk frameworks.</p>
         <dl class="fact-strip">
-          <div><dt>Established</dt><dd class="mono">2020</dd></div>
-          <div><dt>Based in</dt><dd>New Delhi</dd></div>
-          <div><dt>Certification</dt><dd>NISM</dd></div>
-          <div><dt>Strategies</dt><dd class="mono">8</dd></div>
+          <div class="reveal"><dt>Established</dt><dd class="mono">2020</dd></div>
+          <div class="reveal reveal-delay-1"><dt>Based in</dt><dd>New Delhi</dd></div>
+          <div class="reveal reveal-delay-2"><dt>Certification</dt><dd>NISM</dd></div>
+          <div class="reveal reveal-delay-3"><dt>Strategies</dt><dd class="mono">8</dd></div>
         </dl>
       </div>
     </section>
 
-    <!-- ===================== WHO WE ARE ===================== -->
-    <section class="section section--line" aria-labelledby="who-title">
-      <div class="container who">
-        <div class="who__intro reveal">
+    <!-- ===================== WHO WE ARE (bento) ===================== -->
+    <section class="section who-section" aria-labelledby="who-title">
+      <div class="container">
+        <div class="section-head reveal">
           <p class="eyebrow">Who we are</p>
-          <h2 id="who-title" class="h2">One firm, five asset classes, one rulebook.</h2>
+          <h2 id="who-title" class="h2">One firm, five asset classes, <em class="serif-i">one rulebook.</em></h2>
         </div>
-        <div class="who__body reveal reveal-delay-1">
-          <p class="who__statement">Easy Trading is a NISM-certified investment management firm offering structured solutions across Equity, Futures &amp; Options (F&amp;O), IPOs, Intraday Trading, and Commodity ETFs (Gold &amp; Silver).</p>
-          <p class="muted">Since 2020 we have helped investors grow their wealth through data-driven analysis, disciplined execution and low-risk strategies. We specialise in building stable, cash-flow-oriented investment models backed by disciplined risk frameworks.</p>
-          <ul class="asset-index" aria-label="Asset classes we work across">
-            <li><span class="mono">A</span><span>Equity</span><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-trending"/></svg></li>
-            <li><span class="mono">B</span><span>Futures &amp; Options</span><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-layers"/></svg></li>
-            <li><span class="mono">C</span><span>IPOs</span><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-rocket"/></svg></li>
-            <li><span class="mono">D</span><span>Intraday Trading</span><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-candles"/></svg></li>
-            <li><span class="mono">E</span><span>Gold &amp; Silver ETFs</span><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-coins"/></svg></li>
-          </ul>
-          <a class="link-arrow" href="/services.html">See all eight strategies <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a>
+        <div class="bento who-bento">
+          <article class="tile tile--statement reveal">
+            <p class="who__statement">A NISM-certified investment management firm offering structured solutions across Equity, Futures &amp; Options (F&amp;O), IPOs, Intraday Trading, and Commodity ETFs (Gold &amp; Silver).</p>
+            <p class="tile__muted">Since 2020 we have helped investors grow their wealth through data-driven analysis, disciplined execution and low-risk strategies. We specialise in building stable, cash-flow-oriented investment models backed by disciplined risk frameworks.</p>
+          </article>
+          <article class="tile tile--numeral reveal reveal-delay-1">
+            <p class="numeral" aria-hidden="true">2020</p>
+            <p class="tile__label"><span class="sr-only">Established in </span>New Delhi, 2020</p>
+          </article>
+          <article class="tile tile--assets reveal reveal-delay-2">
+            <h3 class="tile__title">Asset classes we work across</h3>
+            <ul class="asset-chips" aria-label="Asset classes we work across">
+              <li><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-trending"/></svg>Equity</li>
+              <li><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-layers"/></svg>Futures &amp; Options</li>
+              <li><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-rocket"/></svg>IPOs</li>
+              <li><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-candles"/></svg>Intraday Trading</li>
+              <li><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-coins"/></svg>Gold &amp; Silver ETFs</li>
+            </ul>
+          </article>
+          <a class="tile tile--link reveal reveal-delay-3" href="/services.html">
+            <span class="numeral numeral--sm" aria-hidden="true">8</span>
+            <span class="tile__label">See all eight strategies</span>
+            <svg class="tile__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg>
+          </a>
         </div>
       </div>
     </section>
@@ -158,86 +171,73 @@
         <div class="section-head split-head reveal">
           <div>
             <p class="eyebrow">Philosophy</p>
-            <h2 id="philosophy-title" class="h2">Three principles, in order of priority.</h2>
+            <h2 id="philosophy-title" class="h2">Three principles, <em class="serif-i">in order of priority.</em></h2>
           </div>
           <p class="lead">The order matters. Protection comes before execution, and execution comes before compounding, because a portfolio can only compound what it keeps.</p>
         </div>
         <ol class="principles">
           <li class="principle reveal">
-            <span class="principle__num mono" aria-hidden="true">01</span>
-            <div class="principle__title">
-              <h3>Capital protection</h3>
-              <p class="principle__tag mono">Risk is defined first</p>
-            </div>
-            <div class="principle__body">
-              <p>Before a position is taken, we decide how much it can lose and what happens if it does. Position sizing, hedges and collateral-backed margins are set at the start, not added after a bad day.</p>
-              <ul class="principle__points">
-                <li>Maximum loss known before entry</li>
-                <li>Hedged or defined-risk derivative structures</li>
-                <li>Exposure sized to the whole portfolio</li>
-              </ul>
-            </div>
+            <span class="principle__num" aria-hidden="true">01</span>
+            <h3>Capital protection</h3>
+            <p class="principle__tag">Risk is considered first</p>
+            <p>Before a position is taken, we aim to define how much it could lose and what happens if it does. Position sizing, hedges and collateral-backed margins are planned at the start, not added after a bad day.</p>
+            <ul class="principle__points">
+              <li>Risk limits considered before entry</li>
+              <li>Derivative positions built around risk controls</li>
+              <li>Exposure viewed across the whole portfolio</li>
+            </ul>
           </li>
-          <li class="principle reveal">
-            <span class="principle__num mono" aria-hidden="true">02</span>
-            <div class="principle__title">
-              <h3>Disciplined execution</h3>
-              <p class="principle__tag mono">Rules over reactions</p>
-            </div>
-            <div class="principle__body">
-              <p>Markets reward process more reliably than prediction. Entries, exits and adjustments follow written frameworks, so decisions look the same on a calm Monday as on a volatile expiry day.</p>
-              <ul class="principle__points">
-                <li>Pre-planned entries, exits and adjustments</li>
-                <li>Data-driven analysis behind every decision</li>
-                <li>Regular updates so you see what was done and why</li>
-              </ul>
-            </div>
+          <li class="principle reveal reveal-delay-1">
+            <span class="principle__num" aria-hidden="true">02</span>
+            <h3>Disciplined execution</h3>
+            <p class="principle__tag">Rules over reactions</p>
+            <p>Markets reward process more reliably than prediction. Entries, exits and adjustments follow written frameworks, so decisions aim to look the same on a calm Monday as on a volatile expiry day.</p>
+            <ul class="principle__points">
+              <li>Planned entries, exits and adjustments</li>
+              <li>Data-driven analysis behind decisions</li>
+              <li>Consistent updates on what was done and why</li>
+            </ul>
           </li>
-          <li class="principle reveal">
-            <span class="principle__num mono" aria-hidden="true">03</span>
-            <div class="principle__title">
-              <h3>Long-term compounding</h3>
-              <p class="principle__tag mono">Time does the heavy lifting</p>
-            </div>
-            <div class="principle__body">
-              <p>Quality equity, held with patience, is the core. Cash flow from options income and tactical opportunities supports it, but never replaces it. The goal is wealth that keeps growing across market cycles.</p>
-              <ul class="principle__points">
-                <li>Equity held for years, not weeks</li>
-                <li>Income strategies that support the core</li>
-                <li>Periodic rebalancing back to plan</li>
-              </ul>
-            </div>
+          <li class="principle reveal reveal-delay-2">
+            <span class="principle__num" aria-hidden="true">03</span>
+            <h3>Long-term compounding</h3>
+            <p class="principle__tag">Time does the heavy lifting</p>
+            <p>Quality equity, held with patience, is the core. Cash flow from options income and tactical opportunities supports it, but does not replace it. The aim is wealth that keeps growing across market cycles.</p>
+            <ul class="principle__points">
+              <li>Equity held for years, not weeks</li>
+              <li>Income strategies that support the core</li>
+              <li>Rebalancing considered against the plan</li>
+            </ul>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- ===================== VISION ===================== -->
-    <section class="section vision" aria-labelledby="vision-title">
-      <div class="container">
-        <div class="vision__head reveal">
-          <p class="eyebrow">Vision</p>
-          <h2 id="vision-title" class="h2">Empowering Financial Freedom</h2>
-        </div>
-        <figure class="pullquote reveal">
+    <!-- ===================== VISION (midnight band) ===================== -->
+    <section class="vision" aria-labelledby="vision-title">
+      <div class="vision__glow" aria-hidden="true"></div>
+      <div class="container vision__inner">
+        <p class="eyebrow">Vision</p>
+        <h2 id="vision-title" class="vision__title reveal">Empowering <em class="serif-i">Financial Freedom</em></h2>
+        <figure class="vision__quote reveal reveal-delay-1">
           <blockquote>
             <p>To empower individuals, professionals, and HNIs with institutional-grade investment solutions that prioritize safety, transparency, and consistency — helping every investor move confidently toward long-term financial freedom.</p>
           </blockquote>
-          <figcaption class="mono">Easy Trading, vision statement</figcaption>
+          <figcaption>Easy Trading, vision statement</figcaption>
         </figure>
         <div class="values">
           <h3 class="sr-only">Our values</h3>
           <dl class="values__list">
             <div class="value reveal">
-              <dt><span class="mono">V.1</span> Innovation</dt>
+              <dt><span class="value__n" aria-hidden="true">01</span>Innovation</dt>
               <dd>Technology and data analytics.</dd>
             </div>
             <div class="value reveal reveal-delay-1">
-              <dt><span class="mono">V.2</span> Integrity</dt>
+              <dt><span class="value__n" aria-hidden="true">02</span>Integrity</dt>
               <dd>Transparency and ethical standards.</dd>
             </div>
             <div class="value reveal reveal-delay-2">
-              <dt><span class="mono">V.3</span> Excellence</dt>
+              <dt><span class="value__n" aria-hidden="true">03</span>Excellence</dt>
               <dd>Service and performance.</dd>
             </div>
           </dl>
@@ -246,143 +246,135 @@
     </section>
 
     <!-- ===================== WHO WE SERVE ===================== -->
-    <section class="section section--alt" aria-labelledby="serve-title">
-      <div class="container split split--wide-left serve">
-        <div class="reveal">
-          <p class="eyebrow">Who we serve</p>
-          <h2 id="serve-title" class="h2">Built for three kinds of investor.</h2>
-          <p class="lead">Different starting points, the same need: money handled with the rigour of an institution and the attention of a personal adviser.</p>
+    <section class="section" aria-labelledby="serve-title">
+      <div class="container">
+        <div class="section-head split-head reveal">
+          <div>
+            <p class="eyebrow">Who we serve</p>
+            <h2 id="serve-title" class="h2">Built for three <em class="serif-i">kinds of investor.</em></h2>
+          </div>
+          <p class="lead">Different starting points, the same need: money handled with an institutional approach and personalised advisory.</p>
         </div>
-        <ul class="audience reveal reveal-delay-1">
-          <li>
-            <span class="audience__k mono">01</span>
-            <div>
-              <h3>Individuals</h3>
-              <p>Investors who want a structured plan for long-term wealth instead of scattered tips and guesswork.</p>
-            </div>
+        <ul class="audience">
+          <li class="reveal">
+            <span class="audience__k" aria-hidden="true">01</span>
+            <h3>Individuals</h3>
+            <p>Investors who want a structured plan for long-term wealth instead of scattered tips and guesswork.</p>
           </li>
-          <li>
-            <span class="audience__k mono">02</span>
-            <div>
-              <h3>Professionals</h3>
-              <p>People with demanding careers and little time to watch markets, who want disciplined management and clear updates.</p>
-            </div>
+          <li class="reveal reveal-delay-1">
+            <span class="audience__k" aria-hidden="true">02</span>
+            <h3>Professionals</h3>
+            <p>People with demanding careers and little time to watch markets, who want disciplined management and clear updates.</p>
           </li>
-          <li>
-            <span class="audience__k mono">03</span>
-            <div>
-              <h3>HNIs</h3>
-              <p>Larger portfolios that need careful structuring, cash-flow strategies and firm risk limits across asset classes.</p>
-            </div>
+          <li class="reveal reveal-delay-2">
+            <span class="audience__k" aria-hidden="true">03</span>
+            <h3>HNIs</h3>
+            <p>Larger portfolios that need careful structuring, cash-flow strategies and clear risk limits across asset classes.</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- ===================== OUR EDGE ===================== -->
-    <section class="section" aria-labelledby="edge-title">
+    <!-- ===================== OUR EDGE (bento) ===================== -->
+    <section class="section section--alt" aria-labelledby="edge-title">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Our edge</p>
-          <h2 id="edge-title" class="h2">Six reasons clients choose Easy Trading.</h2>
+          <h2 id="edge-title" class="h2">Six reasons clients <em class="serif-i">choose Easy Trading.</em></h2>
         </div>
-        <ol class="edge-grid reveal">
-          <li>
-            <span class="edge__n mono">01</span>
-            <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-award"/></svg>
+        <ol class="bento edge-bento">
+          <li class="tile tile--edge tile--edge-lead reveal">
+            <span class="edge__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-award"/></svg></span>
             <h3>Certified NISM professionals</h3>
             <p>Decisions are made by professionals certified by the National Institute of Securities Markets.</p>
           </li>
-          <li>
-            <span class="edge__n mono">02</span>
-            <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-eye"/></svg>
+          <li class="tile tile--edge reveal reveal-delay-1">
+            <span class="edge__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-eye"/></svg></span>
             <h3>Transparent, research-driven decisions</h3>
-            <p>Every call rests on data and is explained in plain language.</p>
+            <p>We aim to base every call on data and explain it in plain language.</p>
           </li>
-          <li>
-            <span class="edge__n mono">03</span>
-            <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-shield"/></svg>
+          <li class="tile tile--edge reveal">
+            <span class="edge__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-shield"/></svg></span>
             <h3>Strong capital protection and risk frameworks</h3>
-            <p>Your principal is the first thing we plan around.</p>
+            <p>Protecting capital is the first thing we plan around.</p>
           </li>
-          <li>
-            <span class="edge__n mono">04</span>
-            <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-layers"/></svg>
+          <li class="tile tile--edge reveal reveal-delay-1">
+            <span class="edge__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-layers"/></svg></span>
             <h3>Advanced risk-controlled F&amp;O strategies</h3>
-            <p>Derivatives used within defined-risk structures, not as a lottery ticket.</p>
+            <p>Derivatives approached with risk controls, not as a lottery ticket.</p>
           </li>
-          <li>
-            <span class="edge__n mono">05</span>
-            <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-users"/></svg>
+          <li class="tile tile--edge reveal reveal-delay-2">
+            <span class="edge__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-users"/></svg></span>
             <h3>Personalised advisory with consistent updates</h3>
-            <p>A plan built around your goals, and regular updates on where you stand.</p>
+            <p>A plan built around your goals, with regular updates on where you stand.</p>
           </li>
-          <li data-performance>
-            <span class="edge__n mono">06</span>
-            <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-chart"/></svg>
-            <h3>Proven multi-year performance record</h3>
-            <p>Five calendar years of client-reported results, set out year by year below.</p>
+          <li class="tile tile--edge tile--edge-wide reveal" data-performance>
+            <span class="edge__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-chart"/></svg></span>
+            <div>
+              <h3>Proven multi-year performance record</h3>
+              <p>Five calendar years of client-reported results, set out year by year below.</p>
+            </div>
           </li>
         </ol>
       </div>
     </section>
 
     <!-- ===================== JOURNEY ===================== -->
-    <section class="section section--alt" aria-labelledby="journey-title">
+    <section class="section" aria-labelledby="journey-title">
       <div class="container split split--wide-left journey-wrap">
         <div class="journey-intro reveal">
           <p class="eyebrow">Journey</p>
-          <h2 id="journey-title" class="h2">From 2020 to today.</h2>
+          <h2 id="journey-title" class="h2">From 2020 <em class="serif-i">to today.</em></h2>
           <p class="lead">Only what can be verified: when we started, how each year went, and where we stand now.</p>
           <p class="fine muted" data-performance>Yearly figures are client-reported and unaudited. Nifty 50 figures are calendar-year price returns from published index closing levels, shown for context. Past performance is not indicative of future returns.</p>
           <a class="link-arrow" href="/performance.html" data-performance>Full performance record <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a>
         </div>
         <ol class="timeline reveal reveal-delay-1">
           <li class="tl">
-            <span class="tl__year mono">2020</span>
+            <span class="tl__year">2020</span>
             <div class="tl__body">
               <h3>Easy Trading is established in New Delhi</h3>
               <div class="tl__result" data-performance>
                 <p class="tl__row"><span>Client-reported return</span><strong class="mono gold">50%</strong></p>
                 <div class="tl__bars" aria-hidden="true"><i class="tl__bar tl__bar--et" style="--w: 100%"></i><i class="tl__bar tl__bar--nifty" style="--w: 29.8%"></i></div>
-                <p class="tl__ref mono">Nifty 50: +14.9%</p>
+                <p class="tl__ref">Nifty 50: +14.9%</p>
               </div>
             </div>
           </li>
           <li class="tl" data-performance>
-            <span class="tl__year mono">2021</span>
+            <span class="tl__year">2021</span>
             <div class="tl__body">
               <p class="tl__row"><span>Client-reported return</span><strong class="mono gold">39%</strong></p>
               <div class="tl__bars" aria-hidden="true"><i class="tl__bar tl__bar--et" style="--w: 78%"></i><i class="tl__bar tl__bar--nifty" style="--w: 48.2%"></i></div>
-              <p class="tl__ref mono">Nifty 50: +24.1%</p>
+              <p class="tl__ref">Nifty 50: +24.1%</p>
             </div>
           </li>
           <li class="tl" data-performance>
-            <span class="tl__year mono">2022</span>
+            <span class="tl__year">2022</span>
             <div class="tl__body">
               <p class="tl__row"><span>Client-reported return</span><strong class="mono gold">35%</strong></p>
               <div class="tl__bars" aria-hidden="true"><i class="tl__bar tl__bar--et" style="--w: 70%"></i><i class="tl__bar tl__bar--nifty" style="--w: 8.6%"></i></div>
-              <p class="tl__ref mono">Nifty 50: +4.3%</p>
+              <p class="tl__ref">Nifty 50: +4.3%</p>
             </div>
           </li>
           <li class="tl" data-performance>
-            <span class="tl__year mono">2023</span>
+            <span class="tl__year">2023</span>
             <div class="tl__body">
               <p class="tl__row"><span>Client-reported return</span><strong class="mono gold">38%</strong></p>
               <div class="tl__bars" aria-hidden="true"><i class="tl__bar tl__bar--et" style="--w: 76%"></i><i class="tl__bar tl__bar--nifty" style="--w: 40%"></i></div>
-              <p class="tl__ref mono">Nifty 50: +20.0%</p>
+              <p class="tl__ref">Nifty 50: +20.0%</p>
             </div>
           </li>
           <li class="tl" data-performance>
-            <span class="tl__year mono">2024</span>
+            <span class="tl__year">2024</span>
             <div class="tl__body">
               <p class="tl__row"><span>Client-reported return</span><strong class="mono gold">41%</strong></p>
               <div class="tl__bars" aria-hidden="true"><i class="tl__bar tl__bar--et" style="--w: 82%"></i><i class="tl__bar tl__bar--nifty" style="--w: 17.6%"></i></div>
-              <p class="tl__ref mono">Nifty 50: +8.8%</p>
+              <p class="tl__ref">Nifty 50: +8.8%</p>
             </div>
           </li>
           <li class="tl tl--now">
-            <span class="tl__year mono">Today</span>
+            <span class="tl__year">Today</span>
             <div class="tl__body">
               <h3>100+ active clients<span data-performance>, ₹50 Cr under advisory</span></h3>
               <p class="muted">Client-reported figures.</p>
@@ -393,38 +385,40 @@
     </section>
 
     <!-- ===================== CREDENTIALS ===================== -->
-    <section class="section" aria-labelledby="cred-title">
+    <section class="section section--alt" aria-labelledby="cred-title">
       <div class="container">
-        <div class="cred">
-          <div class="cred__copy reveal">
+        <div class="section-head split-head reveal">
+          <div>
             <p class="eyebrow">Credentials</p>
-            <h2 id="cred-title" class="h2">Certified, and experienced across market cycles.</h2>
-            <p class="lead">Our investment decisions are made by NISM-certified professionals. The firm was established in 2020; the team behind it brings 15+ years of market experience.</p>
-            <p class="muted">NISM, the National Institute of Securities Markets, is the education and certification body set up by SEBI. Its certifications test practical knowledge of Indian securities markets, products and regulation.</p>
+            <h2 id="cred-title" class="h2">Certified, and experienced <em class="serif-i">across market cycles.</em></h2>
           </div>
-          <dl class="cred__figures reveal reveal-delay-1">
-            <div>
-              <dt>Certification</dt>
-              <dd>NISM</dd>
-              <dd class="cred__note">Certified investment professionals</dd>
-            </div>
-            <div>
-              <dt>Team market experience</dt>
-              <dd><span data-count="15" data-suffix="+">15+</span> yrs</dd>
-              <dd class="cred__note">Across the people who run Easy Trading</dd>
-            </div>
-            <div>
-              <dt>Firm established</dt>
-              <dd>2020</dd>
-              <dd class="cred__note">New Delhi</dd>
-            </div>
-            <div>
-              <dt>Active clients</dt>
-              <dd><span data-count="100" data-suffix="+">100+</span></dd>
-              <dd class="cred__note">Individuals, professionals and HNIs</dd>
-            </div>
-          </dl>
+          <div>
+            <p class="lead">Our investment decisions are made by NISM-certified professionals. The firm was established in 2020; the team behind it brings 15+ years of market experience.</p>
+            <p class="muted cred__about">NISM, the National Institute of Securities Markets, is the education and certification body set up by SEBI. Its certifications test practical knowledge of Indian securities markets, products and regulation.</p>
+          </div>
         </div>
+        <dl class="bento cred-bento">
+          <div class="tile tile--cred reveal">
+            <dt>Certification</dt>
+            <dd class="cred__big">NISM</dd>
+            <dd class="cred__note">Certified investment professionals</dd>
+          </div>
+          <div class="tile tile--cred reveal reveal-delay-1">
+            <dt>Team market experience</dt>
+            <dd class="cred__big"><span data-count="15" data-suffix="+">15+</span><span class="cred__unit"> yrs</span></dd>
+            <dd class="cred__note">Across the people who run Easy Trading</dd>
+          </div>
+          <div class="tile tile--cred reveal reveal-delay-2">
+            <dt>Firm established</dt>
+            <dd class="cred__big">2020</dd>
+            <dd class="cred__note">New Delhi</dd>
+          </div>
+          <div class="tile tile--cred reveal reveal-delay-3">
+            <dt>Active clients</dt>
+            <dd class="cred__big"><span data-count="100" data-suffix="+">100+</span></dd>
+            <dd class="cred__note">Individuals, professionals and HNIs</dd>
+          </div>
+        </dl>
       </div>
     </section>
 

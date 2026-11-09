@@ -15,13 +15,13 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://easytrading.co.in/assets/img/og-image.png">
   <!-- @head -->
-  <meta name="theme-color" content="#fbfaf6">
+  <meta name="theme-color" content="#f4f7fd">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icon-32.png">
   <link rel="apple-touch-icon" href="/assets/img/icon-180.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="/assets/css/main.css">
   <script src="/assets/js/config.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
@@ -65,7 +65,7 @@
             "name": "How is investing different from trading?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Investing means owning quality assets for years and letting earnings growth compound. Trading means taking short-term positions to capture price moves over minutes, days or weeks. Long-term investing is the core of the Easy Trading approach; trading strategies are used selectively and within strict risk limits."
+              "text": "Investing means owning quality assets for years and letting earnings growth compound. Trading means taking short-term positions to capture price moves over minutes, days or weeks. Long-term investing is the core of the Easy Trading approach; trading strategies can be used selectively, within defined risk limits."
             }
           },
           {
@@ -143,7 +143,7 @@
     <!-- ===================== HERO ===================== -->
     <section class="page-hero" aria-labelledby="page-title">
       <div class="container svc-hero">
-        <div>
+        <div class="svc-hero__copy">
           <nav aria-label="Breadcrumb">
             <ol class="breadcrumb">
               <li><a href="/">Home</a></li>
@@ -153,19 +153,30 @@
           <p class="eyebrow">Services</p>
           <h1 id="page-title">Eight strategies, one <em class="serif-i">disciplined</em> portfolio.</h1>
           <p class="lead">From long-term equity compounding to risk-controlled index options, each strategy has a defined role, a stated risk level and an indicative horizon. We combine them to suit your goals and risk appetite.</p>
+          <div class="btn-row svc-hero__cta">
+            <a class="btn btn--gold" href="/contact.html#consult">Book a consultation <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a>
+            <a class="btn btn--ghost" href="#overview">Explore the strategies</a>
+          </div>
         </div>
-        <div class="svc-hero__key">
-          <p class="svc-hero__cap">Where each strategy sits on our risk scale</p>
-          <ul class="risk-ladder" aria-label="Indicative risk level by strategy">
-            <li><a href="#equity-portfolio"><span class="rl__n">Equity portfolio</span><span class="risk-meter" data-level="3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="rl__lvl">Moderate</span></a></li>
-            <li><a href="#options-selling"><span class="rl__n">Options selling</span><span class="risk-meter" data-level="5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="rl__lvl">High</span></a></li>
-            <li><a href="#weekly-expiry"><span class="rl__n">Weekly expiry</span><span class="risk-meter" data-level="6" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="rl__lvl">Very high</span></a></li>
-            <li><a href="#ipo"><span class="rl__n">IPO research</span><span class="risk-meter" data-level="4" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="rl__lvl">Moderate to high</span></a></li>
-            <li><a href="#intraday-swing"><span class="rl__n">Intraday and swing</span><span class="risk-meter" data-level="6" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="rl__lvl">Very high</span></a></li>
-            <li><a href="#gold-silver"><span class="rl__n">Gold and silver ETFs</span><span class="risk-meter" data-level="2" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="rl__lvl">Low to moderate</span></a></li>
-            <li><a href="#mtf"><span class="rl__n">MTF</span><span class="risk-meter" data-level="5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="rl__lvl">High</span></a></li>
-          </ul>
-          <p class="svc-hero__scale">Indicative, from low to very high. Portfolio structuring and risk management applies across all of them.</p>
+        <div class="svc-hero__visual">
+          <div class="spectrum glass reveal">
+            <div class="spectrum__top">
+              <p class="spectrum__cap" id="spectrum-cap">Indicative risk scale</p>
+              <span class="spectrum__ends" aria-hidden="true"><span>Low</span><span>Very high</span></span>
+            </div>
+            <ul class="risk-ladder" aria-labelledby="spectrum-cap">
+              <li><a href="#equity-portfolio"><span class="rl__name">Equity portfolio<small>Moderate</small></span><span class="risk-meter" data-level="3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></a></li>
+              <li><a href="#options-selling"><span class="rl__name">Index options selling<small>High</small></span><span class="risk-meter" data-level="5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></a></li>
+              <li><a href="#weekly-expiry"><span class="rl__name">Weekly expiry<small>Very high</small></span><span class="risk-meter" data-level="6" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></a></li>
+              <li><a href="#ipo"><span class="rl__name">IPO research<small>Moderate to high</small></span><span class="risk-meter" data-level="4" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></a></li>
+              <li><a href="#intraday-swing"><span class="rl__name">Intraday and swing<small>Very high</small></span><span class="risk-meter" data-level="6" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></a></li>
+              <li><a href="#gold-silver"><span class="rl__name">Gold and silver ETFs<small>Low to moderate</small></span><span class="risk-meter" data-level="2" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></a></li>
+              <li><a href="#mtf"><span class="rl__name">MTF optimisation<small>High</small></span><span class="risk-meter" data-level="5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></a></li>
+            </ul>
+            <p class="svc-hero__scale">Relative to each other, not a measure of suitability for you. Portfolio structuring and risk management applies across all of them.</p>
+          </div>
+          <span class="float-chip float-chip--a" aria-hidden="true"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-shield"/></svg> Risk level stated for each</span>
+          <span class="float-chip float-chip--b" aria-hidden="true"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-info"/></svg> Returns are never guaranteed</span>
         </div>
       </div>
     </section>
@@ -174,33 +185,112 @@
     <nav class="svc-nav" aria-label="Strategies on this page">
       <div class="container">
         <ul>
-            <li><a href="#equity-portfolio"><span class="mono">01</span> Equity portfolio</a></li>
-            <li><a href="#options-selling"><span class="mono">02</span> Options selling</a></li>
-            <li><a href="#weekly-expiry"><span class="mono">03</span> Weekly expiry</a></li>
-            <li><a href="#ipo"><span class="mono">04</span> IPO research</a></li>
-            <li><a href="#intraday-swing"><span class="mono">05</span> Intraday &amp; swing</a></li>
-            <li><a href="#gold-silver"><span class="mono">06</span> Gold &amp; silver</a></li>
-            <li><a href="#mtf"><span class="mono">07</span> MTF</a></li>
-            <li><a href="#risk-management"><span class="mono">08</span> Portfolio &amp; risk</a></li>
+          <li><a href="#equity-portfolio"><span class="mono">01</span> Equity portfolio</a></li>
+          <li><a href="#options-selling"><span class="mono">02</span> Options selling</a></li>
+          <li><a href="#weekly-expiry"><span class="mono">03</span> Weekly expiry</a></li>
+          <li><a href="#ipo"><span class="mono">04</span> IPO research</a></li>
+          <li><a href="#intraday-swing"><span class="mono">05</span> Intraday &amp; swing</a></li>
+          <li><a href="#gold-silver"><span class="mono">06</span> Gold &amp; silver</a></li>
+          <li><a href="#mtf"><span class="mono">07</span> MTF</a></li>
+          <li><a href="#risk-management"><span class="mono">08</span> Portfolio &amp; risk</a></li>
         </ul>
       </div>
     </nav>
 
+    <!-- ===================== OVERVIEW (BENTO) ===================== -->
+    <section class="section svc-overview" id="overview" aria-labelledby="overview-title">
+      <div class="container">
+        <div class="section-head split-head reveal">
+          <div>
+            <p class="eyebrow">The strategies</p>
+            <h2 id="overview-title" class="h2">Eight roles, <em class="serif-i">one</em> plan.</h2>
+          </div>
+          <p class="lead">Most portfolios use only a few of them. Open any card to see how it works, who it suits and where it sits on the risk scale.</p>
+        </div>
+        <ul class="bento-grid" role="list">
+          <li class="bento__item bento__item--1 reveal reveal-delay-1">
+            <a class="bento bento--feature" href="#equity-portfolio">
+              <svg class="bento__art bento__art--a" viewBox="0 0 320 150" aria-hidden="true" focusable="false"><defs><linearGradient id="bgA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f6bff" stop-opacity=".28"/><stop offset="1" stop-color="#19c3d6" stop-opacity="0"/></linearGradient><linearGradient id="bsA" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f6bff"/><stop offset="1" stop-color="#19c3d6"/></linearGradient></defs><path d="M0 128 C30 124 44 112 70 108 S112 112 134 92 S176 80 200 62 S256 52 278 30 L320 14 L320 150 L0 150Z" fill="url(#bgA)"/><path class="bento__line" d="M0 128 C30 124 44 112 70 108 S112 112 134 92 S176 80 200 62 S256 52 278 30 L320 14" fill="none" stroke="url(#bsA)" stroke-width="3" stroke-linecap="round" pathLength="1"/><circle cx="278" cy="30" r="5" fill="#fff" stroke="#2f6bff" stroke-width="3"/></svg>
+              <span class="bento__top"><span class="bento__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-trending"/></svg></span><span class="bento__num" aria-hidden="true">01</span></span>
+              <span class="bento__body"><span class="bento__title">Equity portfolio</span><span class="bento__blurb">Quality Indian businesses, held to compound over years.</span><p class="bento__more">A research-led portfolio of quality Indian businesses, built to compound over years rather than trade over weeks. It is the core that other strategies can build on.</p></span>
+              <span class="bento__foot"><span class="risk-meter" data-level="3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="bento__lvl">Moderate</span><span class="bento__go"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></span></span>
+            </a>
+          </li>
+          <li class="bento__item bento__item--2 reveal reveal-delay-2">
+            <a class="bento bento--dark" href="#options-selling">
+              
+              <span class="bento__top"><span class="bento__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-layers"/></svg></span><span class="bento__num" aria-hidden="true">02</span></span>
+              <span class="bento__body"><span class="bento__title">Index options selling</span><span class="bento__blurb">Nifty and Sensex premium for cash flow, margined by holdings you already own.</span></span>
+              <span class="bento__foot"><span class="risk-meter" data-level="5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="bento__lvl">High</span><span class="bento__go"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></span></span>
+            </a>
+          </li>
+          <li class="bento__item bento__item--3 reveal reveal-delay-3">
+            <a class="bento " href="#weekly-expiry">
+              
+              <span class="bento__top"><span class="bento__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-calendar"/></svg></span><span class="bento__num" aria-hidden="true">03</span></span>
+              <span class="bento__body"><span class="bento__title">Weekly expiry</span><span class="bento__blurb">Rule-based setups around weekly index expiry.</span></span>
+              <span class="bento__foot"><span class="risk-meter" data-level="6" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="bento__lvl">Very high</span><span class="bento__go"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></span></span>
+            </a>
+          </li>
+          <li class="bento__item bento__item--4 reveal reveal-delay-1">
+            <a class="bento " href="#ipo">
+              
+              <span class="bento__top"><span class="bento__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-rocket"/></svg></span><span class="bento__num" aria-hidden="true">04</span></span>
+              <span class="bento__body"><span class="bento__title">IPO research</span><span class="bento__blurb">Issue-by-issue research on which offers merit an application.</span></span>
+              <span class="bento__foot"><span class="risk-meter" data-level="4" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="bento__lvl">Moderate to high</span><span class="bento__go"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></span></span>
+            </a>
+          </li>
+          <li class="bento__item bento__item--5 reveal reveal-delay-2">
+            <a class="bento " href="#intraday-swing">
+              
+              <span class="bento__top"><span class="bento__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-candles"/></svg></span><span class="bento__num" aria-hidden="true">05</span></span>
+              <span class="bento__body"><span class="bento__title">Intraday and swing</span><span class="bento__blurb">Short-horizon trades on price action, volume and levels.</span></span>
+              <span class="bento__foot"><span class="risk-meter" data-level="6" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="bento__lvl">Very high</span><span class="bento__go"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></span></span>
+            </a>
+          </li>
+          <li class="bento__item bento__item--6 reveal reveal-delay-3">
+            <a class="bento " href="#gold-silver">
+              
+              <span class="bento__top"><span class="bento__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-coins"/></svg></span><span class="bento__num" aria-hidden="true">06</span></span>
+              <span class="bento__body"><span class="bento__title">Gold and silver ETFs</span><span class="bento__blurb">Precious metals through ETFs in your demat account, as a diversifier.</span></span>
+              <span class="bento__foot"><span class="risk-meter" data-level="2" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="bento__lvl">Low to moderate</span><span class="bento__go"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></span></span>
+            </a>
+          </li>
+          <li class="bento__item bento__item--7 reveal reveal-delay-1">
+            <a class="bento " href="#mtf">
+              
+              <span class="bento__top"><span class="bento__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-percent"/></svg></span><span class="bento__num" aria-hidden="true">07</span></span>
+              <span class="bento__body"><span class="bento__title">MTF optimisation</span><span class="bento__blurb">Broker funding, used only where the benefit outweighs cost and risk.</span></span>
+              <span class="bento__foot"><span class="risk-meter" data-level="5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="bento__lvl">High</span><span class="bento__go"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></span></span>
+            </a>
+          </li>
+          <li class="bento__item bento__item--8 reveal reveal-delay-2">
+            <a class="bento bento--risk" href="#risk-management">
+              <svg class="bento__art bento__art--h" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><linearGradient id="bgH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f6bff"/><stop offset="1" stop-color="#19c3d6"/></linearGradient></defs><circle cx="60" cy="60" r="44" fill="none" stroke="rgba(10,21,56,.08)" stroke-width="14"/><circle cx="60" cy="60" r="44" fill="none" stroke="url(#bgH)" stroke-width="14" stroke-linecap="round" stroke-dasharray="120 276" transform="rotate(-90 60 60)"/><circle cx="60" cy="60" r="44" fill="none" stroke="#d9b66a" stroke-width="14" stroke-linecap="round" stroke-dasharray="46 276" stroke-dashoffset="-140" transform="rotate(-90 60 60)"/><circle cx="60" cy="60" r="22" fill="none" stroke="rgba(10,21,56,.12)" stroke-width="2" stroke-dasharray="3 5"/></svg>
+              <span class="bento__top"><span class="bento__icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-pie"/></svg></span><span class="bento__num" aria-hidden="true">08</span></span>
+              <span class="bento__body"><span class="bento__title">Portfolio and risk</span><span class="bento__blurb">The framework behind the rest: allocation, limits and hedges.</span></span>
+              <span class="bento__foot"><span class="bento__lvl">Applies to all</span><span class="bento__go"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <!-- ===================== STRATEGIES ===================== -->
     <div class="svc-list">
-      <section id="equity-portfolio" class="svc-sec" aria-labelledby="equity-portfolio-title">
-        <div class="container svc">
+      <section id="equity-portfolio" class="svc-sec svc-sec--split" aria-labelledby="equity-portfolio-title">
+        <div class="container svc  svc--split">
           <div class="svc__main reveal">
-            <p class="svc__idx"><span>01</span> / 08</p>
+            <p class="svc__idx" aria-hidden="true"><span class="svc__num">01</span><span class="svc__of">of 08</span></p>
             <div class="icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-trending"/></svg></div>
             <h2 id="equity-portfolio-title" class="svc__title">Long-term Equity Portfolio Management</h2>
-            <p class="svc__summary">A research-led portfolio of quality Indian businesses, built to compound over years rather than trade over weeks. It is the core that every other strategy supports.</p>
+            <p class="svc__summary">A research-led portfolio of quality Indian businesses, built to compound over years rather than trade over weeks. It is the core that other strategies can build on.</p>
             <dl class="svc__meta">
-              <div>
+              <div class="svc__risk">
                 <dt>Risk level</dt>
                 <dd><span class="badge ">Moderate</span><span class="risk-meter" data-level="3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></dd>
               </div>
-              <div>
+              <div class="svc__hz">
                 <dt>Indicative horizon</dt>
                 <dd>Long-term, multi-year</dd>
               </div>
@@ -210,7 +300,7 @@
               </div>
                 <div class="svc__ret" data-performance>
                   <dt>Client-reported</dt>
-                  <dd><strong class="mono gold">15–20%</strong> <span>average yearly return from long-term equity</span></dd>
+                  <dd><strong>15–20%</strong> <span>average yearly return from long-term equity</span></dd>
                   <dd class="svc__ret-fine">Client-reported, unaudited. Past performance is not indicative of future returns.</dd>
                 </div>
             </dl>
@@ -218,27 +308,27 @@
           <div class="svc__how reveal reveal-delay-1">
             <h3 class="svc__how-title">How it works</h3>
             <ol class="steps">
-                <li><span class="step__n">01</span><div><h4>Set the allocation</h4><p>We agree how much of your capital belongs in equity, based on your goals, timeline and risk profile.</p></div></li>
-                <li><span class="step__n">02</span><div><h4>Research and select</h4><p>Companies are screened on business quality, earnings growth, balance-sheet strength and valuation, then sized so that no single stock dominates.</p></div></li>
-                <li><span class="step__n">03</span><div><h4>Hold and monitor</h4><p>Positions are held for the long term and reviewed against results, news and valuation rather than daily price moves.</p></div></li>
-                <li><span class="step__n">04</span><div><h4>Rebalance</h4><p>Holdings that have grown too large are trimmed periodically and the portfolio is brought back to plan.</p></div></li>
+              <li style="--i:0"><span class="step__n">01</span><div><h4>Set the allocation</h4><p>How much of your capital belongs in equity is typically agreed from your goals, timeline and risk profile.</p></div></li>
+              <li style="--i:1"><span class="step__n">02</span><div><h4>Research and select</h4><p>Companies are screened on business quality, earnings growth, balance-sheet strength and valuation, then sized so that no single stock needs to dominate.</p></div></li>
+              <li style="--i:2"><span class="step__n">03</span><div><h4>Hold and monitor</h4><p>Positions are meant to be held for the long term and reviewed against results, news and valuation rather than daily price moves.</p></div></li>
+              <li style="--i:3"><span class="step__n">04</span><div><h4>Rebalance</h4><p>Holdings that have grown too large can be trimmed periodically to bring the portfolio back to plan.</p></div></li>
             </ol>
           </div>
         </div>
       </section>
-      <section id="options-selling" class="svc-sec svc-sec--alt" aria-labelledby="options-selling-title">
-        <div class="container svc svc--flip">
+      <section id="options-selling" class="svc-sec svc-sec--band" aria-labelledby="options-selling-title">
+        <div class="container svc  svc--band">
           <div class="svc__main reveal">
-            <p class="svc__idx"><span>02</span> / 08</p>
+            <p class="svc__idx" aria-hidden="true"><span class="svc__num">02</span><span class="svc__of">of 08</span></p>
             <div class="icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-layers"/></svg></div>
             <h2 id="options-selling-title" class="svc__title">Index Options Selling (Nifty/Sensex) using Collateral Margins</h2>
             <p class="svc__summary">Writing Nifty and Sensex index options to collect premium, using margin released by pledging holdings you already own. The aim is regular cash flow on top of the equity portfolio.</p>
             <dl class="svc__meta">
-              <div>
+              <div class="svc__risk">
                 <dt>Risk level</dt>
                 <dd><span class="badge badge--loss">High</span><span class="risk-meter" data-level="5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></dd>
               </div>
-              <div>
+              <div class="svc__hz">
                 <dt>Indicative horizon</dt>
                 <dd>Weekly to monthly cycles</dd>
               </div>
@@ -248,7 +338,7 @@
               </div>
                 <div class="svc__ret" data-performance>
                   <dt>Client-reported</dt>
-                  <dd><strong class="mono gold">20–25%</strong> <span>yearly return from options selling</span></dd>
+                  <dd><strong>20–25%</strong> <span>yearly return from options selling</span></dd>
                   <dd class="svc__ret-fine">Client-reported, unaudited. Past performance is not indicative of future returns.</dd>
                 </div>
             </dl>
@@ -256,27 +346,27 @@
           <div class="svc__how reveal reveal-delay-1">
             <h3 class="svc__how-title">How it works</h3>
             <ol class="steps">
-                <li><span class="step__n">01</span><div><h4>Pledge holdings for margin</h4><p>Eligible shares or ETFs are pledged through your broker. After a haircut they count as collateral margin, while you keep ownership. Exchange rules require part of the margin to be in cash or cash equivalents.</p></div></li>
-                <li><span class="step__n">02</span><div><h4>Write index options</h4><p>Nifty or Sensex options are sold at strikes chosen from volatility, open interest and key price levels. The seller receives the premium upfront and keeps it if the option expires worthless.</p></div></li>
-                <li><span class="step__n">03</span><div><h4>Define the risk</h4><p>Positions are hedged, usually by buying further out-of-the-money options. This caps the maximum loss and also reduces the margin required.</p></div></li>
-                <li><span class="step__n">04</span><div><h4>Manage to expiry</h4><p>If the market moves against a position, it is adjusted or exited at pre-set levels instead of being held in hope.</p></div></li>
+              <li style="--i:0"><span class="step__n">01</span><div><h4>Pledge holdings for margin</h4><p>Eligible shares or ETFs are pledged through your broker. After a haircut they count as collateral margin, while you keep ownership. Exchange rules require part of the margin to be in cash or cash equivalents.</p></div></li>
+              <li style="--i:1"><span class="step__n">02</span><div><h4>Write index options</h4><p>Nifty or Sensex options are sold at strikes chosen from volatility, open interest and key price levels. The seller receives the premium upfront and keeps it if the option expires worthless.</p></div></li>
+              <li style="--i:2"><span class="step__n">03</span><div><h4>Define the risk</h4><p>Positions can be hedged, typically by buying further out-of-the-money options. This can cap the maximum loss and also reduce the margin required.</p></div></li>
+              <li style="--i:3"><span class="step__n">04</span><div><h4>Manage to expiry</h4><p>If the market moves against a position, it can be adjusted or exited at pre-set levels instead of being held in hope.</p></div></li>
             </ol>
           </div>
         </div>
       </section>
-      <section id="weekly-expiry" class="svc-sec" aria-labelledby="weekly-expiry-title">
-        <div class="container svc">
+      <section id="weekly-expiry" class="svc-sec svc-sec--rail" aria-labelledby="weekly-expiry-title">
+        <div class="container svc  svc--rail">
           <div class="svc__main reveal">
-            <p class="svc__idx"><span>03</span> / 08</p>
+            <p class="svc__idx" aria-hidden="true"><span class="svc__num">03</span><span class="svc__of">of 08</span></p>
             <div class="icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-calendar"/></svg></div>
             <h2 id="weekly-expiry-title" class="svc__title">Weekly Expiry Trading Strategies</h2>
             <p class="svc__summary">Rule-based setups built around the weekly expiry of index options, when time decay is fastest and premiums can swing sharply within hours.</p>
             <dl class="svc__meta">
-              <div>
+              <div class="svc__risk">
                 <dt>Risk level</dt>
                 <dd><span class="badge badge--loss">Very high</span><span class="risk-meter" data-level="6" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></dd>
               </div>
-              <div>
+              <div class="svc__hz">
                 <dt>Indicative horizon</dt>
                 <dd>Weekly, hours to days</dd>
               </div>
@@ -289,27 +379,27 @@
           <div class="svc__how reveal reveal-delay-1">
             <h3 class="svc__how-title">How it works</h3>
             <ol class="steps">
-                <li><span class="step__n">01</span><div><h4>Know the calendar</h4><p>Under current exchange rules each exchange offers a weekly expiry on one benchmark index: Nifty 50 on NSE and Sensex on BSE. Strategies are planned around those dates.</p></div></li>
-                <li><span class="step__n">02</span><div><h4>Read the setup</h4><p>Implied volatility, open-interest build-up and distance to key levels decide whether a week calls for a directional trade, a neutral one, or no trade at all.</p></div></li>
-                <li><span class="step__n">03</span><div><h4>Fix the risk per trade</h4><p>Every trade has a predetermined stop-loss and position size, because near expiry an option premium can double or collapse in minutes.</p></div></li>
-                <li><span class="step__n">04</span><div><h4>Close out</h4><p>Positions are normally squared off on or before expiry to avoid settlement and overnight gap risk.</p></div></li>
+              <li style="--i:0"><span class="step__n">01</span><div><h4>Know the calendar</h4><p>Under current exchange rules each exchange offers a weekly expiry on one benchmark index: Nifty 50 on NSE and Sensex on BSE. Strategies can be planned around those dates.</p></div></li>
+              <li style="--i:1"><span class="step__n">02</span><div><h4>Read the setup</h4><p>Implied volatility, open-interest build-up and distance to key levels decide whether a week calls for a directional trade, a neutral one, or no trade at all.</p></div></li>
+              <li style="--i:2"><span class="step__n">03</span><div><h4>Fix the risk per trade</h4><p>Each trade should have a predetermined stop-loss and position size, because near expiry an option premium can double or collapse in minutes.</p></div></li>
+              <li style="--i:3"><span class="step__n">04</span><div><h4>Close out</h4><p>Positions are typically squared off on or before expiry to avoid settlement and overnight gap risk.</p></div></li>
             </ol>
           </div>
         </div>
       </section>
-      <section id="ipo" class="svc-sec svc-sec--alt" aria-labelledby="ipo-title">
-        <div class="container svc svc--flip">
+      <section id="ipo" class="svc-sec svc-sec--wide" aria-labelledby="ipo-title">
+        <div class="container svc  svc--wide">
           <div class="svc__main reveal">
-            <p class="svc__idx"><span>04</span> / 08</p>
+            <p class="svc__idx" aria-hidden="true"><span class="svc__num">04</span><span class="svc__of">of 08</span></p>
             <div class="icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-rocket"/></svg></div>
             <h2 id="ipo-title" class="svc__title">IPO Research &amp; Premium Listing Strategies</h2>
-            <p class="svc__summary">Issue-by-issue research to decide which public offers are worth applying for, with a listing-day plan agreed before the shares are allotted.</p>
+            <p class="svc__summary">Issue-by-issue research to decide which public offers are worth applying for, with a listing-day plan in place before the shares list.</p>
             <dl class="svc__meta">
-              <div>
+              <div class="svc__risk">
                 <dt>Risk level</dt>
                 <dd><span class="badge badge--gold">Moderate–High</span><span class="risk-meter" data-level="4" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></dd>
               </div>
-              <div>
+              <div class="svc__hz">
                 <dt>Indicative horizon</dt>
                 <dd>Per issue, listing day to long-term</dd>
               </div>
@@ -322,27 +412,27 @@
           <div class="svc__how reveal reveal-delay-1">
             <h3 class="svc__how-title">How it works</h3>
             <ol class="steps">
-                <li><span class="step__n">01</span><div><h4>Read the offer document</h4><p>The red herring prospectus is reviewed for the business model, financials, use of proceeds, promoter background and the valuation asked relative to listed peers.</p></div></li>
-                <li><span class="step__n">02</span><div><h4>Track subscription data</h4><p>Category-wise subscription from qualified institutional buyers, non-institutional investors and retail investors shows how the issue is being received during the bidding days.</p></div></li>
-                <li><span class="step__n">03</span><div><h4>Apply sensibly</h4><p>Applications are made through ASBA or UPI. In oversubscribed issues retail allotment is decided by lottery, so an allotment is never certain.</p></div></li>
-                <li><span class="step__n">04</span><div><h4>Plan listing day</h4><p>Before the shares list we decide whether to book gains, hold for the long term or exit at a pre-set level. Shares can also list below the issue price, and the plan covers that case too.</p></div></li>
+              <li style="--i:0"><span class="step__n">01</span><div><h4>Read the offer document</h4><p>The red herring prospectus is reviewed for the business model, financials, use of proceeds, promoter background and the valuation asked relative to listed peers.</p></div></li>
+              <li style="--i:1"><span class="step__n">02</span><div><h4>Track subscription data</h4><p>Category-wise subscription from qualified institutional buyers, non-institutional investors and retail investors shows how the issue is being received during the bidding days.</p></div></li>
+              <li style="--i:2"><span class="step__n">03</span><div><h4>Apply sensibly</h4><p>Applications are made through ASBA or UPI. In oversubscribed issues retail allotment is decided by lottery, so an allotment is never certain.</p></div></li>
+              <li style="--i:3"><span class="step__n">04</span><div><h4>Plan listing day</h4><p>Before the shares list, a plan can be set: book gains, hold for the long term or exit at a pre-set level. Shares can also list below the issue price, and the plan should cover that case too.</p></div></li>
             </ol>
           </div>
         </div>
       </section>
-      <section id="intraday-swing" class="svc-sec" aria-labelledby="intraday-swing-title">
-        <div class="container svc">
+      <section id="intraday-swing" class="svc-sec svc-sec--split" aria-labelledby="intraday-swing-title">
+        <div class="container svc svc--flip svc--split">
           <div class="svc__main reveal">
-            <p class="svc__idx"><span>05</span> / 08</p>
+            <p class="svc__idx" aria-hidden="true"><span class="svc__num">05</span><span class="svc__of">of 08</span></p>
             <div class="icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-candles"/></svg></div>
             <h2 id="intraday-swing-title" class="svc__title">Intraday &amp; Swing Trading</h2>
             <p class="svc__summary">Short-horizon trades driven by price action, volume and technical levels. Intraday positions close the same day; swing positions run from a few days to a few weeks.</p>
             <dl class="svc__meta">
-              <div>
+              <div class="svc__risk">
                 <dt>Risk level</dt>
                 <dd><span class="badge badge--loss">Very high</span><span class="risk-meter" data-level="6" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></dd>
               </div>
-              <div>
+              <div class="svc__hz">
                 <dt>Indicative horizon</dt>
                 <dd>Intraday to a few weeks</dd>
               </div>
@@ -355,27 +445,27 @@
           <div class="svc__how reveal reveal-delay-1">
             <h3 class="svc__how-title">How it works</h3>
             <ol class="steps">
-                <li><span class="step__n">01</span><div><h4>Scan and shortlist</h4><p>Liquid stocks and indices are screened for trend, momentum, volume and clear support or resistance levels.</p></div></li>
-                <li><span class="step__n">02</span><div><h4>Plan before entry</h4><p>Entry, stop-loss and target are fixed before the trade. Position size is set so that hitting the stop costs only a small, known share of capital.</p></div></li>
-                <li><span class="step__n">03</span><div><h4>Execute and trail</h4><p>Stops are moved up to protect gains as a trade works. Losing trades are exited at the stop, without exception.</p></div></li>
-                <li><span class="step__n">04</span><div><h4>Review every trade</h4><p>Each trade is logged and reviewed so the rules keep improving and mistakes are not repeated.</p></div></li>
+              <li style="--i:0"><span class="step__n">01</span><div><h4>Scan and shortlist</h4><p>Liquid stocks and indices are screened for trend, momentum, volume and clear support or resistance levels.</p></div></li>
+              <li style="--i:1"><span class="step__n">02</span><div><h4>Plan before entry</h4><p>Entry, stop-loss and target are typically fixed before the trade, with position size set so that hitting the stop costs only a small, known share of capital.</p></div></li>
+              <li style="--i:2"><span class="step__n">03</span><div><h4>Execute and trail</h4><p>Stops can be moved up to protect gains as a trade works. Losing trades are meant to be exited at the stop.</p></div></li>
+              <li style="--i:3"><span class="step__n">04</span><div><h4>Review every trade</h4><p>Logging and reviewing each trade helps the rules improve and mistakes are not repeated.</p></div></li>
             </ol>
           </div>
         </div>
       </section>
-      <section id="gold-silver" class="svc-sec svc-sec--alt" aria-labelledby="gold-silver-title">
-        <div class="container svc svc--flip">
+      <section id="gold-silver" class="svc-sec svc-sec--rail" aria-labelledby="gold-silver-title">
+        <div class="container svc svc--flip svc--rail">
           <div class="svc__main reveal">
-            <p class="svc__idx"><span>06</span> / 08</p>
+            <p class="svc__idx" aria-hidden="true"><span class="svc__num">06</span><span class="svc__of">of 08</span></p>
             <div class="icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-coins"/></svg></div>
             <h2 id="gold-silver-title" class="svc__title">Commodity Investments in Gold &amp; Silver ETFs</h2>
             <p class="svc__summary">Exposure to gold and silver through exchange-traded funds held in your demat account. Precious metals often move differently from equities, which makes them a useful diversifier.</p>
             <dl class="svc__meta">
-              <div>
+              <div class="svc__risk">
                 <dt>Risk level</dt>
                 <dd><span class="badge badge--gain">Low–Moderate</span><span class="risk-meter" data-level="2" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></dd>
               </div>
-              <div>
+              <div class="svc__hz">
                 <dt>Indicative horizon</dt>
                 <dd>Medium to long-term</dd>
               </div>
@@ -388,27 +478,27 @@
           <div class="svc__how reveal reveal-delay-1">
             <h3 class="svc__how-title">How it works</h3>
             <ol class="steps">
-                <li><span class="step__n">01</span><div><h4>Set the allocation</h4><p>A portion of the portfolio is assigned to precious metals, based on your overall goals and risk profile.</p></div></li>
-                <li><span class="step__n">02</span><div><h4>Choose the ETF</h4><p>Funds are compared on liquidity, tracking error and expense ratio. Units are backed by metal held by the fund, so there is no storage or purity concern for you.</p></div></li>
-                <li><span class="step__n">03</span><div><h4>Build in stages</h4><p>Purchases can be staggered to average the entry price, and units trade on the exchange just like shares.</p></div></li>
-                <li><span class="step__n">04</span><div><h4>Rebalance</h4><p>After a sharp rally or fall, the allocation is brought back to target, which trims what has run up and adds to what has fallen.</p></div></li>
+              <li style="--i:0"><span class="step__n">01</span><div><h4>Set the allocation</h4><p>A portion of the portfolio can be assigned to precious metals, based on your overall goals and risk profile.</p></div></li>
+              <li style="--i:1"><span class="step__n">02</span><div><h4>Choose the ETF</h4><p>Funds are compared on liquidity, tracking error and expense ratio. Units are typically backed by metal held by the fund, so physical storage is not your concern.</p></div></li>
+              <li style="--i:2"><span class="step__n">03</span><div><h4>Build in stages</h4><p>Purchases can be staggered to average the entry price, and units trade on the exchange just like shares.</p></div></li>
+              <li style="--i:3"><span class="step__n">04</span><div><h4>Rebalance</h4><p>After a sharp rally or fall, the allocation can be brought back to target, which trims what has run up and adds to what has fallen.</p></div></li>
             </ol>
           </div>
         </div>
       </section>
-      <section id="mtf" class="svc-sec" aria-labelledby="mtf-title">
-        <div class="container svc">
+      <section id="mtf" class="svc-sec svc-sec--wide" aria-labelledby="mtf-title">
+        <div class="container svc  svc--wide">
           <div class="svc__main reveal">
-            <p class="svc__idx"><span>07</span> / 08</p>
+            <p class="svc__idx" aria-hidden="true"><span class="svc__num">07</span><span class="svc__of">of 08</span></p>
             <div class="icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-percent"/></svg></div>
             <h2 id="mtf-title" class="svc__title">Margin Trading Fund (MTF) Optimization</h2>
             <p class="svc__summary">Using your broker&#x27;s margin trading facility to buy more than your cash alone allows, only where the expected benefit clearly outweighs the interest cost and the added risk.</p>
             <dl class="svc__meta">
-              <div>
+              <div class="svc__risk">
                 <dt>Risk level</dt>
                 <dd><span class="badge badge--loss">High</span><span class="risk-meter" data-level="5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></dd>
               </div>
-              <div>
+              <div class="svc__hz">
                 <dt>Indicative horizon</dt>
                 <dd>Weeks to months</dd>
               </div>
@@ -421,27 +511,27 @@
           <div class="svc__how reveal reveal-delay-1">
             <h3 class="svc__how-title">How it works</h3>
             <ol class="steps">
-                <li><span class="step__n">01</span><div><h4>Understand the mechanics</h4><p>You pay part of the purchase value and the broker funds the rest. Only stocks on the broker&#x27;s approved list qualify, and the shares bought are pledged as collateral.</p></div></li>
-                <li><span class="step__n">02</span><div><h4>Count the cost</h4><p>Interest is charged daily on the funded amount for as long as the position is open, so a trade has to earn more than its financing cost to be worth it.</p></div></li>
-                <li><span class="step__n">03</span><div><h4>Size conservatively</h4><p>Leverage magnifies losses as well as gains. Positions are sized so that a sharp fall does not trigger margin calls or forced selling.</p></div></li>
-                <li><span class="step__n">04</span><div><h4>Exit with discipline</h4><p>Each position has a time limit and a stop-loss, and is closed or moved to delivery once the idea plays out or fails.</p></div></li>
+              <li style="--i:0"><span class="step__n">01</span><div><h4>Understand the mechanics</h4><p>You pay part of the purchase value and the broker funds the rest. Only stocks on the broker&#x27;s approved list qualify, and the shares bought are pledged as collateral.</p></div></li>
+              <li style="--i:1"><span class="step__n">02</span><div><h4>Count the cost</h4><p>Interest is charged daily on the funded amount for as long as the position is open, so a trade has to earn more than its financing cost to be worth it.</p></div></li>
+              <li style="--i:2"><span class="step__n">03</span><div><h4>Size conservatively</h4><p>Leverage magnifies losses as well as gains. Positions should be sized to reduce the chance that a sharp fall triggers margin calls or forced selling.</p></div></li>
+              <li style="--i:3"><span class="step__n">04</span><div><h4>Exit with discipline</h4><p>Each position should have a time limit and a stop-loss, and be closed or moved to delivery once the idea plays out or fails.</p></div></li>
             </ol>
           </div>
         </div>
       </section>
-      <section id="risk-management" class="svc-sec svc-sec--alt" aria-labelledby="risk-management-title">
-        <div class="container svc svc--flip">
+      <section id="risk-management" class="svc-sec svc-sec--split" aria-labelledby="risk-management-title">
+        <div class="container svc svc--flip svc--foundation svc--split">
           <div class="svc__main reveal">
-            <p class="svc__idx"><span>08</span> / 08</p>
+            <p class="svc__idx" aria-hidden="true"><span class="svc__num">08</span><span class="svc__of">of 08</span></p>
             <div class="icon"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-pie"/></svg></div>
             <h2 id="risk-management-title" class="svc__title">Comprehensive Portfolio Structuring &amp; Risk Management</h2>
             <p class="svc__summary">The framework that holds every other strategy together: how much goes where, how much any single idea is allowed to lose, and how the whole portfolio is protected.</p>
             <dl class="svc__meta">
-              <div>
+              <div class="svc__risk">
                 <dt>Risk level</dt>
                 <dd><span class="badge badge--gold">Foundational, applies to all</span></dd>
               </div>
-              <div>
+              <div class="svc__hz">
                 <dt>Indicative horizon</dt>
                 <dd>Ongoing</dd>
               </div>
@@ -454,10 +544,10 @@
           <div class="svc__how reveal reveal-delay-1">
             <h3 class="svc__how-title">How it works</h3>
             <ol class="steps">
-                <li><span class="step__n">01</span><div><h4>Profile the investor</h4><p>Your goals, timeline, income needs and capacity for loss are mapped before any money is allocated.</p></div></li>
-                <li><span class="step__n">02</span><div><h4>Allocate across assets</h4><p>Capital is divided between equity, options income, precious metals and cash to match that profile.</p></div></li>
-                <li><span class="step__n">03</span><div><h4>Set limits and hedges</h4><p>Position-size caps, a maximum loss per strategy and hedges are set so that no single trade or market event can derail the plan.</p></div></li>
-                <li><span class="step__n">04</span><div><h4>Review and rebalance</h4><p>The portfolio is reviewed regularly and rebalanced as markets move or your circumstances change, with updates shared with you.</p></div></li>
+              <li style="--i:0"><span class="step__n">01</span><div><h4>Profile the investor</h4><p>Your goals, timeline, income needs and capacity for loss are mapped before any money is allocated.</p></div></li>
+              <li style="--i:1"><span class="step__n">02</span><div><h4>Allocate across assets</h4><p>Capital can be divided between equity, options income, precious metals and cash to match that profile.</p></div></li>
+              <li style="--i:2"><span class="step__n">03</span><div><h4>Set limits and hedges</h4><p>Position-size caps, a maximum loss per strategy and hedges are set to limit the damage any single trade or market event can do.</p></div></li>
+              <li style="--i:3"><span class="step__n">04</span><div><h4>Review and rebalance</h4><p>The portfolio can be reviewed regularly and rebalanced as markets move or your circumstances change.</p></div></li>
             </ol>
           </div>
         </div>
@@ -465,7 +555,7 @@
     </div>
 
     <!-- ===================== COMPARISON ===================== -->
-    <section class="section section--line" aria-labelledby="compare-title">
+    <section class="section svc-compare" id="compare" aria-labelledby="compare-title">
       <div class="container">
         <div class="section-head split-head reveal">
           <div>
@@ -536,14 +626,14 @@
     </section>
 
     <!-- ===================== F&O HONESTY ===================== -->
-    <section class="section section--alt" aria-labelledby="fno-title">
+    <section class="section svc-fno" aria-labelledby="fno-title">
       <div class="container fno">
         <div class="reveal">
           <p class="eyebrow">An honest note</p>
           <h2 id="fno-title" class="h2">Is F&amp;O right for me?</h2>
-          <div class="note note--warn">
+          <div class="note note--warn" role="note">
             <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-alert"/></svg>
-            <p>SEBI studies have found that most individual F&amp;O traders incur losses. Derivatives are leveraged and time-bound, and they punish weak risk control quickly. That is why Easy Trading uses defined-risk frameworks: hedged positions, fixed position sizes, pre-set exits and collateral-backed margins. F&amp;O is recommended only where it fits your risk profile, and for many investors it does not.</p>
+            <p>SEBI studies have found that most individual F&amp;O traders incur losses. Derivatives are leveraged and time-bound, and they punish weak risk control quickly. That is why a defined-risk approach matters: hedged positions, fixed position sizes, pre-set exits and collateral-backed margins. F&amp;O should be considered only where it fits your risk profile, and for many investors it does not.</p>
           </div>
         </div>
         <div class="fno__lists reveal reveal-delay-1">
@@ -582,7 +672,7 @@
           </details>
           <details>
             <summary>How is investing different from trading?</summary>
-            <div><p>Investing means owning quality assets for years and letting earnings growth compound. Trading means taking short-term positions to capture price moves over minutes, days or weeks. Long-term investing is the core of the Easy Trading approach; trading strategies are used selectively and within strict risk limits.</p></div>
+            <div><p>Investing means owning quality assets for years and letting earnings growth compound. Trading means taking short-term positions to capture price moves over minutes, days or weeks. Long-term investing is the core of the Easy Trading approach; trading strategies can be used selectively, within defined risk limits.</p></div>
           </details>
           <details>
             <summary>Do I need to use all eight strategies?</summary>

@@ -15,13 +15,13 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://easytrading.co.in/assets/img/og-image.png">
   <!-- @head -->
-  <meta name="theme-color" content="#fbfaf6">
+  <meta name="theme-color" content="#f4f7fd">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icon-32.png">
   <link rel="apple-touch-icon" href="/assets/img/icon-180.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="/assets/css/main.css">
   <script src="/assets/js/config.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
@@ -89,27 +89,41 @@
 
     <!-- ===================== HERO ===================== -->
     <section class="page-hero perf-hero" data-performance aria-labelledby="perf-h1">
-      <div class="container">
-        <ol class="breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Performance</li></ol>
-        <p class="eyebrow">Client-reported record</p>
-        <h1 id="perf-h1">Performance, <em class="serif-i">2020 to 2024</em></h1>
-        <p class="lead">Five calendar years of client-reported returns, set against the Nifty 50 index through a pandemic crash, a global rate-hike cycle and record highs. Every number on this page can be traced to the method below.</p>
-        <div class="perf-flag" role="note">
-          <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-alert"/></svg>
-          <p><strong>Client-reported, unaudited.</strong> Easy Trading figures are reported by the firm and have not been independently audited. Past performance is not indicative of future returns. <a href="#methodology">Read the methodology</a></p>
+      <div class="container perf-hero__grid">
+        <div class="perf-hero__copy">
+          <ol class="breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Performance</li></ol>
+          <p class="eyebrow">Client-reported record</p>
+          <h1 id="perf-h1">Five years, <em class="serif-i">set against the Nifty 50.</em></h1>
+          <p class="lead">Calendar-year returns from 2020 to 2024, reported by the firm and shown next to the index through a pandemic crash, a global rate-hike cycle and record highs. Every number here can be traced to the method below.</p>
+          <div class="perf-flag" role="note">
+            <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-alert"/></svg>
+            <p><strong>Client-reported, unaudited.</strong> Easy Trading figures are reported by the firm and have not been independently audited. Past performance is not indicative of future returns. <a href="#methodology">Read the methodology</a></p>
+          </div>
         </div>
+
+        <figure class="hero-card glass reveal" aria-labelledby="hc-cap">
+          <div class="hero-card__top">
+            <span class="hero-card__label">5-yr CAGR<sup>*</sup></span>
+            <span class="badge badge--gold">Client-reported</span>
+          </div>
+          <p class="hero-card__big mono" data-cagr-client>≈ <span>…</span></p>
+          <p class="hero-card__sub">Nifty 50 price index over the same years: <b class="mono" data-cagr-nifty>≈ <span>…</span></b></p>
+          <div class="hero-bars" role="img" aria-label="Yearly returns, Easy Trading client-reported then Nifty 50. 2020: 50% and 14.9%. 2021: 39% and 24.1%. 2022: 35% and 4.3%. 2023: 38% and 20.0%. 2024: 41% and 8.8%.">
+            <div class="hb" style="--et:50;--nf:14.9"><span class="hb__v mono">50%</span><span class="hb__pair"><i class="hb__et"></i><i class="hb__nf"></i></span><span class="hb__y mono">2020</span></div>
+            <div class="hb" style="--et:39;--nf:24.1"><span class="hb__v mono">39%</span><span class="hb__pair"><i class="hb__et"></i><i class="hb__nf"></i></span><span class="hb__y mono">2021</span></div>
+            <div class="hb" style="--et:35;--nf:4.3"><span class="hb__v mono">35%</span><span class="hb__pair"><i class="hb__et"></i><i class="hb__nf"></i></span><span class="hb__y mono">2022</span></div>
+            <div class="hb" style="--et:38;--nf:20"><span class="hb__v mono">38%</span><span class="hb__pair"><i class="hb__et"></i><i class="hb__nf"></i></span><span class="hb__y mono">2023</span></div>
+            <div class="hb" style="--et:41;--nf:8.8"><span class="hb__v mono">41%</span><span class="hb__pair"><i class="hb__et"></i><i class="hb__nf"></i></span><span class="hb__y mono">2024</span></div>
+          </div>
+          <figcaption id="hc-cap" class="hero-card__key mono"><span><i class="sw sw--gold" aria-hidden="true"></i>Easy Trading</span><span><i class="sw sw--slate" aria-hidden="true"></i>Nifty 50</span></figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- ===================== KPI STRIP ===================== -->
+    <!-- ===================== KPI BAND ===================== -->
     <section class="kpi-strip" data-performance aria-label="Key figures">
       <div class="container">
-        <dl class="kpis">
-          <div class="kpi kpi--lead">
-            <dt>5-yr CAGR <sup>*</sup></dt>
-            <dd class="mono gold" data-cagr-client>≈ <span>…</span></dd>
-            <dd class="kpi__note">Compounded from the five yearly figures</dd>
-          </div>
+        <dl class="kpis glass reveal">
           <div class="kpi">
             <dt>Active clients</dt>
             <dd class="mono"><span data-count="100" data-suffix="+">100+</span></dd>
@@ -123,12 +137,12 @@
             <dd class="mono"><span data-count="98" data-suffix="%">98%</span></dd>
           </div>
           <div class="kpi">
-            <dt>Best · 2020</dt>
-            <dd class="mono gain">+50%</dd>
+            <dt>Best year · 2020</dt>
+            <dd class="mono gain"><span data-count="50" data-prefix="+" data-suffix="%">+50%</span></dd>
           </div>
           <div class="kpi">
-            <dt>Lowest · 2022</dt>
-            <dd class="mono gain">+35%</dd>
+            <dt>Lowest year · 2022</dt>
+            <dd class="mono gain"><span data-count="35" data-prefix="+" data-suffix="%">+35%</span></dd>
           </div>
         </dl>
         <p class="fine muted"><sup>*</sup>All Easy Trading figures are client-reported and unaudited.</p>
@@ -138,16 +152,16 @@
     <!-- ===================== GROWTH SIMULATOR ===================== -->
     <section class="section" id="growth" data-performance aria-labelledby="growth-title">
       <div class="container">
-        <div class="section-head split-head">
+        <div class="section-head split-head reveal">
           <div>
             <p class="eyebrow">Interactive · illustrative</p>
-            <h2 id="growth-title" class="h2">Illustrative growth of a starting amount</h2>
+            <h2 id="growth-title" class="h2">What a starting amount <em class="serif-i">would have grown to</em></h2>
           </div>
           <p class="lead">Enter or slide a starting amount. The chart compounds it through each year's client-reported return and, alongside, through the Nifty 50 index. Illustrative only.</p>
         </div>
 
-        <div class="sim card">
-          <div class="sim__controls">
+        <div class="sim reveal">
+          <div class="sim__controls card">
             <div class="field">
               <label for="sim-amount">Starting amount (₹)</label>
               <input class="input mono" id="sim-amount" type="text" inputmode="numeric" autocomplete="off" value="1,00,000" aria-describedby="sim-hint">
@@ -181,7 +195,7 @@
               </div>
             </dl>
           </div>
-          <div class="sim__chart">
+          <div class="sim__chart card">
             <div class="sim__chart-head mono">
               <span>Value in ₹</span><span>Dec 2019 → Dec 2024</span>
             </div>
@@ -197,14 +211,14 @@
     <!-- ===================== YEAR TABLE ===================== -->
     <section class="section section--alt" id="yearly" data-performance aria-labelledby="table-title">
       <div class="container">
-        <div class="section-head split-head">
+        <div class="section-head split-head reveal">
           <div>
             <p class="eyebrow">The record</p>
-            <h2 id="table-title" class="h2">Year by year</h2>
+            <h2 id="table-title" class="h2">Year by year, <em class="serif-i">side by side</em></h2>
           </div>
           <p class="lead">Easy Trading's reported annual return next to the Nifty 50's calendar-year price return and its closing level.</p>
         </div>
-        <div class="table-wrap">
+        <div class="table-wrap table-card reveal">
           <table class="data perf-table">
             <caption class="sr-only">Easy Trading yearly returns (client-reported, unaudited) compared with the Nifty 50 price index, 2020 to 2024</caption>
             <thead>
@@ -227,42 +241,42 @@
     <!-- ===================== YEARLY BARS + CONTEXT ===================== -->
     <section class="section" id="context" data-performance aria-labelledby="context-title">
       <div class="container">
-        <div class="section-head split-head">
+        <div class="section-head split-head reveal">
           <div>
             <p class="eyebrow">Market context</p>
-            <h2 id="context-title" class="h2">The market behind each year</h2>
+            <h2 id="context-title" class="h2">The market <em class="serif-i">behind each year</em></h2>
           </div>
           <p class="lead">Returns only mean something next to the conditions that produced them. Hover a year to highlight it on the chart.</p>
         </div>
         <div class="ctx">
-          <div class="ctx__chart card">
+          <div class="ctx__chart card reveal">
             <div class="sim__chart-head mono"><span>Annual return, %</span><span class="ctx__legend"><i class="sw sw--gold" aria-hidden="true"></i>Easy Trading <i class="sw sw--slate" aria-hidden="true"></i>Nifty 50</span></div>
             <div class="chart-box chart-box--bars">
               <canvas id="bars-chart" role="img" aria-label="Bar chart of yearly returns. Easy Trading (client-reported): 2020 50%, 2021 39%, 2022 35%, 2023 38%, 2024 41%. Nifty 50: 2020 14.9%, 2021 24.1%, 2022 4.3%, 2023 20.0%, 2024 8.8%."></canvas>
             </div>
           </div>
           <ol class="ctx__list">
-            <li tabindex="0" data-idx="0">
+            <li class="reveal" tabindex="0" data-idx="0">
               <span class="ctx__year mono">2020</span>
               <div><h3>Pandemic crash and recovery</h3><p>Markets fell sharply in March as COVID-19 lockdowns began, then recovered on liquidity support to end the year at new highs.</p></div>
               <span class="ctx__nums mono"><b class="gold" data-ctx-client></b><b data-ctx-nifty></b></span>
             </li>
-            <li tabindex="0" data-idx="1">
+            <li class="reveal reveal-delay-1" tabindex="0" data-idx="1">
               <span class="ctx__year mono">2021</span>
               <div><h3>Post-pandemic rally</h3><p>Reopening, a strong earnings rebound and heavy retail participation carried Indian equities steadily higher.</p></div>
               <span class="ctx__nums mono"><b class="gold" data-ctx-client></b><b data-ctx-nifty></b></span>
             </li>
-            <li tabindex="0" data-idx="2">
+            <li class="reveal reveal-delay-2" tabindex="0" data-idx="2">
               <span class="ctx__year mono">2022</span>
               <div><h3>Rate hikes and war</h3><p>Central banks raised rates aggressively to fight inflation and the Russia–Ukraine war shook commodity markets. Indian indices ended only modestly higher.</p></div>
               <span class="ctx__nums mono"><b class="gold" data-ctx-client></b><b data-ctx-nifty></b></span>
             </li>
-            <li tabindex="0" data-idx="3">
+            <li class="reveal reveal-delay-3" tabindex="0" data-idx="3">
               <span class="ctx__year mono">2023</span>
               <div><h3>Broad-based rally</h3><p>Gains spread across large, mid and small caps as inflation eased and earnings held up.</p></div>
               <span class="ctx__nums mono"><b class="gold" data-ctx-client></b><b data-ctx-nifty></b></span>
             </li>
-            <li tabindex="0" data-idx="4">
+            <li class="reveal" tabindex="0" data-idx="4">
               <span class="ctx__year mono">2024</span>
               <div><h3>Record highs, then a correction</h3><p>Indices reached record highs in September before an autumn correction as foreign investors sold.</p></div>
               <span class="ctx__nums mono"><b class="gold" data-ctx-client></b><b data-ctx-nifty></b></span>
@@ -272,18 +286,47 @@
       </div>
     </section>
 
+    <!-- ===================== INDEX COMPARISON (midnight feature band) ===================== -->
+    <section class="section section--navy vs-band" id="compare" data-performance aria-labelledby="compare-title">
+      <div class="container">
+        <div class="section-head split-head reveal">
+          <div>
+            <p class="eyebrow">Against the index</p>
+            <h2 id="compare-title" class="h2">Reported CAGR <em class="serif-i">beside the Nifty 50</em></h2>
+          </div>
+          <p class="lead">From 2020 to 2024, the reported CAGR was more than twice that of the Nifty 50 price index. Both figures are computed on this page from the yearly numbers.</p>
+        </div>
+        <div class="vs">
+          <div class="vs__col vs__col--client reveal">
+            <p class="vs__label mono">Easy Trading · client-reported</p>
+            <p class="vs__big mono" data-cagr-client>≈ <span>…</span></p>
+            <p class="vs__sub">5-yr CAGR · ₹1,00,000 → <span class="mono" data-end-client>…</span></p>
+            <div class="vs__bar"><span data-bar-client></span></div>
+          </div>
+          <div class="vs__mid mono reveal reveal-delay-1" aria-hidden="true"><span data-cagr-ratio>…</span><small>the CAGR</small></div>
+          <div class="vs__col vs__col--nifty reveal reveal-delay-2">
+            <p class="vs__label mono">Nifty 50 · price index</p>
+            <p class="vs__big mono" data-cagr-nifty>≈ <span>…</span></p>
+            <p class="vs__sub">5-yr CAGR · ₹1,00,000 → <span class="mono" data-end-nifty>…</span></p>
+            <div class="vs__bar vs__bar--slate"><span data-bar-nifty></span></div>
+          </div>
+        </div>
+        <p class="fine">CAGRs are computed on this page from the yearly figures in the table above. The Nifty 50 comparison excludes dividends, which would add to the index return. The comparison is against the index only. Client-reported, unaudited; not a forecast.</p>
+      </div>
+    </section>
+
     <!-- ===================== RETURN COMPOSITION ===================== -->
-    <section class="section section--alt" id="composition" data-performance aria-labelledby="comp-title">
+    <section class="section" id="composition" data-performance aria-labelledby="comp-title">
       <div class="container split split--wide-left comp">
-        <div>
+        <div class="reveal">
           <div class="section-head section-head--flush">
             <p class="eyebrow">Return composition</p>
-            <h2 id="comp-title" class="h2">Where the reported returns come from</h2>
+            <h2 id="comp-title" class="h2">Where the reported returns <em class="serif-i">come from</em></h2>
           </div>
           <p class="lead">Our clients benefit from both equity compounding and weekly/monthly F&amp;O income. Long-term equity holdings grow capital over years; index options selling on collateral margins adds a cash-flow layer on top.</p>
           <p class="muted">The bars show the reported yearly range of each engine. The combined bar stacks the midpoints of the two ranges, with the whisker spanning the sum of their lows and highs.</p>
         </div>
-        <figure class="ranges card" aria-labelledby="ranges-cap">
+        <figure class="ranges card reveal reveal-delay-1" aria-labelledby="ranges-cap">
           <div class="ranges__axis mono" aria-hidden="true"><span style="--x:0">0%</span><span style="--x:20">10%</span><span style="--x:40">20%</span><span style="--x:60">30%</span><span style="--x:80">40%</span><span style="--x:100">50%</span></div>
           <div class="range">
             <div class="range__label"><span>Long-term equity</span><span class="mono gold">15–20% avg / yr</span></div>
@@ -308,66 +351,38 @@
       </div>
     </section>
 
-    <!-- ===================== INDEX COMPARISON ===================== -->
-    <section class="section" id="compare" data-performance aria-labelledby="compare-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Against the index</p>
-          <h2 id="compare-title" class="h2">Reported CAGR beside the Nifty 50</h2>
-          <p class="lead">From 2020 to 2024, the reported CAGR was more than twice that of the Nifty 50 price index. Both figures are computed on this page from the yearly numbers:</p>
-        </div>
-        <div class="vs">
-          <div class="vs__col vs__col--client">
-            <p class="vs__label mono">Easy Trading · client-reported</p>
-            <p class="vs__big mono gold" data-cagr-client>≈ <span>…</span></p>
-            <p class="vs__sub">5-yr CAGR · ₹1,00,000 → <span class="mono" data-end-client>…</span></p>
-            <div class="vs__bar"><span data-bar-client></span></div>
-          </div>
-          <div class="vs__mid mono" aria-hidden="true"><span data-cagr-ratio>…</span><small>the CAGR</small></div>
-          <div class="vs__col">
-            <p class="vs__label mono">Nifty 50 · price index</p>
-            <p class="vs__big mono" data-cagr-nifty>≈ <span>…</span></p>
-            <p class="vs__sub">5-yr CAGR · ₹1,00,000 → <span class="mono" data-end-nifty>…</span></p>
-            <div class="vs__bar vs__bar--slate"><span data-bar-nifty></span></div>
-          </div>
-        </div>
-        <p class="fine muted">CAGRs are computed on this page from the yearly figures in the table above. The Nifty 50 comparison excludes dividends, which would add to the index return. The comparison is against the index only.</p>
-      </div>
-    </section>
-
-    <!-- ===================== METHODOLOGY ===================== -->
+    <!-- ===================== METHODOLOGY (bento) ===================== -->
     <section class="section section--alt" id="methodology" data-performance aria-labelledby="method-title">
-      <div class="container split split--wide-left method">
-        <div>
-          <div class="section-head section-head--flush">
+      <div class="container">
+        <div class="section-head split-head reveal">
+          <div>
             <p class="eyebrow">How the figures are computed</p>
-            <h2 id="method-title" class="h2">Methodology</h2>
+            <h2 id="method-title" class="h2">Methodology, <em class="serif-i">in plain terms</em></h2>
           </div>
-          <ol class="method__list">
-            <li><span class="mono gold">01</span><div><h3>Yearly returns are client-reported</h3><p>The 2020 to 2024 annual figures (50%, 39%, 35%, 38% and 41%) are reported by Easy Trading. They have not been audited by an independent third party.</p></div></li>
-            <li><span class="mono gold">02</span><div><h3>CAGR is compounded, not averaged</h3><p>Each year's return is applied to the previous year's ending value. CAGR is the constant annual rate that turns the starting value into the final value over five years: (product of (1 + r))<sup>1/5</sup> − 1.</p></div></li>
-            <li><span class="mono gold">03</span><div><h3>Nifty 50 is the price index</h3><p>Benchmark returns use published calendar-year closing levels of the Nifty 50 price index, from 12,168.45 at the end of 2019 to 23,644.80 at the end of 2024. Dividends are excluded.</p></div></li>
-            <li><span class="mono gold">04</span><div><h3>Fees and taxes</h3><p>Whether the reported figures are gross or net of fees and charges is not specified. Taxes, brokerage and the timing of individual deposits and withdrawals are not reflected.</p></div></li>
-            <li><span class="mono gold">05</span><div><h3>Individual results differ</h3><p>Each client's return depends on when they started, the strategies used, position sizing and capital added or withdrawn. Your result may be higher or lower.</p></div></li>
-          </ol>
+          <p class="lead">Five short notes on where each number comes from and what it leaves out.</p>
         </div>
-        <aside class="method__side">
-          <div class="note note--warn">
-            <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-alert"/></svg>
-            <div>
-              <p><strong>Important disclaimer.</strong> Investments in the securities market are subject to market risks. Please read all related documents carefully before investing. Past performance may not guarantee future results.</p>
-              <p>The returns on this page are client-reported and unaudited, and are shown for information only. They are not an offer, a recommendation, or a promise or guarantee of any future return. Derivatives (F&amp;O) trading involves substantial risk of loss and may not be suitable for every investor. Returns can be lower or negative in any year.</p>
-            </div>
+        <ol class="bento">
+          <li class="bento__item bento__item--a reveal"><span class="bento__n mono">01</span><h3>Yearly returns are client-reported</h3><p>The 2020 to 2024 annual figures (50%, 39%, 35%, 38% and 41%) are reported by Easy Trading. They have not been audited by an independent third party.</p></li>
+          <li class="bento__item bento__item--b reveal reveal-delay-1"><span class="bento__n mono">02</span><h3>CAGR is compounded, not averaged</h3><p>Each year's return is applied to the previous year's ending value. CAGR is the constant annual rate that turns the starting value into the final value over five years: (product of (1 + r))<sup>1/5</sup> − 1.</p></li>
+          <li class="bento__item bento__item--c reveal reveal-delay-2"><span class="bento__n mono">03</span><h3>Nifty 50 is the price index</h3><p>Benchmark returns use published calendar-year closing levels of the Nifty 50 price index, from 12,168.45 at the end of 2019 to 23,644.80 at the end of 2024. Dividends are excluded.</p></li>
+          <li class="bento__item bento__item--d reveal"><span class="bento__n mono">04</span><h3>Fees and taxes</h3><p>Whether the reported figures are gross or net of fees and charges is not specified. Taxes, brokerage and the timing of individual deposits and withdrawals are not reflected.</p></li>
+          <li class="bento__item bento__item--e reveal reveal-delay-1"><span class="bento__n mono">05</span><h3>Individual results differ</h3><p>Each client's return depends on when they started, the strategies used, position sizing and capital added or withdrawn. Your result may be higher or lower.</p></li>
+        </ol>
+        <div class="note note--warn disclaimer reveal">
+          <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-alert"/></svg>
+          <div>
+            <p><strong>Important disclaimer.</strong> Investments in the securities market are subject to market risks. Please read all related documents carefully before investing. Past performance may not guarantee future results.</p>
+            <p>The returns on this page are client-reported and unaudited, and are shown for information only. They are not an offer, a recommendation, or a promise or guarantee of any future return. Derivatives (F&amp;O) trading involves substantial risk of loss and may not be suitable for every investor. Returns can be lower or negative in any year.</p>
+            <a class="link-arrow" href="/legal/disclaimer.html">Read the full disclaimer <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a>
           </div>
-          <a class="link-arrow" href="/legal/disclaimer.html">Read the full disclaimer <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a>
-        </aside>
+        </div>
       </div>
     </section>
 
     <!-- ===================== CTA ===================== -->
     <section class="section section--tight" data-performance>
       <div class="container">
-        <div class="cta-band">
+        <div class="cta-band reveal">
           <p class="eyebrow">Talk it through</p>
           <h2>Ask how these numbers were made.</h2>
           <p class="lead">A no-obligation conversation with a NISM-certified professional about your goals, your risk appetite and the strategies that fit.</p>
