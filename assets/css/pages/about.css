@@ -138,5 +138,5 @@
 .cred__figures > div:nth-child(2n) { padding-left: 16px; padding-right: 0; border-left: 1px solid var(--line); }
 .cred__figures dt { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 .cred__figures dd { margin: 10px 0 6px; font-family: var(--font-display); font-stretch: 125%; font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem); font-weight: 800; color: var(--text); letter-spacing: -0.03em; line-height: 1.1; }
-.cred__figures p { margin: 0; color: var(--muted); font-size: var(--fs-sm); }
+.cred__figures dd.cred__note { margin: 0; font-family: var(--font-sans); font-stretch: 100%; font-size: var(--fs-sm); font-weight: 400; letter-spacing: 0; line-height: inherit; color: var(--muted); }
 @media (min-width: 640px) { .cred__figures > div { padding: 28px 24px 28px 0; } .cred__figures > div:nth-child(2n) { padding-left: 24px; } }

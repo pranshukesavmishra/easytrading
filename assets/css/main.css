@@ -157,6 +157,7 @@ ul, ol { margin: 0; padding: 0; }
 .muted { color: var(--muted); }
 .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
 .gold { color: var(--gold); }
+p a.gold { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .gain { color: var(--gain); }
 .loss { color: var(--loss); }
 .text-gold-grad { background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }

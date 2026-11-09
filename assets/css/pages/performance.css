@@ -31,7 +31,7 @@
 .kpi dt sup { color: var(--gold); }
 .kpi dd { margin: 10px 0 0; font-size: clamp(1.6rem, 1.3rem + 1.4vw, 2.3rem); font-weight: 600; line-height: 1; letter-spacing: -0.03em; }
 .kpi--lead dd { font-size: clamp(2.6rem, 2rem + 3vw, 4.2rem); }
-.kpi p { margin: 10px 0 0; color: var(--muted); font-size: var(--fs-xs); }
+.kpi dd.kpi__note { margin: 10px 0 0; color: var(--muted); font-size: var(--fs-xs); font-weight: 400; line-height: inherit; letter-spacing: 0; }
 .kpi-strip .fine { margin-top: 14px; }
 @media (min-width: 1024px) {
   .kpis { grid-template-columns: 1.6fr repeat(5, minmax(0, 1fr)); }
