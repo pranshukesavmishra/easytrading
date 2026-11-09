@@ -128,7 +128,7 @@
   }
   function compose(d) {
     var lines = [
-      "Hello Easy Trading, I'd like to book a free consultation.",
+      "Hello Easy Trading, I'd like to book a consultation.",
       "",
       "Name: " + d.name,
       "Mobile: " + d.phone
