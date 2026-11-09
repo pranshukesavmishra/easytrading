@@ -8,7 +8,7 @@ html { scroll-padding-top: calc(var(--header-h) + 80px); }
 .svc-hero__key { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line-strong); }
 .svc-hero__key > div { padding: 14px 12px 0 0; }
 .svc-hero__key > div + div { padding-left: 12px; border-left: 1px solid var(--line); }
-.svc-hero__key dt { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.svc-hero__key dt {  font-size: var(--fs-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 .svc-hero__key dd { margin: 8px 0 0; font-size: var(--fs-xl); font-weight: 600; color: var(--text); line-height: 1.1; }
 .svc-hero__key .risk-meter { margin: 10px 0 8px; }
 .svc-hero__scale { display: block; font-size: var(--fs-xs); color: var(--muted); font-weight: 400; }
@@ -76,7 +76,7 @@ html { scroll-padding-top: calc(var(--header-h) + 80px); }
 .svc__meta > div { padding: 16px 12px 16px 0; border-bottom: 1px solid var(--line); }
 .svc__meta > div:nth-child(2) { padding-left: 16px; border-left: 1px solid var(--line); }
 .svc__meta .svc__suited, .svc__meta .svc__ret { grid-column: 1 / -1; }
-.svc__meta dt { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.svc__meta dt {  font-size: var(--fs-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
 .svc__meta dd { margin: 0; color: var(--text); font-size: var(--fs-sm); display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .svc__ret dd { align-items: baseline; color: var(--text-2); }
 .svc__ret strong { font-size: var(--fs-xl); letter-spacing: -0.02em; }
@@ -132,6 +132,6 @@ table.compare { min-width: 680px; }
   .compare th[scope="row"], .compare td { padding: 4px 0; border: 0; }
   .compare th[scope="row"] { padding-bottom: 8px; font-size: var(--fs-md); }
   .compare td { display: grid; grid-template-columns: 96px 1fr; gap: 12px; align-items: center; }
-  .compare td::before { content: attr(data-label); font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .compare td::before { content: attr(data-label);  font-size: var(--fs-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
   .tbl-risk { white-space: normal; }
 }

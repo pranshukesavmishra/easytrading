@@ -27,7 +27,7 @@
 .kpi:nth-child(odd) { padding-left: 16px; border-left: 1px solid var(--line); }
 .kpi:last-child { grid-column: 1 / -1; }
 .kpi--lead { grid-column: 1 / -1; border-left: 0 !important; padding-left: 0 !important; }
-.kpi dt { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.kpi dt {  font-size: var(--fs-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 .kpi dt sup { color: var(--gold); }
 .kpi dd { margin: 10px 0 0; font-size: clamp(1.6rem, 1.3rem + 1.4vw, 2.3rem); font-weight: 600; line-height: 1; letter-spacing: -0.03em; }
 .kpi--lead dd { font-size: clamp(2.6rem, 2rem + 3vw, 4.2rem); }
@@ -74,11 +74,11 @@
 .perf-table tbody th, .perf-table tfoot th { font-weight: 600; color: var(--text); }
 .perf-table tbody td.num { font-size: var(--fs-base); }
 .perf-table tbody tr { transition: background .2s; }
-.perf-table tbody tr:hover { background: rgba(255,255,255,.025); }
+.perf-table tbody tr:hover { background: rgba(11,27,51,.025); }
 .perf-table tfoot tr th, .perf-table tfoot tr td { border-top: 1px solid var(--line-strong); }
 .perf-table__base th, .perf-table__base td { color: var(--muted); font-size: var(--fs-xs); }
 .perf-table__total th, .perf-table__total td { background: var(--ink-1); font-weight: 600; }
-.perf-table__total th { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .08em; text-transform: uppercase; }
+.perf-table__total th {  font-size: var(--fs-xs); letter-spacing: .08em; text-transform: uppercase; }
 .perf-table__total td.muted { font-weight: 400; font-size: var(--fs-xs); }
 table.data td.gain { color: var(--gain); }
 table.data td.loss { color: var(--loss); }
@@ -117,7 +117,7 @@ table.data td.loss { color: var(--loss); }
 .range__label .mono { font-weight: 500; font-size: var(--fs-xs); }
 .range__track {
   position: relative; height: 14px; margin-right: 14px; border-radius: calc(var(--radius-sm) / 4);
-  background: repeating-linear-gradient(90deg, var(--line) 0 1px, transparent 1px 20%), rgba(255,255,255,.03);
+  background: repeating-linear-gradient(90deg, var(--line) 0 1px, transparent 1px 20%), rgba(11,27,51,.03);
 }
 .range__bar, .range__seg, .range__whisker { position: absolute; top: 0; bottom: 0; left: calc(var(--from) * 1%); width: calc((var(--to) - var(--from)) * 1%); }
 .range__bar { border-radius: calc(var(--radius-sm) / 4); background: var(--gold); }
@@ -145,7 +145,7 @@ table.data td.loss { color: var(--loss); }
 .vs__label { margin: 0 0 8px; font-size: var(--fs-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 .vs__big { margin: 0; font-size: clamp(3rem, 2rem + 5vw, 6rem); line-height: 1; font-weight: 600; letter-spacing: -0.04em; }
 .vs__sub { margin: 12px 0 18px; color: var(--text-2); font-size: var(--fs-sm); }
-.vs__bar { height: 6px; background: rgba(255,255,255,.05); border-radius: calc(var(--radius-sm) / 4); overflow: hidden; }
+.vs__bar { height: 6px; background: rgba(11,27,51,.05); border-radius: calc(var(--radius-sm) / 4); overflow: hidden; }
 .vs__bar span { display: block; height: 100%; width: var(--w, 0); background: var(--gold); border-radius: inherit; transition: width 1.2s var(--ease); }
 .vs__bar--slate span { background: var(--muted); }
 .vs__mid {

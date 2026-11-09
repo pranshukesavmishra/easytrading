@@ -21,7 +21,7 @@
   100% { transform: translateY(0) rotate(6deg); opacity: 1; }
 }
 .nf-links-wrap { border-top: 1px solid var(--line); }
-.nf-links__title { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 16px; }
+.nf-links__title {  font-size: var(--fs-xs); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 16px; }
 .nf-links { list-style: none; display: grid; counter-reset: nf; border-top: 1px solid var(--line-strong); }
 @media (min-width: 768px) { .nf-links { grid-auto-flow: column; grid-auto-columns: 1fr; } .nf-links li + li a { border-left: 1px solid var(--line); } }
 .nf-links a { display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 16px; border-bottom: 1px solid var(--line); font-weight: 600; color: var(--text); transition: color .2s, background .2s; }

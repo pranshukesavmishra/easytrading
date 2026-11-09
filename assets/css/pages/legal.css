@@ -1,10 +1,10 @@
 /* Legal pages (disclaimer, privacy, terms). Tokens only. */
-.legal-meta { margin: 24px 0 0; font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.legal-meta { margin: 24px 0 0;  font-size: var(--fs-xs); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .legal-layout { display: grid; gap: 40px; align-items: start; }
 @media (min-width: 1024px) { .legal-layout { grid-template-columns: 240px minmax(0, 1fr); gap: 72px; } }
 .legal-toc { border-top: 1px solid var(--line-strong); padding-top: 16px; font-size: var(--fs-sm); }
 @media (min-width: 1024px) { .legal-toc { position: sticky; top: calc(var(--header-h) + 32px); } }
-.legal-toc h2 { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin: 0 0 12px; }
+.legal-toc h2 {  font-size: var(--fs-xs); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin: 0 0 12px; }
 .legal-toc ol { list-style: none; display: grid; gap: 2px; counter-reset: toc; }
 .legal-toc li { counter-increment: toc; }
 .legal-toc a { display: flex; gap: 12px; padding: 8px 0; min-height: 40px; align-items: center; color: var(--text-2); border-bottom: 1px solid var(--line); }

@@ -24,7 +24,7 @@
   if (hero) hero.classList.add("has-webgl");
 
   var scene = new THREE.Scene();
-  scene.fog = new THREE.FogExp2(0x07080a, 0.045);
+  scene.fog = new THREE.FogExp2(0xfbfaf6, 0.035);
   var camera = new THREE.PerspectiveCamera(48, 1, 0.1, 100);
   var camBase = new THREE.Vector3(0, 2.4, 8.6);
   camera.position.copy(camBase);
@@ -65,13 +65,13 @@
   geo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
   geo.setAttribute("color", new THREE.BufferAttribute(col, 3));
   var mat = new THREE.PointsMaterial({
-    size: small ? 0.1 : 0.085, map: sprite, vertexColors: true, transparent: true,
-    depthWrite: false, blending: THREE.AdditiveBlending, sizeAttenuation: true
+    size: small ? 0.14 : 0.115, map: sprite, vertexColors: true, transparent: true,
+    depthWrite: false, blending: THREE.NormalBlending, sizeAttenuation: true, opacity: 0.9
   });
   var terrain = new THREE.Points(geo, mat);
   scene.add(terrain);
 
-  var gold = new THREE.Color(0xe8b33a), deep = new THREE.Color(0x6b4d10), hot = new THREE.Color(0xfff1c4);
+  var gold = new THREE.Color(0xc99a2e), deep = new THREE.Color(0x4f6c9c), hot = new THREE.Color(0xa8741a);
   var tmp = new THREE.Color();
 
   function heightAt(x, z, t) {
@@ -91,12 +91,12 @@
   var tracePos = new Float32Array(TRACE_N * 3);
   var traceGeo = new THREE.BufferGeometry();
   traceGeo.setAttribute("position", new THREE.BufferAttribute(tracePos, 3));
-  var trace = new THREE.Line(traceGeo, new THREE.LineBasicMaterial({ color: 0xf3d58a, transparent: true, opacity: 0.9, blending: THREE.AdditiveBlending }));
+  var trace = new THREE.Line(traceGeo, new THREE.LineBasicMaterial({ color: 0x0b2447, transparent: true, opacity: 0.9 }));
   scene.add(trace);
-  var head = new THREE.Sprite(new THREE.SpriteMaterial({ map: sprite, color: 0xfff1c4, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false }));
+  var head = new THREE.Sprite(new THREE.SpriteMaterial({ map: sprite, color: 0x0b2447, transparent: true, depthWrite: false }));
   head.scale.set(0.55, 0.55, 1);
   scene.add(head);
-  var halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: sprite, color: 0xe8b33a, transparent: true, opacity: 0.35, blending: THREE.AdditiveBlending, depthWrite: false }));
+  var halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: sprite, color: 0xe2b13c, transparent: true, opacity: 0.45, depthWrite: false }));
   halo.scale.set(1.8, 1.8, 1);
   scene.add(halo);
 

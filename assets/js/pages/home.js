@@ -109,7 +109,7 @@
               label: "Easy Trading", data: D.growthOf(100000, D.clientReturns),
               borderColor: C.gold, borderWidth: 2.5, tension: 0.35, pointRadius: 0, pointHoverRadius: 5, pointBackgroundColor: C.gold,
               fill: true,
-              backgroundColor: function (c) { return window.ET_CHART.gradient(c.chart.ctx, c.chart.chartArea, "rgba(232,179,58,0.3)", "rgba(232,179,58,0)"); }
+              backgroundColor: function (c) { return window.ET_CHART.gradient(c.chart.ctx, c.chart.chartArea, "rgba(226,177,60,0.35)", "rgba(226,177,60,0)"); }
             },
             {
               label: "Nifty 50", data: D.growthOf(100000, D.nifty50Returns),
@@ -139,8 +139,8 @@
         data: {
           labels: D.years.map(String),
           datasets: [
-            { label: "Easy Trading (client-reported)", data: D.clientReturns, backgroundColor: C.gold, borderRadius: 1, maxBarThickness: 44 },
-            { label: "Nifty 50", data: D.nifty50Returns, backgroundColor: "rgba(124,138,165,0.55)", borderRadius: 1, maxBarThickness: 44 }
+            { label: "Easy Trading (client-reported)", data: D.clientReturns, backgroundColor: C.gold, borderRadius: 4, maxBarThickness: 44 },
+            { label: "Nifty 50", data: D.nifty50Returns, backgroundColor: "rgba(124,138,165,0.55)", borderRadius: 4, maxBarThickness: 44 }
           ]
         },
         options: {
