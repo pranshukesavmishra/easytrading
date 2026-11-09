@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-IN" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Market Desk: Live Sensex, Gold, Silver &amp; Economic Calendar | Easy Trading</title>
+  <meta name="description" content="Easy Trading's Market Desk: live Sensex and BSE indices, Indian ETFs, gold, silver, crude and USD/INR, an interactive chart, a Sensex heatmap, technical gauge and economic calendar.">
+  <link rel="canonical" href="https://easytrading.co.in/markets.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Easy Trading">
+  <meta property="og:title" content="Market Desk: live Indian markets in one screen">
+  <meta property="og:description" content="Sensex, BSE indices, ETFs, gold, silver and USD/INR, with an interactive chart, heatmap and economic calendar.">
+  <meta property="og:url" content="https://easytrading.co.in/markets.html">
+  <meta property="og:image" content="https://easytrading.co.in/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://easytrading.co.in/assets/img/og-image.png">
+  <!-- @head -->
+  <!-- /@head -->
+  <link rel="stylesheet" href="/assets/css/pages/markets.css">
+</head>
+<body class="page-markets">
+  <!-- @header -->
+  <!-- /@header -->
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="page-hero desk-hero" aria-labelledby="desk-h1">
+      <div class="container desk-hero__inner">
+        <div>
+          <ol class="breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Market Desk</li></ol>
+          <p class="eyebrow">Live market analysis</p>
+          <h1 id="desk-h1">Market <em class="serif-i">Desk</em></h1>
+          <p class="lead">Indian indices, ETFs, bullion, crude and the rupee on one screen. The same instruments we track every session, with charts you can explore yourself.</p>
+        </div>
+        <dl class="desk-status mono" aria-label="Desk status">
+          <div><dt>Status</dt><dd><span class="live-badge"><span class="dot" aria-hidden="true"></span>Live</span></dd></div>
+          <div><dt>Session (IST)</dt><dd data-desk-time>--:--</dd></div>
+          <div><dt>Market hours</dt><dd>09:15 to 15:30</dd></div>
+          <div><dt>Source</dt><dd>TradingView</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===================== TICKER ===================== -->
+    <div class="ticker-wrap" aria-label="Live market ticker">
+      <div class="tv-embed tv--ticker" data-tv="ticker-tape" data-tv-config='{"symbols":[{"proName":"BSE:SENSEX","title":"Sensex"},{"proName":"BSE:SNSX50","title":"Sensex 50"},{"proName":"BSE:BANK","title":"Bankex"},{"proName":"BSE:BSE100","title":"BSE 100"},{"proName":"BSE:BSE500","title":"BSE 500"},{"proName":"BSE:NIFTYBEES","title":"Nifty 50 ETF"},{"proName":"TVC:GOLD","title":"Gold"},{"proName":"TVC:SILVER","title":"Silver"},{"proName":"BSE:GOLDBEES","title":"Gold ETF"},{"proName":"FX_IDC:USDINR","title":"USD/INR"},{"proName":"TVC:USOIL","title":"Crude Oil"}],"showSymbolLogo":true,"displayMode":"adaptive","colorTheme":"dark","isTransparent":false}'></div>
+    </div>
+
+    <!-- ===================== TERMINAL ===================== -->
+    <section class="section section--tight desk" aria-labelledby="desk-title">
+      <div class="container">
+        <h2 id="desk-title" class="sr-only">Live markets</h2>
+        <div class="desk-grid">
+
+          <article class="panel panel--overview" aria-labelledby="p-overview">
+            <header class="panel__bar"><h3 id="p-overview">Indian indices</h3><span class="panel__tag mono">IDX · ETF · CMDTY · FX</span></header>
+            <div class="tv-embed tv--overview" data-tv="market-overview" data-tv-config='{"colorTheme":"dark","dateRange":"12M","showChart":true,"locale":"en","width":"100%","height":"100%","largeChartUrl":"","isTransparent":true,"showSymbolLogo":true,"showFloatingTooltip":true,"plotLineColorGrowing":"rgba(245, 184, 0, 1)","plotLineColorFalling":"rgba(255, 90, 118, 1)","gridLineColor":"rgba(255, 255, 255, 0.04)","scaleFontColor":"rgba(154, 166, 189, 1)","belowLineFillColorGrowing":"rgba(245, 184, 0, 0.12)","belowLineFillColorFalling":"rgba(255, 90, 118, 0.10)","belowLineFillColorGrowingBottom":"rgba(245, 184, 0, 0)","belowLineFillColorFallingBottom":"rgba(255, 90, 118, 0)","symbolActiveColor":"rgba(245, 184, 0, 0.10)","tabs":[{"title":"Indices","symbols":[{"s":"BSE:SENSEX","d":"Sensex"},{"s":"BSE:SNSX50","d":"Sensex 50"},{"s":"BSE:BSE100","d":"BSE 100"},{"s":"BSE:BSE500","d":"BSE 500"},{"s":"BSE:BANK","d":"Bankex"}],"originalTitle":"Indices"},{"title":"ETFs","symbols":[{"s":"BSE:NIFTYBEES","d":"Nifty 50 ETF"},{"s":"BSE:BANKBEES","d":"Bank ETF"},{"s":"BSE:JUNIORBEES","d":"Nifty Next 50 ETF"},{"s":"BSE:GOLDBEES","d":"Gold ETF"},{"s":"BSE:SILVERBEES","d":"Silver ETF"}],"originalTitle":"ETFs"},{"title":"Commodities & FX","symbols":[{"s":"TVC:GOLD","d":"Gold"},{"s":"TVC:SILVER","d":"Silver"},{"s":"TVC:USOIL","d":"WTI Crude"},{"s":"FX_IDC:USDINR","d":"USD/INR"}],"originalTitle":"Commodities & FX"}]}'></div>
+          </article>
+
+          <article class="panel panel--chart" aria-labelledby="p-chart">
+            <header class="panel__bar"><h3 id="p-chart">Interactive chart</h3><span class="panel__tag mono">BSE:SENSEX · 1D · change symbol ↗</span></header>
+            <div class="tv-embed tv--chart" data-tv="advanced-chart" data-tv-config='{"autosize":true,"symbol":"BSE:SENSEX","interval":"D","timezone":"Asia/Kolkata","theme":"dark","colorTheme":"dark","style":"1","locale":"en","allow_symbol_change":true,"hide_side_toolbar":false,"calendar":false,"withdateranges":true,"save_image":false,"backgroundColor":"rgba(12, 19, 34, 1)","gridColor":"rgba(255, 255, 255, 0.04)","support_host":"https://www.tradingview.com"}'></div>
+          </article>
+
+          <article class="panel panel--heatmap" aria-labelledby="p-heat">
+            <header class="panel__bar"><h3 id="p-heat">Sensex heatmap</h3><span class="panel__tag mono">SECTOR · SIZE = MKT CAP · COLOUR = % CHG</span></header>
+            <div class="tv-embed tv--heatmap" data-tv="stock-heatmap" data-tv-config='{"exchanges":[],"dataSource":"SENSEX","grouping":"sector","blockSize":"market_cap_basic","blockColor":"change","locale":"en","symbolUrl":"","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":"100%"}'></div>
+          </article>
+
+          <article class="panel panel--bullion" aria-labelledby="p-bullion">
+            <header class="panel__bar"><h3 id="p-bullion">Gold &amp; silver</h3><span class="panel__tag mono">TVC · USD / OZ</span></header>
+            <div class="bullion">
+              <div class="tv-embed tv--mini" data-tv="mini-symbol-overview" data-tv-config='{"symbol":"TVC:GOLD","width":"100%","height":"100%","locale":"en","dateRange":"12M","colorTheme":"dark","isTransparent":true,"autosize":true,"trendLineColor":"rgba(245, 184, 0, 1)","underLineColor":"rgba(245, 184, 0, 0.15)","underLineBottomColor":"rgba(245, 184, 0, 0)","chartOnly":false,"noTimeScale":false}'></div>
+              <div class="tv-embed tv--mini" data-tv="mini-symbol-overview" data-tv-config='{"symbol":"TVC:SILVER","width":"100%","height":"100%","locale":"en","dateRange":"12M","colorTheme":"dark","isTransparent":true,"autosize":true,"trendLineColor":"rgba(195, 203, 219, 1)","underLineColor":"rgba(195, 203, 219, 0.12)","underLineBottomColor":"rgba(195, 203, 219, 0)","chartOnly":false,"noTimeScale":false}'></div>
+            </div>
+            <p class="panel__note">Precious metals often move differently from equities, which is why many portfolios hold a measured allocation as a diversifier. In India the simplest route is through gold and silver ETFs, held in a demat account. <a href="/services.html#gold-silver">How we use gold &amp; silver ETFs</a></p>
+          </article>
+
+          <article class="panel panel--gauge" aria-labelledby="p-gauge">
+            <header class="panel__bar"><h3 id="p-gauge">Technical gauge</h3><span class="panel__tag mono">BSE:SENSEX</span></header>
+            <div class="tv-embed tv--gauge" data-tv="technical-analysis" data-tv-config='{"interval":"1D","width":"100%","height":"100%","isTransparent":true,"symbol":"BSE:SENSEX","showIntervalTabs":true,"displayMode":"single","locale":"en","colorTheme":"dark"}'></div>
+            <p class="panel__note">An automated summary of moving averages and oscillators. It is a mechanical reading, not a buy or sell recommendation.</p>
+          </article>
+
+          <article class="panel panel--calendar" aria-labelledby="p-cal">
+            <header class="panel__bar"><h3 id="p-cal">Economic calendar</h3><span class="panel__tag mono">IN · US</span></header>
+            <div class="tv-embed tv--calendar" data-tv="events" data-tv-config='{"colorTheme":"dark","isTransparent":true,"width":"100%","height":"100%","locale":"en","importanceFilter":"0,1","countryFilter":"in,us"}'></div>
+          </article>
+
+          <a class="panel panel--yt" href="https://youtube.com/@easytradinglive" target="_blank" rel="noopener" aria-labelledby="p-yt">
+            <span class="panel__bar"><span class="panel__title" id="p-yt">Watch our analysis</span><span class="panel__tag mono">YOUTUBE · @easytradinglive</span></span>
+            <span class="yt">
+              <span class="yt__screen" aria-hidden="true">
+                <span class="yt__play"><svg><use href="/assets/img/icons.svg#i-youtube"/></svg></span>
+                <svg class="yt__line" viewBox="0 0 300 80" preserveAspectRatio="none"><polyline points="0,62 24,58 46,64 70,48 92,52 118,36 140,42 164,30 190,34 212,20 238,26 262,14 300,10" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+              </span>
+              <span class="yt__copy">
+                <span class="yt__h">Market views and strategy explainers on our YouTube channel.</span>
+                <span class="link-arrow">Open the channel <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></span>
+              </span>
+            </span>
+          </a>
+        </div>
+
+        <div class="note desk-note" role="note">
+          <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-info"/></svg>
+          <p>Market data and charts are provided by <a href="https://www.tradingview.com/" target="_blank" rel="noopener">TradingView</a> and may be delayed. Some symbols are shown through BSE-listed equivalents or ETFs. Nothing on this page is investment advice or a recommendation to buy or sell any security. Investments in the securities market are subject to market risks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band">
+          <p class="eyebrow">From data to decisions</p>
+          <h2>Charts show the market. A plan shows the way.</h2>
+          <p class="lead">Talk to a NISM-certified professional about turning market views into a portfolio built around your goals and your risk limits.</p>
+          <div class="btn-row">
+            <a class="btn btn--gold" href="/contact.html#consult">Book a consultation <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a>
+            <a class="btn btn--ghost" href="/services.html">Explore strategies</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- @footer -->
+  <!-- /@footer -->
+</body>
+</html>
