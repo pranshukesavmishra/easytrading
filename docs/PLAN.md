@@ -37,7 +37,7 @@ trading site. The brand comes from the logo: deep ink background with a gold ₹
 | `performance.html` | Year-wise returns vs Nifty 50, ₹1 lakh growth chart, return mix, methodology and disclaimers |
 | `markets.html` | "Market Desk": live TradingView widgets (indices, Nifty heatmap, gold/silver, chart, calendar) + YouTube |
 | `tools.html` | SIP, Lumpsum, Goal planner, CAGR calculators + investor risk-profile quiz |
-| `contact.html` | Consultation form (WhatsApp / email hand-off), phone, email, map, hours, FAQ |
+| `contact.html` | Consultation form (WhatsApp / email hand-off), phone, email, map, FAQ (no hours until the client confirms them) |
 | `legal/disclaimer.html`, `legal/privacy.html`, `legal/terms.html` | Compliance pages |
 | `404.html`, `robots.txt`, `sitemap.xml`, `site.webmanifest`, `.htaccess` | Production plumbing |
 
