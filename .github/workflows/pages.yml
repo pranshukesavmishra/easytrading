@@ -1,0 +1,63 @@
+# Publishes the static site to GitHub Pages for review.
+# The source uses root-relative URLs (/assets/...), which is right for easytrading.co.in.
+# On a project Pages address (…github.io/easytrading/) they need a prefix, so the copy that is
+# deployed gets rewritten here. The repository files are not changed.
+name: Deploy preview to GitHub Pages
+
+on:
+  push:
+    branches: [claude/confident-lovelace-jrcv1l, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+        continue-on-error: true
+
+      - name: Assemble site with base path
+        env:
+          BASE: /${{ github.event.repository.name }}
+        run: |
+          mkdir _site
+          rsync -a --exclude '.git' --exclude '.github' --exclude 'docs' --exclude 'scripts' \
+            --exclude 'partials' --exclude '_site' --exclude '*.md' --exclude '.htaccess' ./ _site/
+          touch _site/.nojekyll
+          # HTML + manifest: href/src/action="/x" and href="/"
+          find _site -name '*.html' -o -name '*.webmanifest' | while read -r f; do
+            sed -i -E \
+              -e "s#(href|src|action)=\"/([^/\"])#\1=\"${BASE}/\2#g" \
+              -e "s#(href|src)=\"/\"#\1=\"${BASE}/\"#g" \
+              -e "s#\"(src|start_url|scope)\": \"/#\"\1\": \"${BASE}/#g" "$f"
+          done
+          # JS strings that build URLs
+          find _site -name '*.js' | while read -r f; do
+            sed -i -E "s#([\"'(])/(assets|about|services|performance|markets|tools|contact|legal)#\1${BASE}/\2#g" "$f"
+          done
+          # CSS url(/...)
+          find _site -name '*.css' | xargs -r sed -i -E "s#url\((['\"]?)/(assets)#url(\1${BASE}/\2#g"
+          echo "Assembled $(find _site -type f | wc -l) files with base ${BASE}"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
