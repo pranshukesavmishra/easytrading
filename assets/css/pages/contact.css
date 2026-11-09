@@ -126,3 +126,4 @@
 
 /* ---------- Print ---------- */
 @media print { .consult__panel, .map-frame { display: none; } }
+@media (min-width: 640px) { .form-grid--stack { grid-template-columns: 1fr; } }

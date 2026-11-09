@@ -10,17 +10,22 @@
 wealth desk: calm, precise, data-rich and trustworthy. It should not look like a flashy tip-selling
 trading site. The brand comes from the logo: deep ink background with a gold ₹ accent.
 
-## 3. Design system
+## 3. Design system (bespoke identity: must not read as a template or AI-generated site)
 | Token | Value | Use |
 |---|---|---|
-| Ink | `#070B14` / `#0C1322` / `#111A2E` | backgrounds, layered surfaces |
-| Gold | `#F5B800` → `#FFD369` | brand accent, CTAs, the ₹ |
-| Gain | `#22C55E`-family | positive numbers only |
-| Loss | `#F43F5E`-family | negative numbers only |
-| Text | `#EEF2F8` / `#9AA6BD` | body / muted |
-- Type: *Fraunces* (editorial serif headlines), *Inter* (UI/body), *JetBrains Mono* (numbers and tickers).
-- Motion: subtle reveal-on-scroll, animated candlestick hero canvas, count-up stats, all off under
-  `prefers-reduced-motion`.
+| Graphite | `#07080a` / `#0d0f12` / `#131619` | backgrounds, layered surfaces |
+| Bullion gold | `#e8b33a` / `#f3d58a` | brand accent, CTAs, the ₹ |
+| Gain / Loss | `#3ddc97` / `#ff5c5c` | numbers only |
+| Paper text | `#f2efe8` / `#8e9196` | body / muted |
+- Type: **Archivo** (variable width; expanded 125%, weight 800, UPPERCASE for h1/h2) and **IBM Plex Mono** for labels, nav, buttons and data.
+- Signature details: HUD corner ticks (`var(--ticks)`), notched primary buttons, auto-numbered section indexes ("01 /"),
+  outlined gold accent words in display type, oversized outlined numerals, hairline rules, film-grain overlay,
+  a giant outlined ₹ in CTA bands, and an outlined "EASY TRADING" wordmark in the footer.
+- Graphics: a three.js (r128) WebGL particle "market terrain" with a live price trace in the home hero
+  (`assets/js/hero3d.js`), falling back to a 2D candlestick canvas. Live TradingView data on Market Desk.
+- Avoided on purpose: rounded pill buttons, tinted icon tiles, glassmorphism blobs, italic-serif accent words,
+  em-dashes in copy, stock taglines.
+- Motion: reveal-on-scroll, count-ups, button shine; all off under `prefers-reduced-motion`.
 - Mobile first. 16px gutters, no horizontal scroll, 44px tap targets, WCAG AA contrast.
 
 ## 4. Information architecture (static multi-page, no build step needed to host)
