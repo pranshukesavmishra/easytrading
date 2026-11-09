@@ -26,3 +26,11 @@ investing, market analysis and related services. It must clearly feel a level ab
 Static HTML/CSS/JS for cPanel hosting. Shared header and footer live in `partials/`; run `node scripts/build.mjs`
 after any partial change. Design tokens are in `assets/css/main.css`; page-specific files go in
 `assets/css/pages/` and `assets/js/pages/`.
+
+## DESIGN DECISION (owner feedback, 9 Nov 2026) — supersedes any earlier dark/gold direction
+The owner disliked the first build (dark graphite + gold, wide uppercase type, sharp-corner HUD style). Rebuild direction, confirmed by the owner:
+- **Light, premium, trustworthy** (modern private bank): warm white and soft grey surfaces, deep navy text and primary, restrained gold accent, green for gains.
+- New typography, new layout language. Calm, spacious, not shouty: sentence-case headlines, no all-caps display type, no outlined text, no grain, no corner-tick motif.
+- Balance: richer visuals where it felt plain (illustrated charts, graphics), fewer repeated sections where it felt busy.
+- Content: lead with the service and the process, not with returns. Performance figures stay but are secondary, clearly labelled, and hideable (`showPerformance`).
+- Must still not look like a generic template or AI output; keep verified facts only (docs/CLIENT-FACTS.md).
