@@ -64,6 +64,21 @@
     window.addEventListener("resize", function () { if (window.innerWidth >= 1100) setMenu(false); });
   }
 
+  /* ---------- Scroll progress bar ---------- */
+  (function () {
+    var bar = document.createElement("div");
+    bar.className = "scroll-progress"; bar.setAttribute("aria-hidden", "true");
+    document.body.appendChild(bar);
+    var tick = false;
+    function upd() {
+      tick = false;
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.transform = "scaleX(" + (h > 0 ? Math.min(1, window.scrollY / h) : 0) + ")";
+    }
+    window.addEventListener("scroll", function () { if (!tick) { tick = true; requestAnimationFrame(upd); } }, { passive: true });
+    upd();
+  })();
+
   /* ---------- Reveal on scroll ---------- */
   var reveals = document.querySelectorAll(".reveal");
   if (!reduceMotion && "IntersectionObserver" in window) {

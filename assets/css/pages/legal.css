@@ -1,6 +1,6 @@
 /* Legal pages (disclaimer, privacy, terms): clean reading column + sticky contents card. Tokens only. */
 .legal-meta {
-  display: inline-flex; margin: 24px 0 0; padding: 7px 14px; border-radius: 999px; background: rgba(255,255,255,.75);
+  display: inline-block; margin: 24px 0 0; padding: 7px 14px; border-radius: 999px; background: rgba(255,255,255,.75);
   border: 1px solid var(--line); font-size: var(--fs-sm); color: var(--text-2); font-weight: 550;
 }
 .legal-layout { display: grid; gap: 32px; align-items: start; }
@@ -31,3 +31,4 @@
 .legal-related a { color: var(--gold); font-weight: 650; }
 .note--warn { background: rgba(47,107,255,.07); border-color: rgba(47,107,255,.22); }
 .note--warn svg { color: var(--gold); }
+.page-hero .lead { max-width: 50ch; }

@@ -157,3 +157,4 @@ address.contact-item__value { font-size: clamp(1.05rem, 0.8rem + 0.7vw, 1.25rem)
 .page-hero:has(+ .contact-strip-wrap) { padding-bottom: clamp(96px, 10vw, 128px); }
 .note--warn { background: rgba(47,107,255,.07); border-color: rgba(47,107,255,.22); }
 .note--warn svg { color: var(--gold); }
+.page-hero .lead { max-width: 50ch; }
