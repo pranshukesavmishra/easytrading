@@ -118,3 +118,20 @@ table.compare { min-width: 680px; }
 }
 
 .faq-wrap { align-items: start; }
+.svc__meta .svc__ret-fine { display: block; margin-top: 8px; font-size: var(--fs-xs); color: var(--muted); }
+.compare tbody tr:last-child th { border-bottom: 0; }
+
+/* Comparison table stacks into rows on small screens */
+@media (max-width: 639px) {
+  .table-wrap:has(.compare) { overflow: visible; }
+  table.compare { min-width: 0; }
+  .compare thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+  .compare, .compare tbody, .compare tr, .compare th, .compare td { display: block; width: 100%; }
+  .compare tr { padding: 14px 16px; border-bottom: 1px solid var(--line); }
+  .compare tbody tr:last-child { border-bottom: 0; }
+  .compare th[scope="row"], .compare td { padding: 4px 0; border: 0; }
+  .compare th[scope="row"] { padding-bottom: 8px; font-size: var(--fs-md); }
+  .compare td { display: grid; grid-template-columns: 96px 1fr; gap: 12px; align-items: center; }
+  .compare td::before { content: attr(data-label); font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .tbl-risk { white-space: normal; }
+}

@@ -105,6 +105,18 @@
     counters.forEach(runCount);
   }
 
+  /* ---------- Deep links: re-align to #hash once fonts and layout settle ---------- */
+  if (location.hash.length > 1) {
+    var realign = function () {
+      var t = null;
+      try { t = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch (e) { t = null; }
+      if (t) t.scrollIntoView({ block: "start" });
+    };
+    var fontsReady = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+    fontsReady.then(function () { setTimeout(realign, 60); });
+    window.addEventListener("load", function () { setTimeout(realign, 60); });
+  }
+
   /* ---------- Lazy TradingView embeds: <div class="tv-embed" data-tv="ticker-tape" data-tv-config='{...}'> ---------- */
   function mountTV(el) {
     if (el.dataset.mounted) return;
