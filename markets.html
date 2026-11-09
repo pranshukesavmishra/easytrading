@@ -15,11 +15,59 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://easytrading.co.in/assets/img/og-image.png">
   <!-- @head -->
+  <meta name="theme-color" content="#07080a">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icon-32.png">
+  <link rel="apple-touch-icon" href="/assets/img/icon-180.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/assets/js/config.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
   <!-- /@head -->
   <link rel="stylesheet" href="/assets/css/pages/markets.css">
+  <script src="/assets/js/pages/markets.js" defer></script>
 </head>
 <body class="page-markets">
   <!-- @header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/" aria-label="Easy Trading home">
+        <img src="/assets/img/logo-256.webp" alt="" width="40" height="40">
+        <span>Easy <b>Trading</b></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/performance.html">Performance</a></li>
+          <li><a href="/markets.html" aria-current="page">Market Desk</a></li>
+          <li><a href="/tools.html">Tools</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--gold btn--sm header-cta" href="/contact.html#consult">Book a consultation</a>
+      <button class="menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu"><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobile-nav" inert>
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/performance.html">Performance</a></li>
+        <li><a href="/markets.html" aria-current="page">Market Desk</a></li>
+        <li><a href="/tools.html">Tools</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--gold" href="/contact.html#consult">Book a consultation</a>
+    <p class="mobile-contact">Call or WhatsApp <a href="tel:+919891722514">+91 98917 22514</a></p>
+  </div>
   <!-- /@header -->
 
   <main id="main">
@@ -34,8 +82,8 @@
         </div>
         <dl class="desk-status mono" aria-label="Desk status">
           <div><dt>Status</dt><dd><span class="live-badge"><span class="dot" aria-hidden="true"></span>Live</span></dd></div>
-          <div><dt>Session (IST)</dt><dd data-desk-time>--:--</dd></div>
-          <div><dt>Market hours</dt><dd>09:15 to 15:30</dd></div>
+          <div><dt>Time · IST</dt><dd data-desk-time>--:--</dd></div>
+          <div><dt>BSE hours · Mon to Fri</dt><dd>09:15 to 15:30</dd></div>
           <div><dt>Source</dt><dd>TradingView</dd></div>
         </dl>
       </div>
@@ -126,6 +174,67 @@
   </main>
 
   <!-- @footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Easy Trading home">
+            <img src="/assets/img/logo-256.webp" alt="" width="40" height="40" loading="lazy">
+            <span>Easy <b>Trading</b></span>
+          </a>
+          <p>Your trusted partner in wealth management and portfolio services. Capital protection, disciplined execution, long-term compounding.</p>
+          <div class="socials">
+            <a href="https://www.facebook.com/easytradinglive" target="_blank" rel="noopener" aria-label="Easy Trading on Facebook"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-facebook"/></svg></a>
+            <a href="https://youtube.com/@easytradinglive" target="_blank" rel="noopener" aria-label="Easy Trading on YouTube"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-youtube"/></svg></a>
+            <a href="https://wa.me/919891722514" target="_blank" rel="noopener" aria-label="Chat with Easy Trading on WhatsApp"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-whatsapp"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="/about.html">About us</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/performance.html">Performance</a></li>
+            <li><a href="/markets.html">Market Desk</a></li>
+            <li><a href="/tools.html">Investor tools</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Strategies</h3>
+          <ul>
+            <li><a href="/services.html#equity-portfolio">Equity portfolios</a></li>
+            <li><a href="/services.html#options-selling">Index options selling</a></li>
+            <li><a href="/services.html#ipo">IPO research</a></li>
+            <li><a href="/services.html#gold-silver">Gold &amp; silver ETFs</a></li>
+            <li><a href="/services.html#mtf">MTF optimisation</a></li>
+            <li><a href="/services.html#risk-management">Risk management</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Reach us</h3>
+          <ul class="footer-contact">
+            <li><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-phone"/></svg><a href="tel:+919891722514">+91 98917 22514</a></li>
+            <li><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-mail"/></svg><a href="mailto:contact@easytrading.co.in">contact@easytrading.co.in</a></li>
+            <li><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-pin"/></svg><span>Tower 5, UGF–A, Sahana Apartment, Chhatarpur, New Delhi – 110074</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p class="risk-disclaimer"><strong>Risk disclosure:</strong> Investments in the securities market are subject to market risks. Please read all related documents carefully before investing. Past performance may not guarantee future results. Derivatives (F&amp;O) trading involves substantial risk and may not be suitable for every investor. Returns shown on this website are client-reported and are not a promise or guarantee of future returns.</p>
+        <p data-registrations hidden></p>
+        <div class="row">
+          <span>© <span data-year>2026</span> Easy Trading. All rights reserved.</span>
+          <nav aria-label="Legal">
+            <a href="/legal/disclaimer.html">Disclaimer</a>
+            <a href="/legal/privacy.html">Privacy</a>
+            <a href="/legal/terms.html">Terms</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a class="fab-whatsapp" href="https://wa.me/919891722514?text=Hi%20Easy%20Trading%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-whatsapp"/></svg></a>
   <!-- /@footer -->
 </body>
 </html>

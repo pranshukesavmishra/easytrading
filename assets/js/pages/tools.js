@@ -203,7 +203,7 @@ if (typeof document !== "undefined") (function () {
     return this.decimals() ? nf2.format(v) : nf0.format(Math.round(v));
   };
   Field.prototype.fmtLimit = function (v) {
-    if (this.unit === "inr") return v >= 1e5 ? ET.formatINRShort(v) : rupee(v);
+    if (this.unit === "inr") return v >= 1e5 ? words(v) : rupee(v);
     if (this.unit === "pct") return v + "%";
     return v + (v === 1 ? " year" : " years");
   };
@@ -235,7 +235,7 @@ if (typeof document !== "undefined") (function () {
     if (commit) { this.set(c, true); return; }
     if (c !== v) this.showErr((v < this.min ? "Minimum is " + this.fmtLimit(this.min) : "Maximum is " + this.fmtLimit(this.max)) + ". Using " + this.fmtLimit(c) + ".");
     else this.showErr("");
-    this.apply(c, false);
+    this.apply(c, true);
   };
   Field.prototype.showErr = function (msg) {
     this.err.textContent = msg;

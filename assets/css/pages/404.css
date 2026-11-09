@@ -22,10 +22,11 @@
 }
 .nf-links-wrap { border-top: 1px solid var(--line); }
 .nf-links__title { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 16px; }
-.nf-links { list-style: none; display: grid; border-top: 1px solid var(--line-strong); }
+.nf-links { list-style: none; display: grid; counter-reset: nf; border-top: 1px solid var(--line-strong); }
 @media (min-width: 768px) { .nf-links { grid-auto-flow: column; grid-auto-columns: 1fr; } .nf-links li + li a { border-left: 1px solid var(--line); } }
 .nf-links a { display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 16px; border-bottom: 1px solid var(--line); font-weight: 600; color: var(--text); transition: color .2s, background .2s; }
-.nf-links a .mono { color: var(--gold); font-size: var(--fs-xs); font-weight: 400; }
+.nf-links li { counter-increment: nf; }
+.nf-links a::before { content: counter(nf, decimal-leading-zero); font-family: var(--font-mono); color: var(--gold); font-size: var(--fs-xs); font-weight: 400; }
 .nf-links a svg { width: 16px; height: 16px; margin-left: auto; color: var(--muted); transition: transform .25s var(--ease), color .2s; }
 .nf-links a:hover { color: var(--gold); background: var(--gold-soft); }
 .nf-links a:hover svg { transform: translateX(4px); color: var(--gold); }
