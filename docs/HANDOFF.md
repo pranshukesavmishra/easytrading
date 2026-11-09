@@ -43,6 +43,13 @@ Local server: `cd /home/user/easytrading && python3 -m http.server 8080 &`. Per-
 (prints console errors/overflow, saves desktop+mobile screenshots; widgets render lazily so use a tall viewport for TradingView). Calculator tests:
 `node scripts/test-calculators.cjs` (9 checks). Playwright is preinstalled; for external sites launch chromium with the HTTPS_PROXY.
 
+## Session log (10 Nov 2026, session 3)
+- Steps 1-2 done: build OK; all 11 pages x 390/768/1440 = 0 console errors, 0 overflow, 0 hidden reveals. All 8 TradingView embeds mount on desktop+mobile
+  (they only look blank in full-page screenshots because they load lazily; test by scrolling, not by fullPage).
+- Fixed: performance table first-column border glitch; contact email wrapping mid-word.
+- With `showPerformance=false` every return figure, Rs 50 Cr and 98% hide. Left visible on purpose (verified facts, not returns): "100+ clients", "15+ yrs team experience".
+- Owner feedback on v2 (10 Nov): "still doesn't look premium and good, too old-looking and boring". Redesign iteration in progress; see below.
+
 ## What is left to do (in order)
 1. **Verify the last uncommitted change** (may or may not have been applied): `assets/js/main.js` TradingView defaults should be
    `colorTheme = "light"` and `isTransparent = false` (grep `colorTheme =`). Then run `node scripts/build.mjs`, run `shoot.cjs` on all 11 pages

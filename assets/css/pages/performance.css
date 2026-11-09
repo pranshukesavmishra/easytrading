@@ -184,3 +184,5 @@ table.data td.loss { color: var(--loss); }
 .perf-table tbody th { background: transparent; }
 .kpi dd { white-space: nowrap; }
 .kpi dd.kpi__note { white-space: normal; }
+/* collapsed-border fix: last body row's <th> must not out-rank the footer's strong top border */
+.perf-table tbody tr:last-child th, .perf-table tfoot tr:last-child th { border-bottom: 0; }
