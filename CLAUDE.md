@@ -1,5 +1,7 @@
 # Project brief — Easy Trading premium website
 
+**New session? Read `docs/HANDOFF.md` first: full status, decisions, what is left, how to run QA and deploy.**
+
 Standing instructions from the owner (developer building this for a client). Read before any work.
 
 ## The client (verified facts: docs/CLIENT-FACTS.md)

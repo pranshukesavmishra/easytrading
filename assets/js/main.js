@@ -124,9 +124,9 @@
     var type = el.getAttribute("data-tv");
     var cfg = {};
     try { cfg = JSON.parse(el.getAttribute("data-tv-config") || "{}"); } catch (e) { cfg = {}; }
-    cfg.colorTheme = cfg.colorTheme || "dark";
+    cfg.colorTheme = cfg.colorTheme || "light";
     cfg.locale = cfg.locale || "en";
-    if (cfg.isTransparent === undefined) cfg.isTransparent = true;
+    if (cfg.isTransparent === undefined) cfg.isTransparent = false;
     var wrap = document.createElement("div");
     wrap.className = "tradingview-widget-container";
     var inner = document.createElement("div");
