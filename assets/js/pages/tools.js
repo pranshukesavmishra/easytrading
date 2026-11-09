@@ -260,7 +260,7 @@ if (typeof document !== "undefined") (function () {
 
   /* ---------------- Charts ---------------- */
   var chartsReady = !!(window.Chart && window.ET_CHART && window.ET_CHART.init());
-  var COL = (window.ET_CHART && window.ET_CHART.colors) || { slate: "#7C8AA5", gold: "#E8B33A", grid: "rgba(255,255,255,0.06)" };
+  var COL = (window.ET_CHART && window.ET_CHART.colors) || { slate: "#8B98AB", gold: "#C99A2E", text: "#5B6A7D", grid: "rgba(11,27,51,0.08)" };
   var tipINR = { callbacks: { label: function (c) { return " " + c.dataset.label + ": " + rupee(c.parsed.y != null ? c.parsed.y : c.parsed); } } };
   var axisINR = { ticks: { callback: function (v) { return ET.formatINRShort(v); }, maxTicksLimit: 6 }, grid: { color: COL.grid }, border: { display: false } };
 
@@ -278,7 +278,7 @@ if (typeof document !== "undefined") (function () {
       { label: "Invested", data: [], backgroundColor: COL.slate, stack: "s", borderRadius: 2, maxBarThickness: 36, order: 2 },
       { label: "Returns", data: [], backgroundColor: COL.gold, stack: "s", borderRadius: 2, maxBarThickness: 36, order: 2 }
     ];
-    if (withLine) ds.push({ label: "Goal", type: "line", data: [], borderColor: COL.text || "#9AA6BD", borderDash: [5, 4], borderWidth: 1.5, pointRadius: 0, order: 1 });
+    if (withLine) ds.push({ label: "Goal", type: "line", data: [], borderColor: COL.text || "#5B6A7D", borderDash: [5, 4], borderWidth: 1.5, pointRadius: 0, order: 1 });
     return new Chart(canvas, {
       type: "bar",
       data: { labels: [], datasets: ds },
@@ -294,7 +294,7 @@ if (typeof document !== "undefined") (function () {
     return new Chart(canvas, {
       type: "line",
       data: { labels: [], datasets: [{ label: "Value", data: [], borderColor: COL.gold, borderWidth: 2, pointRadius: 0, pointHoverRadius: 4, tension: 0.25, fill: true,
-        backgroundColor: function (ctx) { return window.ET_CHART.gradient(ctx.chart.ctx, ctx.chart.chartArea, COL.goldFill || "rgba(232,179,58,0.18)"); } }] },
+        backgroundColor: function (ctx) { return window.ET_CHART.gradient(ctx.chart.ctx, ctx.chart.chartArea, COL.goldFill || "rgba(226,177,60,0.2)"); } }] },
       options: { interaction: { mode: "index", intersect: false }, plugins: { legend: { display: false }, tooltip: tipINR },
         scales: { x: { grid: { display: false }, ticks: { maxRotation: 0, autoSkipPadding: 8 } }, y: axisINR } }
     });
